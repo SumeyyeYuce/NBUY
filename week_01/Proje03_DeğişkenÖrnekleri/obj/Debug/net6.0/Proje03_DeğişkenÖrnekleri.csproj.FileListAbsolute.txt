@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\bin\Debug\net6.0\Proje03_DeğişkenÖrnekleri.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\bin\Debug\net6.0\Proje03_DeğişkenÖrnekleri.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\bin\Debug\net6.0\Proje03_DeğişkenÖrnekleri.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\bin\Debug\net6.0\Proje03_DeğişkenÖrnekleri.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\bin\Debug\net6.0\Proje03_DeğişkenÖrnekleri.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\refint\Proje03_DeğişkenÖrnekleri.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\Proje03_DeğişkenÖrnekleri.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje03_DeğişkenÖrnekleri\obj\Debug\net6.0\ref\Proje03_DeğişkenÖrnekleri.dll
