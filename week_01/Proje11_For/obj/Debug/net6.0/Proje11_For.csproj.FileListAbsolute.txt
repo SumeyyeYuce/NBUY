@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\bin\Debug\net6.0\Proje11_For.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\bin\Debug\net6.0\Proje11_For.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\bin\Debug\net6.0\Proje11_For.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\bin\Debug\net6.0\Proje11_For.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\bin\Debug\net6.0\Proje11_For.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\refint\Proje11_For.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\Proje11_For.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_01\Proje11_For\obj\Debug\net6.0\ref\Proje11_For.dll

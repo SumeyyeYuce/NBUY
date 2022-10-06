@@ -70,14 +70,70 @@ class Program
         //string aranacakİfade = "Ş";
 
         //int sıraNo = adres.ToLower().IndexOf(aranacakİfade.ToLower());//kuçukharfe döndğr sonra ara.
-       
+
         //Console.WriteLine($"C harfi {adres} içinde,{sıraNo}.sıradadır");
 
-        string aranacakİfade = "Şehit ali";
+        //string aranacakİfade = "Şehit ali";
 
-        int sıraNo = adres.ToLower().IndexOf(aranacakİfade.ToLower());//kuçukharfe döndğr sonra ara.
+        //int sıraNo = adres.ToLower().IndexOf(aranacakİfade.ToLower());//kuçukharfe döndğr sonra ara.
 
-        Console.WriteLine($"{aranacakİfade} ifadesi {adres} içinde,{sıraNo}.sıradadır");
+        //Console.WriteLine($"{aranacakİfade} ifadesi {adres} içinde,{sıraNo}.sıradadır");
+
+        //string ad = "Engin";
+        //int yas = 47;
+        //string okul = "BAU";
+        /*
+         * Benim adım Engin. 47 yaşındayım. Okuduğum okulun adı BAU.
+         * 1) + operatörü ile
+         * 2) Concat ile
+         * 3) $"" ile 
+         */
+
+        ////Çözüm-1
+        //string sonuc1 = "Benim adım " + ad + ". " + yas + " yaşındayım. Okuduğum okulun adı " + okul;
+        //Console.WriteLine(sonuc1);
+        ////Çözüm-2
+        //string sonuc2 = String.Concat("Benim adım ", ad, ". ", yas, " yaşındayım. Okuduğum okulun adı ", okul); 
+        //Console.WriteLine(sonuc2);
+        ////Çözüm-3
+        //string sonuc3 = $"Benim adım {ad}. {yas} yaşındayım. Okuduğum okulun adı {okul}";
+        //Console.WriteLine(sonuc3);
+        //string metin = "Merhaba. Bu hafta eğitime başladık.";
+        //bool sonuc = metin.Contains(" ");
+        //Console.WriteLine(sonuc);
+
+        //string ad = "Sümeyye";
+        //int yas = 22;
+        //string okul = "BAU";
+
+        //string sonuc1 = "Benim adım" + ad + "," + yas + "yasındayım. Okulumun adı:" + okul;
+        //Console.WriteLine(sonuc1);
+
+        //string sonuc2 = String.Concat("Benim adım", ad, ".", yas, "yasındayım. Okulumun adı", okul);
+        //Console.WriteLine(sonuc2);
+
+        //string sonuc3 = $"Benim adım {ad}. {yas} yaşındayım. okulumun adı {okul}";
+        //Console.WriteLine(sonuc3);
+
+
+        //string metin = "Wissen Akademie";
+        //Console.WriteLine($"Metnin ilk hali:{metin}");
+        //Console.WriteLine($"Akademie ifadesi silindikten sonraki hali:{metin.Remove(7)}");//remove silme işlemi yapar
+        //Console.WriteLine($"Aka ifadesi silindikten sonraki hali:{metin.Remove(7,3)}");//7 ile 3 arasındakileri siliyor
+
+
+        string urunAd = "Iphone 13 Pro";
+        //iphone-13-pro bu haline dönüştürmek istiyoruz.
+        //string sonuc = (urunAd.Replace(" ","-")).ToLower();
+        string sonuc = urunAd.ToLower().Replace(" ", "-");//yukarıdali kod satırıyla aynı işlevi görüyor
+        Console.WriteLine(sonuc);
+
+        string sonuc2 = urunAd.Replace("Iphone", "Samsung");//iphonu samsunga dönüştür dedik
+        Console.WriteLine(sonuc2);
+
+
+
+
 
 
     }
