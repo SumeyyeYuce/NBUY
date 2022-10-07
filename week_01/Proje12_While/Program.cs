@@ -111,12 +111,13 @@ class Program
 
 
 
-             Random rnd=new Random();
+            Random rnd=new Random();
             int uretılenSayı=rnd.Next(1,101);
             Console.WriteLine($"Hile:{uretılenSayı}");//Ekranda rastgele üretilen sayıyı gösterdi.
             int tahminEdilenSayı;
             int hak=1;//buaraya 5 de yazıp alt tarafta -- yapabilirsin.(kullanıcının hak değişkeni)
             int hakSınırı=5;//kullanıcının toplam kaç hakka sahip oldugu bilgisi.
+            string Mesaj="";
 
             do
             {
@@ -124,28 +125,39 @@ class Program
                     tahminEdilenSayı=Convert.ToInt32(Console.ReadLine());
                     if (tahminEdilenSayı>uretılenSayı)
                     {
-                        Console.WriteLine("büyük girin");
+                       Mesaj="Büyük Girdin";
                         
                     }
                    else if (tahminEdilenSayı<uretılenSayı)
                    {
-                        Console.WriteLine("küçük girin");
+                        Mesaj="Küçük Girdin";
                         
                    }
                    if (tahminEdilenSayı!=uretılenSayı)
                    {
                         hak++;
-                        if (hak<hakSınırı)
-                        {
-                            Console.WriteLine("kaybettin");
-                        }
+                        if (hak<=hakSınırı) Console.WriteLine(Mesaj);
+                       
+
+                       
                    }
-                   else
-                   {
-                        Console.WriteLine("kazandın");
-                   }
-                
+                  
             } while (tahminEdilenSayı!=uretılenSayı && hak<=hakSınırı);
+
+
+            Mesaj=tahminEdilenSayı==uretılenSayı? "Kazandınız" : "Kaybettiniz";
+            Console.WriteLine(Mesaj); //turnry if kullanımı
+
+
+            // if (tahminEdilenSayı==uretılenSayı)
+            // {
+            //     Console.WriteLine("Kazandınız");
+            // }
+            // else
+            // {
+            //         Console.WriteLine("Kaybettiniz.");
+            // }
+            // Console.WriteLine("Oyun bitti");//ya doğru tercihde buraya geliyor ya da hakkı bittiğinde
             //eger program bu satıra gelmiş ise ya doğru tahmin de bulunulmuştur ya da hak sona ermiştir.
 
 
