@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\bin\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\bin\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\bin\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\bin\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\bin\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\refint\Proje06_Inheritance_Kalıtım_Miras.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\Proje06_Inheritance_Kalıtım_Miras.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje06_Inheritance_Kalıtım_Miras\obj\Debug\net6.0\ref\Proje06_Inheritance_Kalıtım_Miras.dll

@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\bin\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\bin\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\bin\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\bin\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\bin\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\refint\Proje03_Sayi_Bulmaca_With_Method.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\Proje03_Sayi_Bulmaca_With_Method.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje03_Sayi_Bulmaca_With_Method\obj\Debug\net6.0\ref\Proje03_Sayi_Bulmaca_With_Method.dll

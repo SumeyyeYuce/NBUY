@@ -111,95 +111,131 @@ class Program
 
 
 
-            Random rnd=new Random();
-            int uretılenSayı=rnd.Next(1,101);
-            Console.WriteLine($"Hile:{uretılenSayı}");//Ekranda rastgele üretilen sayıyı gösterdi.
-            int tahminEdilenSayı;
-            int hak=1;//buaraya 5 de yazıp alt tarafta -- yapabilirsin.(kullanıcının hak değişkeni)
-            int hakSınırı=5;//kullanıcının toplam kaç hakka sahip oldugu bilgisi.
-            string Mesaj="";
+            //Random rnd=new Random();
+            //int uretılenSayı=rnd.Next(1,101);
+            //Console.WriteLine($"Hile:{uretılenSayı}");//Ekranda rastgele üretilen sayıyı gösterdi.
+            //int tahminEdilenSayı;
+            //int hak=1;//buaraya 5 de yazıp alt tarafta -- yapabilirsin.(kullanıcının hak değişkeni)
+            //int hakSınırı=5;//kullanıcının toplam kaç hakka sahip oldugu bilgisi.
+            //string Mesaj="";
 
-            do
-            {
-                    Console.Write($"{hak}Tahmininizi Girin (1-100 arasında):");
-                    tahminEdilenSayı=Convert.ToInt32(Console.ReadLine());
-                    if (tahminEdilenSayı>uretılenSayı)
-                    {
-                       Mesaj="Büyük Girdin";
+            //do
+            //{
+            //        Console.Write($"{hak}Tahmininizi Girin (1-100 arasında):");
+            //        tahminEdilenSayı=Convert.ToInt32(Console.ReadLine());
+            //        if (tahminEdilenSayı>uretılenSayı)
+            //        {
+            //           Mesaj="Büyük Girdin";
                         
-                    }
-                   else if (tahminEdilenSayı<uretılenSayı)
-                   {
-                        Mesaj="Küçük Girdin";
+            //        }
+            //       else if (tahminEdilenSayı<uretılenSayı)
+            //       {
+            //            Mesaj="Küçük Girdin";
                         
-                   }
-                   if (tahminEdilenSayı!=uretılenSayı)
-                   {
-                        hak++;
-                        if (hak<=hakSınırı) Console.WriteLine(Mesaj);
+            //       }
+            //       if (tahminEdilenSayı!=uretılenSayı)
+            //       {
+            //            hak++;
+            //            if (hak<=hakSınırı) Console.WriteLine(Mesaj);
                        
 
                        
-                   }
+            //       }
                   
-            } while (tahminEdilenSayı!=uretılenSayı && hak<=hakSınırı);
+            //} while (tahminEdilenSayı!=uretılenSayı && hak<=hakSınırı);
 
 
-            Mesaj=tahminEdilenSayı==uretılenSayı? "Kazandınız" : "Kaybettiniz";
-            Console.WriteLine(Mesaj); //turnry if kullanımı
+            //Mesaj=tahminEdilenSayı==uretılenSayı? "Kazandınız" : "Kaybettiniz";
+            //Console.WriteLine(Mesaj); //turnry if kullanımı
 
 
-            // if (tahminEdilenSayı==uretılenSayı)
-            // {
-            //     Console.WriteLine("Kazandınız");
-            // }
-            // else
-            // {
-            //         Console.WriteLine("Kaybettiniz.");
-            // }
-            // Console.WriteLine("Oyun bitti");//ya doğru tercihde buraya geliyor ya da hakkı bittiğinde
-            //eger program bu satıra gelmiş ise ya doğru tahmin de bulunulmuştur ya da hak sona ermiştir.
-
-
-
+        // if (tahminEdilenSayı==uretılenSayı)
+        // {
+        //     Console.WriteLine("Kazandınız");
+        // }
+        // else
+        // {
+        //         Console.WriteLine("Kaybettiniz.");
+        // }
+        // Console.WriteLine("Oyun bitti");//ya doğru tercihde buraya geliyor ya da hakkı bittiğinde
+        //eger program bu satıra gelmiş ise ya doğru tahmin de bulunulmuştur ya da hak sona ermiştir.
 
 
 
+        // do
+        // {
+        //      Console.Write($"{hak}Tahmininizi Girin (1-100 arasında):");
+        //      tahminEdilenSayı=Convert.ToInt32(Console.ReadLine());
+
+        //         if (hak==hakSınırı && uretılenSayı!=tahminEdilenSayı)
+        //         {
+        //                 Console.WriteLine("Kaybettiniz");
+        //                 break;
+        //         }
+        //          if (tahminEdilenSayı>uretılenSayı)
+        //          {
+        //             Console.WriteLine("Büyük bir deger giridiniz dah küçük bir deger girerek deneyiniz");
+        //          }
+        //          else if (tahminEdilenSayı<uretılenSayı)
+        //          {
+        //             Console.WriteLine("küçük bir deger giridiniz dah büyük bir deger girerek deneyiniz");
+        //          }
+        //          else
+        //          {
+        //             Console.WriteLine("tebrikler");
+        //          }
+        //         hak++;
+
+        // }
+        // while (tahminEdilenSayı!=uretılenSayı && hak<=hakSınırı);
 
 
+        /************************************************************************************************/
+
+        // int toplam=0;
+        // string girilenDeger="";
+        // int sayac=1;
+        // while (girilenDeger !="exit")//girilendeger eşit olmasın exit'e
+        //  {
+        //        Console.WriteLine($"{sayac}.sayıyı giriniz(çıkış için exit):");
+        //         girilenDeger=Console.ReadLine();
+        //         //if (girilenDeger!="exit")
+        //         try
+        //         {
+        //              toplam+=Convert.ToInt32(girilenDeger); 
+        //         }
+        //         catch (System.Exception)
+        //         {
+        //             Console.WriteLine(toplam);
+        //             break;   
+
+        //         }
+
+        //         sayac++;
+        //  }
 
 
+        int toplam = 0;
+        string gırılenDeger = "";
+        int sayac = 1;
+        while (gırılenDeger!="exit")
+        {
+            Console.WriteLine($"{sayac} sayıyı giriniz(çıkış için exit):");
+            gırılenDeger = Console.ReadLine();
+            if (gırılenDeger!="exit")
+                try
+                {
+                    toplam += Convert.ToInt31(gırılenDeger);
+                }
+                catch (System.Exception)
+                {
+                    Console.WritLine(toplam);
+                    break;
+                    
+                }
+                  sayac++;
 
-
-
-            
-            // do
-            // {
-            //      Console.Write($"{hak}Tahmininizi Girin (1-100 arasında):");
-            //      tahminEdilenSayı=Convert.ToInt32(Console.ReadLine());
-              
-            //         if (hak==hakSınırı && uretılenSayı!=tahminEdilenSayı)
-            //         {
-            //                 Console.WriteLine("Kaybettiniz");
-            //                 break;
-            //         }
-            //          if (tahminEdilenSayı>uretılenSayı)
-            //          {
-            //             Console.WriteLine("Büyük bir deger giridiniz dah küçük bir deger girerek deneyiniz");
-            //          }
-            //          else if (tahminEdilenSayı<uretılenSayı)
-            //          {
-            //             Console.WriteLine("küçük bir deger giridiniz dah büyük bir deger girerek deneyiniz");
-            //          }
-            //          else
-            //          {
-            //             Console.WriteLine("tebrikler");
-            //          }
-            //         hak++;
-                 
-            // }
-            // while (tahminEdilenSayı!=uretılenSayı && hak<=hakSınırı);
-           
+        }
 
     }
 }
