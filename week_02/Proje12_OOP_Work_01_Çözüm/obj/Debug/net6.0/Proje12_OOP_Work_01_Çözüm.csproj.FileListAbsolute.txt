@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\bin\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\bin\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\bin\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\bin\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\bin\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\refint\Proje12_OOP_Work_01_Çözüm.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\Proje12_OOP_Work_01_Çözüm.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje12_OOP_Work_01_Çözüm\obj\Debug\net6.0\ref\Proje12_OOP_Work_01_Çözüm.dll

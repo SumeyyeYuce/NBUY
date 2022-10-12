@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\bin\Debug\net6.0\Proje11_Collections_GeneralList.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\bin\Debug\net6.0\Proje11_Collections_GeneralList.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\bin\Debug\net6.0\Proje11_Collections_GeneralList.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\bin\Debug\net6.0\Proje11_Collections_GeneralList.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\bin\Debug\net6.0\Proje11_Collections_GeneralList.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\refint\Proje11_Collections_GeneralList.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\Proje11_Collections_GeneralList.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje11_Collections_GeneralList\obj\Debug\net6.0\ref\Proje11_Collections_GeneralList.dll

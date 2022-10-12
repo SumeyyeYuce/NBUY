@@ -1,0 +1,15 @@
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\bin\Debug\net6.0\Proje09_InterFace.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\bin\Debug\net6.0\Proje09_InterFace.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\bin\Debug\net6.0\Proje09_InterFace.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\bin\Debug\net6.0\Proje09_InterFace.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\bin\Debug\net6.0\Proje09_InterFace.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.csproj.AssemblyReference.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.AssemblyInfoInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.AssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.csproj.CoreCompileInputs.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\refint\Proje09_InterFace.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.pdb
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\Proje09_InterFace.genruntimeconfig.cache
+C:\Users\SABAH\Documents\GitHub\NBUY\week_02\Proje09_InterFace\obj\Debug\net6.0\ref\Proje09_InterFace.dll

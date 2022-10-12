@@ -1,5 +1,14 @@
 ﻿namespace Proje09_InterFace
 {
+    /*
+     * interfaceler için belirtilmediğinde defaoult erişim belirleyici public'tir.
+     * interfaceler protected private ya da static olarak işaretlenemzler.
+     * interfaceler içinde çalışabilir kodlar olamaz. yani metotların sadece imzası bulunur
+     * bir interface bir ya da dah çok inerfaceden miras alabilri
+     * bir interface classda miras alamaz
+     * eger bir class bir interface den miras alıyorsa miras aldığı interfacedki tüm metotları imlplemete etmek zorundadır
+     * (implemente:mirs alıınan interface de imzası bulunan tüm metotların içi dolu halleri.)*/
+
     interface IPersonel
     {
         public string Departman { get; set; }
@@ -50,7 +59,7 @@
         }
     }
     //herşeyin absctrt olmasını istiyoask interface kullanırız.
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -60,11 +69,36 @@
              * ancak bazen miras alınan clastaki bir methodun içinin dolu hallerini yazmak zorunlu olsun isteriz
              * yani bir nevi hepsi absctrt olsunisteriz. Bunu yapmak yerine miras alınan classı, class değil
              * interface şeklinde tanımlarız.
-             * */
-            Yonetıcı yonetıcı1 = new Yonetıcı();
-            Yonetıcı yonetıcı2 = new Yonetıcı("Alex de souza","fgfgfgfg","54646","fbgfhfgf");
-            
-            Console.WriteLine();
+            // * */
+            //Yonetıcı yonetıcı1 = new Yonetıcı();
+            //Yonetıcı yonetıcı2 = new Yonetıcı("Alex de souza","fgfgfgfg","54646","fbgfhfgf");
+
+            //Console.WriteLine();
+
+            Product product1 = new Product()
+            {
+                Id = 1,
+                Name = "iphone 13",
+                Price = 59000,
+                Properties = "8 gb ram",
+                Ratio = 0.5m,
+                CreatedDate = DateTime.Now
+
+            };
+
+            Console.WriteLine($"Product Name:{product1.Name} (Büyük harf:{product1.NameToUpper(product1.Name)}) " +
+                $"Properties:{product1.Properties}");
+
+            Category category1 = new Category()
+            {
+                Id = 1,
+                Name = "telefon",
+                CreatedDate = DateTime.Now,
+                Description = "",
+            };
+            Console.WriteLine($"Category Name:{category1.Name} (büyük harf: {category1.NameToUpper(category1.Name)}) " +
+                $"Description:{category1.Description}");
+            Console.ReadLine();
         }
     }
 }

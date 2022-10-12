@@ -1,0 +1,13 @@
+﻿1)Bir kaç bölümde okuyan ögrencilerin bilgilerinin girilmesimi ve bunu  doğru bir şekilde class/interface/list 
+yapılarının içerisinde tutulmasını saglayarak ekrana sonucu yazdıracagız.
+
+2)Bolum classı  -->Id,Ad,Acıklama
+3)Ogrencı classı -->Id,ogreno,ad,soyad,yas
+4) 2 adet bölüm bilgisi olsun her bölümün içinde de 3 er adet ögrenci bilgisi olsun
+
+
+Yol h:
+1)ihtiyac duyulan interface/class yapıları hazıralnmal
+2)gerekli metot varsa onlar hazrlanmalı
+3)program kodlanmalı
+
