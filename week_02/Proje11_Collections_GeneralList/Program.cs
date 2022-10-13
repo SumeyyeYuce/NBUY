@@ -117,7 +117,8 @@
             List<ProductModel> productModels = new List<ProductModel>()
             {
                 //burası 1 tane
-                new ProductModel(){Id=1,CategoryName="bilgisayr",Products=new List<Product>()
+                new ProductModel()
+                {Id=1,CategoryName="bilgisayr",Products=new List<Product>()
                 {
                     new Product(){Id=1,Name="ürün1",Price=5000},
                     new Product(){Id=2,Name="ürün1",Price=5000},
