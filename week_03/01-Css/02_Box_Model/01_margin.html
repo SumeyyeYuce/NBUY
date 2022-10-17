@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+       main{
+        flex-direction: column;
+       }
+        body{
+            margin: 5px;
+            height: 400px;
+           display: flex;
+         align-items: center;/*dikeyde ortala*/
+            
+
+        }
+        #page-title{
+            background-color: red;
+            width: 200px;
+            /*buradaki belitilen yazım tekniği sadece margin ile ilgili değilidr.*/
+           /* margin: 30px 50px 70px 90px; top rigth botttom left*/
+            /*margin: 10px;4 kenardan da 10px lik boşluk ver*/
+           /* margin: 30px 50px;ilki top ve botom ikincisi rigrt ve left*/
+            /*margin: 30px 50px 70px;ilki top ikincisi right bottom digerini de right olarak alıyor.*/
+            margin: 0px auto ;/*kutuyu ortalar*/
+        }
+        #page-subtitle
+        {
+            background-color: blue;
+            /*aşşagıdaki sıralama saat yönünde ilerler*/
+            margin-top: 30px;
+            margin-right: 50px;
+            margin-bottom: 70px;
+            margin-left: 90px;/*sadece soldan boşluk bırak*/
+        }
+        h1{
+            text-align: center;/*kutu içindeki yazıyı ortaladı*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        margin:Kurunun kenar çizgisinin dışındaki mesafe
+        padding:Kutunun kenar çizgisinin içerikle arsındaki mesafe
+        border:Kutunun kenar çizgisi
+
+    -->
+
+    <main>
+
+        <section id="page-title">
+            <h1>Hoşgeldiniz</h1>
+        </section>
+
+        <section id="page-subtitle">
+            <h2>Nasıl Çalışıyroyz</h2>
+        </section>
+
+    </main>
+</body>
+</html>

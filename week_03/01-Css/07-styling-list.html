@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Sample</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #page-title
+        {
+            background-color: darkslategray;
+            color: white;
+            width: 100%;
+            height: 400px;
+            padding: 10px;
+        }
+        #page-subtitle
+        {
+            background-color: crimson;
+            color: bisque;
+            padding: 10px;
+        }
+        .main-header
+        {
+            background-color: darkgoldenrod;
+           
+        }
+        .main-nav
+        {
+            display: inline-block;
+            text-align: right;
+            width: calc(100% - 199px); 
+           
+        }
+        .main-nav-items
+        {
+            list-style-type: none;
+        }
+        .main-nav-item
+        {
+            display: inline-block;
+            padding: 5px;
+            background-color: azure;
+        }
+        
+        .main-nav-items a{
+            text-decoration: none;
+            color: black;
+            
+        }
+        .main-header-logo
+        {
+            color: yellow;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            padding: 10px;
+
+
+        }
+
+        a:hover{
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+        <header class="main-header">
+            <a href="#" class="main-header-logo">Ögrenci Bilgi Sistemi</a>
+
+            <nav class="main-nav">
+                <ul class="main-nav-items">
+                   <li class="main-nav-item"><a href="#">Home</a></li>
+                   <li class="main-nav-item"><a href="#">Contact</a></li>
+                   <li class="main-nav-item"><a href="#">Abaout</a></li>
+                   
+                   
+                </ul>
+                <!-- <a href="#">Ögrenci Girişi</a>
+                <a href="#">Ögrenci Listesi</a>
+                <a href="#">Yardım</a> -->
+
+            </nav>
+
+        </header>
+
+        <main>
+            <section id="page-title">
+                <h1>Ögrenci sistemine hoş geldinz</h1>
+            </section>
+
+            <section id="page-subtitle">
+                <h2>Sayın kemal belge</h2>
+            </section>
+
+        </main>
+    </body>
+    </html>
