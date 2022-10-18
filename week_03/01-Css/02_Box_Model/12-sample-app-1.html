@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Application</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .container
+        {
+            height: 100vh;/*gözüken kısımde yüzde yüzünü kullansın dedeik*/
+           
+        }
+        .main-header
+        {
+            background-color: tomato;
+            padding: 8px 16px;
+        }
+        .main-header-logo
+        {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 21px;
+        }
+        .main-nav{
+            display: inline-block;
+            text-align: right;
+            width: calc(100% - 190px);
+        }
+        .main-nav-items
+        {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+        }
+        .main-nav-item
+        {
+            display: inline-block;
+           margin: 0px 10px;
+        }
+        .main-nav-item a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .main-nav-item a:hover{
+            color: rgb(38, 39, 59);
+        }
+        .main-nav-item-login a
+        {
+            background-color: teal;
+            padding: 4px 16px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+        }
+        .main-nav-item-login a:hover{
+            color: teal;
+            background-color: #fff;
+            border: 2px solid teal;
+
+        }
+        #showcase
+        {
+            background: url();
+            background-repeat: no-repeat;/*sürekliaynı resmi koyma dedeil*/
+            background-size: cover;/*içinde bulunduğu alanı kaplasın dedik*/
+
+            background-color:  rgb(38, 39, 59);
+            color: aliceblue;
+            padding:10px ;
+            width: 100%;
+             height: 80vh;/*cihazın ekran yüksekliğinin yüzde 80'inin kullanıyor*/
+        }
+        #how-it-works
+        {
+            background-color: tomato;
+            padding: 10px;
+            height: 13vh;/*cihazın ekran yüksekliğinin yüzde 13'ünü kullanıyor.*/
+        }
+       
+
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <header class="main-header">
+            <!--burası sayfanın üst ksımı-->
+            <a href="#" class="main-header-logo">Movie Application</a>
+            <nav class="main-nav">
+                <ul class="main-nav-items">
+                    <li class="main-nav-item"><a href="#">Home</a></li>
+                    <li class="main-nav-item"><a href="#">Movies</a></li>
+                    <li class="main-nav-item"><a href="#">Contact</a></li>
+                    <li class="main-nav-item main-nav-item-login"><a href="#">Login</a></li>
+
+
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <!--burası sayfanın ana içerik ksımı-->
+            <section id="showcase">
+                <h1>Welcome to movie Application</h1>
+            </section>
+            <section id="how-it-works">
+                <h2>How it works?</h2>
+            </section>
+
+        </main>
+    </div>
+    </body>
+    </html>

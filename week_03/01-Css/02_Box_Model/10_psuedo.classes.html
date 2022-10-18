@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo </title>
+    <style>
+        a{
+            border: 1px solid gray;
+            padding: 5px 8px;
+            display: inline-block;/*inline kalmasını ama bloklar gibi geniş olmasını saglıyor*/
+            width: 70px;
+            text-decoration: none;
+            text-align: center;
+           
+        }
+
+       a:link{/*daha önce ziyaret edilmiş linkleri gösterri*/
+            color: tomato;
+            background-color: white;
+       }
+       a:visited
+       {
+            color: tomato;
+            background-color: white;
+        
+       }
+        a:hover
+        {
+            color:white;
+            background-color: tomato;
+        }
+        /*üzeine basılı tutunca gözükür*/
+        /* a:active{     
+            color: white;
+            background-color: tomato;
+        } */
+        /*div'in üzerine geldiğinde p yi kırmızı yap*/
+        div:hover p{
+            /* color: red; */
+            display: block;
+        }
+        p{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="03_border.html">Border</a>
+    <a href="06-navbar.html">Navbar</a>
+    <a href="07-styling-list.html">Styling</a>
+    <br><br>
+
+    <div>
+        üzerime gelsene
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi alias obcaecati sed. Aut ratione deserunt ab distinctio est necessitatibus architecto hic nobis reprehenderit eum? Quae facilis quod, hic officiis, ea sapiente commodi aliquid nemo nostrum odit quo impedit soluta ab error numquam suscipit voluptas alias eveniet laudantium repellat sequi! Omnis!</p>
+
+
+    </div>
+</body>
+</html>

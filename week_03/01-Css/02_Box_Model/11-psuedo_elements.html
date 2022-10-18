@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo Elements</title>
+    <style>
+
+      
+        /*burdaki bütün paragrafların ilk satırına işlem yapar*/
+        p::first-line
+        {
+            font-weight: bold;
+            color: red;
+            word-spacing: 10px;/*kelimerlin arsındaki boşluku ayarlar*/
+            letter-spacing: 2px;/*harflerin arsındaki boşlugu ayaralar*/
+
+        }
+        /*myclass'ın ilk paragrafı yeşil olsun dedeil*/
+        p.myClass::first-line
+        {
+            color: green;
+        }
+      
+        /*seçtiğimiz yeri boyar*/
+        ::selection
+        {
+            background-color: yellow;
+            color: navy;
+            font-weight: bold;/*etki etmez*/
+            font-size: 30px;/*etki etmez*/
+        }
+          /*ilk harfi büyütür*/
+          p.myClass::first-letter
+        {
+            font-size: 48px;
+        }
+        /* after ve content ile herhnagi bir elementin sonuna bişey eklenir*/
+        p::after
+        {
+            content: "Bu yeni eklendi";
+            font-size: 48px;
+        }
+         /* before ve content ile herhnagi bir elementin sonuna bişey eklenir*/
+        p::before
+        {
+            content: "Bu da before ile eklendi";
+            font-size: 48px;
+        }
+
+
+       
+    </style>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga placeat id totam. Magnam modi deleniti porro maiores rem dolorum repellendus voluptatibus voluptatem consequuntur maxime repudiandae, blanditiis nobis voluptate optio nostrum!</p>
+
+        <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rem inventore necessitatibus accusamus in eligendi amet voluptate magni neque voluptates odio vel doloribus, sint dolorum? Laboriosam suscipit vitae numquam distinctio.</p>
+
+
+
+    </body>
+    </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .modal
+        {
+            width: 400px ;
+            height: 250px;
+            background-color: rgb(240, 238, 235);
+            border: 1px solid navy;
+            border-radius: 5px;
+            position: relative;
+            top:calc((100vh - 250px)/2);
+            left: calc((100% - 400px)/2);
+            /*yukarıdaki satırla aynı işi görür.*/
+            left: calc(50% - 200px);
+            padding: 5px;
+          
+        }
+        .x-button
+        {
+            top: 5px;
+            right: 5px;
+            position:absolute;
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+        }
+        .message
+        {
+            position:absolute;
+            top: 95px;
+            left: 65px;
+
+        }
+        .close-button
+        {
+            position: absolute;
+            bottom: 10px;
+            left: 185px;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 7px 10px;
+            border-radius: 5px;
+        }
+        .dikkat
+        { 
+            width: 200px;
+            height: 20px;
+            text-align: center;
+            padding: 5px;
+            font-size: 15px;
+            background-color: rgb(240, 238, 235);
+            color: red; 
+            border: 3px solid bisque;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="modal">
+            <div class="dikkat">Dikkat</div>
+            <button class="x-button">X</button>
+            <p class="message">Kapatmak için aşşagıdaki butona tıklayınız.</p>
+            <button class="close-button">Close</button>
+           
+        </div>
+    
+    </body>
+    </html>

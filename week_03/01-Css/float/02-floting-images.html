@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 2px solid red;
+
+        }
+        .resim{
+            width: 300px;
+            float: left;
+            margin-right: 10px;
+
+        }
+        .clearfix::after/*afterdan sonra bunları yap*/
+        {
+            content: " ";/*contenti boşalt*/
+            display: block;/* displayi blok yap*/
+            clear: both;/*clear'ı both yap*/
+        }
+    </style>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil aliquid ratione officiis neque? Odio quod sit quasi et animi repudiandae at, quis nam asperiores cumque dolore voluptatum temporibus eveniet!</p>
+
+        <p class="clearfix">
+
+            <img class="resim" src="/00_Images/features.jpeg" alt="" >
+            <span> <!--span divin aynısı sasadece inline-->
+                resim burdan başlıyor ipsum, dolor sit amet consectetur adipisicing elit. Doloremque corrupti nesciunt nostrum fugit, inventore possimus, corporis rerum modi aliquid unde autem sit dolorum totam maxime, minus ipsum aspernatur necessitatibus incidunt?
+            </span>
+
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non suscipit similique perspiciatis ipsum odio asperiores veniam optio vel molestias voluptates rerum illum necessitatibus, excepturi laboriosam quidem labore earum dicta iure.
+
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque ab corporis, numquam dignissimos dolorum quibusdam consequatur, sapiente voluptas possimus repellendus! Expedita, esse repellendus excepturi ipsa ex cum officia pariatur.
+
+
+                </span>
+            </span>
+        </p>
+
+        
+        <p>
+            <img  src="/00_Images/features.jpeg" alt="" width="50" >
+            <span> <!--span divin aynısı sasadece inline-->
+                resim burdan başlıyor ipsum, dolor sit amet consectetur adipisicing elit. Doloremque corrupti nesciunt nostrum fugit, inventore possimus, corporis rerum modi aliquid unde autem sit dolorum totam maxime, minus ipsum aspernatur necessitatibus incidunt?
+            </span>
+
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non suscipit similique perspiciatis ipsum odio asperiores veniam optio vel molestias voluptates rerum illum necessitatibus, excepturi laboriosam quidem labore earum dicta iure.
+
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi doloremque ab corporis, numquam dignissimos dolorum quibusdam consequatur, sapiente voluptas possimus repellendus! Expedita, esse repellendus excepturi ipsa ex cum officia pariatur.
+
+
+                </span>
+            </span>
+        </p>
+    </body>
+    </html>
