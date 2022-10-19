@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*bu class tüm butonlarımızın ortak özelliğini tanımlayacak*/
+        .btn
+        {
+            text-align:center;
+            text-decoration: none;
+            display: inline-block;
+            padding: 7px 15px;
+            font-size: 16px;
+            cursor: pointer;/*üzerine gelince impleçde el işareti çıkar*/
+            border: none;
+            border-radius: 3px;
+            transition-duration: 0.5s;/* butonların üzerine gelince değişim süresi*/
+
+        }
+        .btn-primary
+        {
+            background-color: #DD5353;
+            color: #EDDBC0;
+            border: 2px solid #DD5353 ;
+        }
+        .btn-primary:hover
+        {
+            background-color: #EDDBC0;
+            color:#DD5353 ;
+        }
+    </style>
+</head>
+<body>
+    <a class="btn btn-primary" href="#">Button</a>
+    <label for="" class="btn btn-primary">Button</label>
+</body>
+</html>

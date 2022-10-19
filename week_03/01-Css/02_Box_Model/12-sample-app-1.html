@@ -1,121 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Movie Application</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
-        body{
-            margin: 0px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+        body {
+            margin: 0px;
+            font-family: 'Roboto Condensed', sans-serif;
         }
-        .container
-        {
-            height: 100vh;/*gözüken kısımde yüzde yüzünü kullansın dedeik*/
-           
+
+        .container {
+            height: 100vh;
         }
-        .main-header
-        {
+
+        .main-header {
             background-color: tomato;
             padding: 8px 16px;
+
         }
-        .main-header-logo
-        {
+
+        .main-header-logo {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
             font-size: 21px;
         }
-        .main-nav{
+
+        .main-nav {
             display: inline-block;
             text-align: right;
             width: calc(100% - 190px);
         }
-        .main-nav-items
-        {
+
+        .main-nav-items {
             margin: 0px;
             padding: 0px;
-            list-style-type: none;
+            list-style: none;
+
         }
-        .main-nav-item
-        {
+
+        .main-nav-item {
             display: inline-block;
-           margin: 0px 10px;
+            margin: 0px 10px;
         }
-        .main-nav-item a{
+
+        .main-nav-item a {
             text-decoration: none;
             color: #fff;
         }
-        .main-nav-item a:hover{
+
+        .main-nav-item a:hover {
             color: rgb(38, 39, 59);
         }
-        .main-nav-item-login a
-        {
+
+        .main-nav-item-login a {
             background-color: teal;
             padding: 4px 16px;
             border-radius: 8px;
             border: 2px solid #fff;
         }
-        .main-nav-item-login a:hover{
+
+        .main-nav-item-login a:hover {
             color: teal;
             background-color: #fff;
             border: 2px solid teal;
-
         }
-        #showcase
-        {
-            background: url();
-            background-repeat: no-repeat;/*sürekliaynı resmi koyma dedeil*/
-            background-size: cover;/*içinde bulunduğu alanı kaplasın dedik*/
 
-            background-color:  rgb(38, 39, 59);
+        #showcase {
+            background: url('/00_Images/home-bg.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-color: rgb(38, 39, 59);
             color: aliceblue;
-            padding:10px ;
-            width: 100%;
-             height: 80vh;/*cihazın ekran yüksekliğinin yüzde 80'inin kullanıyor*/
-        }
-        #how-it-works
-        {
-            background-color: tomato;
             padding: 10px;
-            height: 13vh;/*cihazın ekran yüksekliğinin yüzde 13'ünü kullanıyor.*/
+            width: 100%;
+            height: 60vh;
         }
-       
 
+        #showcase h1 {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: inline;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #how-it-works {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #how-it-works h2 {
+            color: #3e4555;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .row {
+            margin-bottom: 40px;
+        }
+
+        .col {
+            display: inline-block;
+            width: 30%;
+            margin: 8px;
+            padding: 16px;
+        }
+
+        .icon-box i {
+            color: tomato;
+            font-size: 50px;
+            border-radius: 5px;
+        }
+
+        .icon-box h3 {
+            color: #3e4555;
+            font-size: 22px;
+        }
     </style>
-    </head>
-    <body>
-        <div class="container">
+</head>
+
+<body>
+    <div class="container">
         <header class="main-header">
-            <!--burası sayfanın üst ksımı-->
+            <!-- Burası sayfamızın üst kısmı -->
             <a href="#" class="main-header-logo">Movie Application</a>
             <nav class="main-nav">
                 <ul class="main-nav-items">
                     <li class="main-nav-item"><a href="#">Home</a></li>
                     <li class="main-nav-item"><a href="#">Movies</a></li>
                     <li class="main-nav-item"><a href="#">Contact</a></li>
-                    <li class="main-nav-item main-nav-item-login"><a href="#">Login</a></li>
-
-
+                    <li class="main-nav-item main-nav-item-login"><a href="#"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+                    </li>
                 </ul>
             </nav>
-
         </header>
         <main>
-            <!--burası sayfanın ana içerik ksımı-->
+            <!-- Burası sayfamızın ana içerik kısmı -->
             <section id="showcase">
-                <h1>Welcome to movie Application</h1>
+                <h1>Welcome to Movie Application</h1>
             </section>
             <section id="how-it-works">
-                <h2>How it works?</h2>
-            </section>
+                <div class="row">
+                    <h2>How it works?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam debitis nostrum esse velit aliquid
+                        vitae nesciunt hic excepturi deserunt beatae voluptas quasi ut, ratione voluptate placeat
+                        laboriosam nihil libero eius.</p>
+                </div>
+                <div class="row">
+                    <div class="icon-box col">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <h3>Register</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad asperiores porro, minus nam at
+                            ea iusto, temporibus alias aut illo corporis? Rem debitis ad autem. Quod in dolorem officia
+                            voluptatem?</p>
+                    </div>
+                    <div class="icon-box col">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <h3>Choose a Plan</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad asperiores porro, minus nam at
+                            ea iusto, temporibus alias aut illo corporis? Rem debitis ad autem. Quod in dolorem officia
+                            voluptatem?</p>
+                    </div>
+                    <div class="icon-box col">
+                        <i class="fa-brands fa-github"></i>
+                        <h3>Enjoy Movies</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad asperiores porro, minus nam at
+                            ea iusto, temporibus alias aut illo corporis? Rem debitis ad autem. Quod in dolorem officia
+                            voluptatem?</p>
+                    </div>
+                </div>
 
+            </section>
         </main>
     </div>
-    </body>
-    </html>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+
+        .flex-container
+        {
+            height: 400px;
+            background-color: navy;
+            display: flex;
+            
+
+        }
+        .flex-item
+        {
+            background-color: red;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 22px;
+            width: 15%;
+        }
+
+
+
+             /* bu flex yapısına sahip olanherşeyi bir satır boyunca aynı satıra koy yan yana*/
+            /* flex-direction:row; */
+            /*tek bir kolona yerleştir diyoruz*/
+            /* flex-direction: column; */
+            /*column-reverse:colum ile aynı şekilde çalışır flex-item ları ters sıra ile yerleştiri*/
+            /* flex-direction: column-reverse; */
+            /*row-reverse:row ile aynı şekilde çalışır flex-item ları ters sıra ile yerleştiri*/
+            /* flex-direction: row-reverse; */
+            /* nowrap:bir satıra sıgmayan flex-item lar olursa aynı satıra devam eder. yani alt satıra geçmez */
+            /* flex-wrap: nowrap; */
+            /* wrap:bir satıra sıgmayan olursa alt satıra geçerek devam eder */
+            /* flex-wrap: wrap; */
+            /* wrap-reverse:flex-itemları ters sıraya geçiripsatıra sıgmayanları üst satırdan devam ettirir */
+            /* flex-wrap: wrap-reverse; */
+
+             /* flex-direction: column;
+            flex-wrap: wrap; */
+
+              /* flex-direction: row;
+            flex-wrap: wrap; */
+            /*üstttekinin tek satır hali*/
+            /* flex-flow:row wrap; */
+
+              /*ortaladı*/
+            /* justify-content: center; */
+
+            /*saga hizalar*/
+            /* justify-content: flex-end; */
+
+            /*sola hizalar*/
+            /* justify-content: flex-start; */
+
+              /*aralarında boşluk bırakarak hizalar*/
+           /* justify-content: space-around; */
+
+             /*birinciyi ve sonuncuyu sola saga dayandı digerlerini aynı boşlukta bıraktı*/
+         /* justify-content: space-between; */
+
+
+           /*dikeyde hizaladı*/
+            /* align-items: center; */
+
+            /*altta hizalar*/
+            /* align-items: flex-end; */
+
+            /*sag alt köşeye hizala*/
+            /* justify-content: flex-end;
+            align-items: flex-end; */
+
+            /*tam merkeze ortalar*/
+            /* justify-content: center;
+            align-items: center; */
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+
+        <!--flex-shrink daraltma işmeli yapıyor-->
+        <!-- <div  style="" class="flex-item">1</div>
+        <div  style="" class="flex-item">2</div>
+        <div  style="" class="flex-item">3</div>
+        <div  style="" class="flex-item">4</div>
+        <div  style="" class="flex-item">5</div>
+        <div  style="flex-shrink: 5;" class="flex-item">6</div> -->
+
+        <!--flex-grow ile 1 birim uzunluk verdi digerine 2 br verdi-->
+        <!-- <div  style="flex-grow:1;" class="flex-item">1</div>
+        <div  style="flex-grow:1;" class="flex-item">2</div>
+        <div  style="flex-grow:1;" class="flex-item">3</div>
+        <div  style="flex-grow:2;" class="flex-item">4</div>
+        <div  style="flex-grow:2;" class="flex-item">5</div>
+        <div  style="flex-grow:2;" class="flex-item">6</div> -->
+
+        <!-- <div style="order:2;" class="flex-item">1</div>
+        <div style="order:4;" class="flex-item">2</div>
+        <div style="order:6;" class="flex-item">3</div>
+        <div style="order:5;" class="flex-item">4</div>
+        <div style="order:3;" class="flex-item">5</div>
+        <div style="order:1;" class="flex-item">6</div> -->
+
+        <!-- <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+        <div class="flex-item">11</div>
+        <div class="flex-item">12</div> -->
+    </div>
+</body>
+</html>
