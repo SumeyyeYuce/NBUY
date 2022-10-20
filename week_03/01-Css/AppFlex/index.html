@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+        .container
+        {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+          
+           
+            
+        }
+        .header, .footer
+        {
+            background-color: #002B58;
+            padding-left: 20px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+
+        }
+        .footer{
+            height: 60px;
+            color:#fff ;
+        }
+        .header h1{
+            color: #FEC260;
+            font-size: 60px;
+        }
+        .content
+        {
+            display: flex;
+            flex-direction: column; 
+            margin-top: 10px;
+            height:calc(100vh - 210px);
+            
+        }
+        .content-left
+        {
+            width: 25%;
+           
+        }
+        .content-left ul{
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+           
+
+        }
+        .content-left ul li{
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background-color: #256D85;
+            color: #fff;
+        }
+        .content-left ul li:hover{
+            cursor: pointer;/*üzerine gelince link gözüksün*/
+            background-color:#2B4865 ;
+        }
+        .content-rigth
+        {
+            width: 75%;
+             /*padding-left: 15px;*/
+            /*row-reverse kullanıcaksak bunu kullanıcaz*/
+             padding-right: 15px; 
+           
+           
+        }
+        .content-rigth h1
+        {
+            color: #002B5B;
+            margin: 0px;
+        }
+        @media (max-width:657px)
+        {
+            .header
+            {
+                height:50px; 
+                position: relative;
+                top: 560px;
+            }
+            .header h1
+            {
+                font-size: 20px;
+            }
+            .content-left
+            {
+               
+                width: auto !important;
+                
+                
+            }
+            .content-left ul
+            {   display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+            }
+            .content-rigth
+            {
+                width: 85%;
+            }
+            .content-rigth h1
+            {
+                
+                font-size: 20px;
+            }
+            .content-rigth p
+            {
+                font-size: 15px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Frontend Dersleri</h1>
+            </div>
+
+            <div class="content">
+                <div class="content-left">
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+
+                <div class="content-rigth">
+                    <h1>Uygulama Geliştirici Egitimi</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, blanditiis autem sunt mollitia odit nesciunt vitae, totam illum eum omnis laborum neque excepturi minus ad fugit et nisi, minima laudantium!</p>
+
+
+                </div>
+
+            </div>
+
+
+            <div  class="footer">
+              Bu sayfa BAU Wissen Akademie Ögrencileri tarafından yapıldı
+            </div>
+        </div>
+    </body>
+    </html>
