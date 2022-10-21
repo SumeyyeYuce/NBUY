@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/02-Lessons/css/bootstrap.min.css">
+    <title>Bootstrap</title>
+</head>
+<body class="p-4">
+    <ul class="list-unstyled"> <!--yandaki noktalar kalkar list-undstyled-->
+        <li>Çok Satanlar</li>
+        <li>Roman</li>
+        <li>Hikaye</li>
+        <li>Başvuru</li>
+        <li>Çoçuk</li>
+    </ul>
+
+    <ul class="list-inline"> <!--yan yana dizer list-inline (alttakiler de list-inline-item koy)-->
+        <li class="list-inline-item">Çok Satanlar</li>
+        <li class="list-inline-item">Roman</li>
+        <li class="list-inline-item">Hikaye</li>
+        <li class="list-inline-item">Başvuru</li>
+        <li class="list-inline-item">Çoçuk</li>
+    </ul>
+
+    <ul class="list-group"> <!--yandaki noktalar kalkar list-undstyled-->
+        <li class="list-group-item">Çok Satanlar</li>
+        <li class="list-group-item">Roman</li>
+        <li class="list-group-item">Hikaye</li>
+        <li class="list-group-item">Başvuru</li>
+        <li class="list-group-item">Çoçuk</li>
+    </ul>
+<br><br>
+    
+    <ul class="list-group"> <!--üstüne gittiğnde renk değişimi-->
+        <li class="list-group-item list-group-item-action">Çok Satanlar</li>
+        <li class="list-group-item list-group-item-action">Roman</li>
+        <li class="list-group-item list-group-item-action active">Hikaye</li> <!--active eklemek seçili olması demek-->
+        <li class="list-group-item list-group-item-action">Başvuru</li>
+        <li class="list-group-item list-group-item-action">Çoçuk</li>
+    </ul>
+
+    <br><br><br>
+
+    <table class="table table-bordered w-50 table-striped">
+        <!--başlık bölümü-->
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>Sıra</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Yaş</th>
+            </tr>
+        </thead>
+        <!--içerik-->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Kemal</td>
+                <td>Sucu</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cemal</td>
+                <td>kapıcı</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>selen</td>
+                <td>AK</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>filiz</td>
+                <td>bakın</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script src="/02-Lessons/js/bootstrap.min.js"></script>
+</body>
+</html>

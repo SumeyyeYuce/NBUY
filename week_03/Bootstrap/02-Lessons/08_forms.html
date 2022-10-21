@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/02-Lessons/css/bootstrap.min.css">
+    <title>Forms</title>
+</head>
+<body class="p-4">
+    <!--col-form-label düzgün hizalama-->
+    <!--formun özel clasıı yok içinde ne yaparsan yapıysun-->
+    <!--form-check-input farklı gösterim-->
+    <form>
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="" class="col-form-label">Ad Soyad:</label>
+            </div>
+
+            <div class="col-8">
+                <input type="text" class="form-control">
+            </div>
+            
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="" class="col-form-label">Yaşadığı Yer:</label>
+            </div>
+
+            <div class="col-8">
+               <select name="" class="form-select">
+                    <option>İstanbul</option>
+                    <option>Ankara</option>
+                    <option>İzmir</option>
+               </select>
+            </div>
+            
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4">
+                <label for="" class="col-form-label">Medeni duurm</label>
+            </div>
+
+            <div class="col-8">
+                <input type="radio" name="medenidurum" class="form-check-input">
+                <label for=""  class="form-check-label">Bekar</label>
+
+                <input type="radio" name="medenidurum" class="form-check-input">
+                <label for="" class="form-check-label">Evli</label>
+                
+
+            </div>
+            
+        </div>
+
+        <div class="row mb-2">
+
+            <div class="col-4"></div>
+            <div class="col-8">
+                <button type="submit" class="btn btn-success">Kaydet</button>
+            </div>
+        </div>
+       
+    </form>
+    
+    <script src="/02-Lessons/js/bootstrap.min.js"></script>
+</body>
+</html>
