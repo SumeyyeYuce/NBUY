@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <title>Document</title>
      <!--collapse yazılan şeyin gözükmemesini saglıyor-->
-     <!-- data-bs-toogle (göster gizle nin collpse işlemi yapmasını saglıyoruz.eger görünürse gizle gizleyse görüntüle diyoruz)(true-false)-->
+     <!-- data-bs-toggle (göster gizle nin collpse işlemi yapmasını saglıyoruz.eger görünürse gizle gizleyse görüntüle diyoruz)(true-false)-->
      <!--data-bs-target=""  butonun href özlliği olmadıgı için butona bu şeikde komut verip id sini gösteriyoruz-->
      <!--accordion (sık sorulan 3 soru gibi düşün tıklayınca bir tanei açılıyor)-->
      <!--data-bs-parent="#myAccordion" bu komutu kaldırdıgımızda bir tane accordiona tıkladıgımızda otomatik digerleri kapanmaz açık kalır-->
@@ -93,7 +93,11 @@
             </div>
         </div>
 
+        <button type="button" class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#deneme">Göster</button>
 
+     <div class="collapse" id="deneme">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+     </div>
 
 
 

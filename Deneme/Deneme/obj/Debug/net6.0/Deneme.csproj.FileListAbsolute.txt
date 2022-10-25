@@ -1,0 +1,15 @@
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/bin/Debug/net6.0/Deneme
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/bin/Debug/net6.0/Deneme.deps.json
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/bin/Debug/net6.0/Deneme.runtimeconfig.json
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/bin/Debug/net6.0/Deneme.dll
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/bin/Debug/net6.0/Deneme.pdb
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.csproj.AssemblyReference.cache
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.AssemblyInfoInputs.cache
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.AssemblyInfo.cs
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.csproj.CoreCompileInputs.cache
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.dll
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/refint/Deneme.dll
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.pdb
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/Deneme.genruntimeconfig.cache
+/Users/sumeyye/Desktop/NBUY/Deneme/Deneme/obj/Debug/net6.0/ref/Deneme.dll

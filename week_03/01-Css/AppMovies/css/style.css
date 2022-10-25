@@ -68,7 +68,7 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
-    background: linear-gradient(to top left,rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url('/images/home-bg.jpeg');
+    background: linear-gradient(to top left,rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url('/AppMovies/images/home-bg.jpeg');
     background-position: center;
     background-size: cover;
     background-color: rgb(38, 39, 59);
@@ -120,7 +120,7 @@ body {
 }
 .featurs-left
 {
-    background: url("/images/features.jpeg");
+    background: url("/AppMovies/images/features.jpeg");
     background-position: top center;
     background-size: cover;
 }
