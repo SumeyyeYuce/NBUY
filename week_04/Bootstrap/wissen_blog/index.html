@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Wissen Blog Home</title>
+    <!--navbar-brand menü deki iletişim marka gibi şeyler için kullanılır-->
+    <!--nav-item li leri yan yan getiircek-->
+    <!--navbar-nav ul nin içine navbar olucagını söylüyoruz-->
+    <!--navbar-collapse (sayf BELLİ BİR BOYUTTDA DARALIRSA FARKLI ŞEKLE GİRSİN ALTA ALTA 3 NOKTA (3 nokta butonu koymamız lazım))-->
+    <!--<navbar-toggler navbar için toggle (true/false)-->
+    <!--navbar-toggler-icon (3 çizgi icomnu)  -->
+    <!--navbar-expand-md (sayfa belli bir px den küçük oldugunda çalışsın dedik)  -->
+    <!--active (o sayfadayken orası aktif olsun dedik)  -->
+    <!--nav-link (a ların navbar da link oldugunu söyledik)  -->
+    <!--<form action=""></form> bu tarz aramlarda form kullanılır  -->
+    <!--form-control (text clası veriyor içine bişey yazabilirizi)  -->
+    <!--me-auto (içinde bulundugu yerin boşluğu kadar boşluk ver dedik)  -->
+    <!--text-center (herşeyi ortala dedik)  -->
+    <!--border-bottom(aşşagıya çizgi koyduk)  -->
+    <!--lead (header ın latındaki yazı(yazı tipi faln de değişiyor) )  -->
+    <!--col-md-6 (6 kolonluk yer kullansın dedeik (sadece paragraf 6 kolonluk yer kullansın dedik))  -->
+    <!--d-md-flex justify-content-md-center (butonları ortaladık)  -->
+    <!--gap-md-2 -> flex-itemın içinde kaçtane birşe varsa bolşluk bırak demek-->
+    <!--flex-sm-column (sm oldugunda column olsun diyoruz butonlar için)  -->
+    <!--flex-sm-row (butonlar sm den daha küçük hale geldiğinde alt alta column olsun dedik)  -->
+    <!--btn-lg (buton boyutlarını büyüttük)  -->
+    <!--overflow-hidden (resmin taşan kısmını gizle dedik)   -->
+    <!-- mx-auto (sag ve sola kalan boşlugu otomatik olarak dagıt demek)  -->
+    <!--fixed-top (eger böyle yaparsak navbar akışın dışında bırakılıyor ama (sticky-top) yaparsak navbarın latından header başlıyor)  -->
+    <!--row-cols-1 (1 satır 1 kolon demek)  -->
+    <!--row-cols-lg-3 (lg boyutunda olunca 3 kolon gözküsün)  -->
+    <!--row-col-md-2 (md boyutunda oldugunda ise 2 kolon gözüksün)  -->
+    <!--card-img-top(carın içinde resmi üste koy dedeik) -->
+    <!--object-fit:cover (resmi içinde bulunduğu yerde tam kapla dedik)  -->
+    <!--  -->
+
+    </head>
+    <body>
+        <div class="container-fluid m-0 p-0">
+          <!--navbar-->
+            <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand"><i class="fa-solid fa-house"></i></a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mobile-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div id="mobile-menu" class="navbar-collapse collapse">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                            <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+                        </ul>
+                 
+
+                    <form id="search" class="d-flex">
+                        <input type="text" class="form-control me-2" placeholder="Search">
+                        <button type="submit" class="btn btn-warning"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+
+                </div>
+
+            </nav>
+
+            <!--header-->
+            <header>
+                <div class="text-center border-bottom px-5 mt-5 pt-5">
+                    <h1 class="display-4 fw-bold">Wissen Blog</h1>
+                    <div class="col-md-6 mx-auto">
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus beatae, adipisci aut non reprehenderit expedita, error eos eligendi impedit quibusdam explicabo. Doloribus quaerat maxime alias, provident magnam in deleniti!</p>
+
+                    <div class="pt-4 d-flex flex-column justify-content-center gap-2 flex-sm-row ">
+                        <button class="btn btn-primary btn-lg">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Detay</button>
+                        <button class="btn btn-success btn-lg">
+                            <i class="fa-solid fa-caret-right"></i>
+                            İndir</button>
+                    </div>
+
+                    <div class="overflow-hidden mt-5" style="max-height:30vh;">
+
+                        <div class="container">
+                            <img src="/img/bg2.png" class="img-fluid border rounded-3 shadow-lg" width="700" height="500">
+                        </div>
+
+                    </div>
+                 </div>
+                </div>
+            </header>
+
+            <!--Main(ana içerik)-->
+            <main>
+                <div class="bg-dark text-center text-white py-5">
+                   <div class="py-5">
+                    <h1 class="display-5 fw-bold">Lorem, ipsum.</h1>
+                    <div class="col-md-6 mx-auto">
+                      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora amet quaerat vero quas quo eum ullam magnam, cumque ex similique deleniti aperiam harum consequatur inventore repudiandae dolorem architecto quod porro?</p>
+
+                      <div class="pt-4 px-5 d-flex flex-column justify-content-center gap-2 flex-sm-row ">
+                        <button class="btn btn-outline-warning btn-lg">
+                            <i class="fa-solid fa-caret-right"></i>
+                            Detay</button>
+                        <button class="btn btn-outline-light btn-lg">
+                            <i class="fa-solid fa-caret-right"></i>
+                            İndir</button>
+                    </div>
+
+                    </div>
+                   </div>
+                </div>
+
+                <div class="container my-4">
+                    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-3">
+                        <div class="col">
+                            <div class="card shadow-lg">        
+                            <img src="/img/1.jpeg" class="card-img-top">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem, ipsum.</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, id!</p>
+
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-lg">        
+                            <img src="/img/2.jpeg" class="card-img-top">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem, ipsum.</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, id!</p>
+
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-lg">        
+                            <img src="/img/3.jpeg" class="card-img-top">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem, ipsum.</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, id!</p>
+
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-lg">        
+                            <img src="/img/4.jpeg" class="card-img-top">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem, ipsum.</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, id!</p>
+
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-lg">        
+                            <img src="/img/5.jpeg" class="card-img-top">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem, ipsum.</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, id!</p>
+
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-lg">        
+                            <img src="/img/6.jpeg" class="card-img-top">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem, ipsum.</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, id!</p>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!--footer-->
+
+            <footer class="bg-dark text-white py-3">
+                <div class="container text-center">
+                    <span>Bau Wissen Akademie Ögrencileri Tarafından Tasarlanmıştır.@2022</span>
+                </div>
+            </footer>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+</body>
+</html>

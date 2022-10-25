@@ -1,0 +1,10 @@
+.navbar, .bg-dark
+{
+    background-color: #085E7D !important; /*important yazmamızın nedeni bu kodu önceliklendir demek*/
+}
+.card-img-top
+{
+    width:100%; 
+    height:35vh; 
+    object-fit: cover;
+}
