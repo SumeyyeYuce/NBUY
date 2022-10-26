@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--onclick="alert('Merhaba Javascript')" bu tarzda html eventlerinin içine yazabiliriz -->
+    <!--onclick="console.log('Burası konsol')" inceledki konsol ekranında gözükür -->
+    <!--onclick="Tikla()" (burada app.js deki yazdığımız kodu çagırdık) -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+</head>
+<body>
+    <button type="submit" onclick="alert('Merhaba Javascript')">Selam Ver</button>
+    <button type="submit" onclick="console.log('Burası konsol')">Bana Tıkla</button>
+    <button type="button" onclick="selamVer()">Fonsksiyonu Çagır</button>
+    <button type="button" onclick="Tikla()">Hadi bunuda çagır</button>
+
+
+
+    <!--bu şekilde javascript kodlarını da yazabilirz-->
+    <script>
+        console.log('işde burası script etiketlerinin arası!')
+        function selamVer(){
+            alert('işte bu da bir function')
+        }
+        
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
