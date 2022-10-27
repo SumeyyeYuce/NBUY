@@ -54,17 +54,39 @@
 // console.log(sonuc);
 
 
-let ogrenciler = ['Cemre','Melahat', 'Sema', 'HasanCAN'];
+// let ogrenciler = ['Cemre','Melahat', 'Sema', 'HasanCAN'];
+// let sonuc;
+// ogrenciler[4]='Serhat';
+// ogrenciler.push('Aylin');//bir dizinin en sonuna eleman ekler push
+// ogrenciler.pop();//dizinin içindeki son elamanı siler.
+
+
+// sonuc=ogrenciler.push('Aylin');//dizinin son eleman sayısı
+// sonuc = ogrenciler.pop();//sondaki hangi elamnı sildiğini gösterir.
+// sonuc =ogrenciler.unshift('Aylin');//Dizinin en başına elaman ekler.
+
+
+// console.log(ogrenciler);
+// console.log(sonuc);
+
 let sonuc;
-ogrenciler[4]='Serhat';
-ogrenciler.push('Aylin');//bir dizinin en sonuna eleman ekler push
-ogrenciler.pop();//dizinin içindeki son elamanı siler.
+let markalar1 = ['mazda','toyota','mercedes'];
+let markalar2 =['Opel','BMW'];
+let markalar3 = ['ford'];
+console.log('MARKLAR1:' + markalar1);
+console.log('MARKLAR2:' + markalar2);
+console.log('MARKLAR3:' + markalar3);
 
 
-sonuc=ogrenciler.push('Aylin');//dizinin son eleman sayısı
-sonuc = ogrenciler.pop();//sondaki hangi elamnı sildiğini gösterir.
-sonuc =ogrenciler.unshift('Aylin');//Dizinin en başına elaman ekler.
+sonuc = markalar1.concat(markalar2);//marklaar1 ile marklar2 yi bu şekilde(concat(markalar)) birlşetirebiliyoruz
+sonuc = markalar1.concat(markalar2,markalar3)
+console.log('Sonuc:' +sonuc);
+ikinciDizi = sonuc.splice(0,3)
 
+// sonuc = markalar1.splice(0,1);//silinecek olanı söylüyoruz kaçtan başlayaıp kaça kadar oldugunu söylüyoruz.
+// console.log('Sonuc:' +sonuc);
+// sonuc.splice(0,4);
+console.log('Sonuc:' +sonuc);
+console.log('ikincidizi:' +ikinciDizi);
 
-console.log(ogrenciler);
-console.log(sonuc);
+// console.log('MARKLAR1:' + markalar1);
