@@ -7,3 +7,133 @@
     width: 40%;
     height: 25px;
 }
+.form_height
+{
+    width:80% ;
+    height:45px;
+}
+.nav_menu
+{
+    background-color: #89B399;
+}
+.card-box
+{
+    transition: 0.5s;
+}
+.card-box:hover
+{
+    -ms-transform: scale(1.1); 
+   -webkit-transform: scale(1.1); 
+    transform: scale(1.1); 
+    
+    
+}
+.dropdown-menu li a:hover
+{
+   
+    background-color: black;
+}
+
+.nav-item2:hover
+{ 
+    background-color: #70b288;
+}
+
+.foto1
+{
+    height: 70%;
+}
+.anafoto
+{
+    width: 85%;
+    height: 400px;
+}
+.box
+{
+    width: 45%;
+    height: 50%;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 28%;
+    border: 1px solid rgba(46,76, 109,0.4) ;
+    background-color: white;
+   
+}
+.btn-black:hover
+{
+    background-color: black;
+}
+.h4-baslık:hover{
+    color: #89B399;
+}
+.blogger-p
+{
+    font-size: 13px;
+}
+.populer-p
+{
+    font-size: 12px;
+}
+.populer-p:hover
+{
+    color: #89B399;
+}
+.facb2-p
+{
+    font-size: 14px;
+}
+.featured-p
+{
+    font-size: 13px;
+}
+.footer-nav-a
+{
+    font-size: 14px;
+}
+.footer-nav-a:hover
+{
+    color: #89B399;
+}
+.hover-alan
+{
+    width: 100%;
+    height: 530px;
+    border: 1px solid red;  
+    
+}
+/* .gorunmez-alan
+{
+    visibility: hidden;
+}
+
+.gorunmez-alan:hover
+{
+    visibility: inherit;
+    background-color: #70b288;
+} */
+
+
+/* .hover-alan
+{
+    visibility: hidden;
+}
+
+.hover-alan:hover
+{
+    visibility: inherit;
+    background-color: aqua;
+} */
+
+.footer-milano
+{
+    color: #89B399;
+}
+.footerr
+{
+    background-color: #00020a;
+}
+.footer-blg:hover
+{
+    color:#89B399;
+    text-decoration: none;
+}
