@@ -1,0 +1,15 @@
+/*dropdowun ordaki oku kladırdık*/
+.dropdown-toggle::after{
+    display: none;
+}
+
+/*3 noktalı divi sag dayadık*/
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task label.checked{
+    text-decoration: line-through;
+}

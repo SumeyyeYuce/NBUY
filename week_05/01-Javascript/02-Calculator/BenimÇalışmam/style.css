@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;/*tüm yazı tiplerini orantılı bişekilde değiştirbilicez*/
+}
+
+body{
+    font-size: 1.5rem;
+}
+.calculator
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*dikeyde ve yatayda ortaladı*/
+}
+.calculator-input{
+    width: 100%;
+    height: 70px;
+    font-size: 4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+    background-color: #252525;
+    color: #fff;
+}
+button
+{
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;/*üzerine gelince el işareti çıksın*/
+}
+
+button:hover{
+    background-color: #eaeaea;
+}
+.calculator-keys
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);/*reaple 4 kolan tekrarla herbiri 25 genişliğinde olsun. sonra 1 fr ile  4 kolunda herbiri 1 br olucak şekilde paylaşşsın*/
+    grid-gap: 20px;
+    padding: 20px;
+}
+.operator
+{
+    color: #336cac;
+}
+.decimal{
+
+}
+.clear{
+    background-color: #f0595f;
+    color: #fff;
+
+}
+.clear:hover{
+    background-color: #f17377;
+}
+.equal-sign
+{
+    background-color: #336cac;
+    color: #fff;
+    grid-area:2/4/6/5 ;/*bu yapıyla hangi satır hangi sütuna gidicegini söylüyoruz 2.satır 4.sutuna git dedik*/
+    height: 100%;
+}
+.equal-sign:hover{
+    background-color: #2e86c0;
+}

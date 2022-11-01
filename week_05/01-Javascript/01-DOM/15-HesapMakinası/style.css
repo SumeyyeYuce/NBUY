@@ -1,0 +1,105 @@
+.container
+{
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    width: 25%;
+    height: 350px;
+    margin-top: 20px;
+    border: 1px solid red;
+    background-color: white;
+}
+.text-top
+{
+    width: 98%;
+    height: 15%;
+    background-color: black;
+    color: white;
+}
+.row1
+{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+.artı{
+    width: 17%;
+    height: 34px;
+    border: 1px solid gray;
+    justify-content: center;
+    text-align: center;
+
+}
+.eksi{
+    width: 17%;
+    height: 34px;
+    border: 1px solid gray;
+    justify-content: center;
+    text-align: center;
+    /* margin-left: 15px; */
+}
+.çarpı{
+    width: 17%;
+    height: 34px;
+    border: 1px solid gray;
+    justify-content: center;
+    text-align: center;
+    /* margin-left: 15px; */
+}
+.bölme{
+    width: 17%;
+    height: 34px;
+    border: 1px solid gray;
+    justify-content: center;
+    text-align: center;
+    /* margin-left: 15px; */
+}
+.row2
+{
+    display: flex;
+    width: 75%;
+    height: 65%;
+    border: 1px solid blue;
+    margin-top: 10px;
+   
+}
+.sol{
+   
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.yedi
+{
+    width: 56px;
+    height: 34px;
+    border: 1px solid gray;
+    margin-left: 20px;   
+}
+.sekiz{
+    width: 56px;
+    height: 34px;
+    border: 1px solid gray;
+    margin-left: 24px;   
+}
+.dokuz
+{
+    width: 56px;
+    height: 34px;
+    border: 1px solid gray;
+    margin-left: 24px;   
+}
+.dort
+{
+    width: 56px;
+    height: 34px;
+    border: 1px solid gray;
+    margin-left: 20px;  
+    
+}
