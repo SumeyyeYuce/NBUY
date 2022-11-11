@@ -45,50 +45,50 @@ class Program
         }
     }
 
-    // static void  CustomerList()
-    // {
-    //        List<Customers> cumtomers = GetAllCustomers();
-    //     foreach (var customer in cumtomers)
-    //     {
-    //         Console.WriteLine($"Id:{customer.Id}, Name:{customer.Name}, City:{customer.City}, Country:{customer.Country}");
-    //     }
-    // }
+    static void  CustomerList()
+    {
+           List<Customers> cumtomers = GetAllCustomers();
+        foreach (var customer in cumtomers)
+        {
+            Console.WriteLine($"Id:{customer.Id}, Name:{customer.Name}, City:{customer.City}, Country:{customer.Country}");
+        }
+    }
 
    
     // static List<Customers> GetAllCustomers()
     // {
-    //      List<Customers> customers = new List<Customers>();
-    //     using (var connection=GetSqlConnection())
-    //     {
-    //         try
-    //         {
-    //             connection.Open();
-    //             string queryString="SELECT CustomerID,CompanyName,City,Country FROM Customers";
-    //             SqlCommand sqlCommand = new SqlCommand(queryString,connection);
-    //             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-    //             while (sqlDataReader.Read())
-    //             {
-    //                customers.Add(new Customers(){
-    //                     Id=sqlDataReader["CustomerID"].ToString(),
-    //                     Name=sqlDataReader["CompanyName"].ToString(),
-    //                     City=sqlDataReader["City"].ToString(),
-    //                     Country=sqlDataReader["Country"].ToString()
+        //  List<Customers> customers = new List<Customers>();
+        // using (var connection=GetSqlConnection())
+        // {
+        //     try
+        //     {
+        //         connection.Open();
+        //         string queryString="SELECT CustomerID,CompanyName,City,Country FROM Customers";
+        //         SqlCommand sqlCommand = new SqlCommand(queryString,connection);
+        //         SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+        //         while (sqlDataReader.Read())
+        //         {
+        //            customers.Add(new Customers(){
+        //                 Id=sqlDataReader["CustomerID"].ToString(),
+        //                 Name=sqlDataReader["CompanyName"].ToString(),
+        //                 City=sqlDataReader["City"].ToString(),
+        //                 Country=sqlDataReader["Country"].ToString()
 
-    //                });
-    //             }
-    //             sqlDataReader.Close();
-    //         }
-    //         catch (Exception)
-    //         {
-    //             Console.WriteLine("Bir sorun oluştu");
+        //            });
+        //         }
+        //         sqlDataReader.Close();
+        //     }
+        //     catch (Exception)
+        //     {
+        //         Console.WriteLine("Bir sorun oluştu");
                 
-    //         }
-    //         finally
-    //         {
-    //             connection.Close();
-    //         }
-    //     }
-    //     return customers;
+        //     }
+        //     finally
+        //     {
+        //         connection.Close();
+        //     }
+        // }
+        // return customers;
     // }
 
 

@@ -14,6 +14,6 @@ namespace Proje05_KatmanliMimari.DataAccessLayer
         void UpdateCustomers(Customers customers);    //U-pdate 
         void DeleteCustomers(int id);             //D-elete
 
-        //List<Customers> GetCustomersByCategory(string categoryName);
+     
     }
 }
