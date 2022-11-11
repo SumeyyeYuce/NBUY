@@ -6,7 +6,7 @@ namespace Proje.DataAccessLayer
     {
         private SqlConnection GetSqlConnection()
         {
-            string connectionString = @"Server=DESKTOP-OFVK2FD; Database=Northwind; User=sa; Pwd=123";
+            string connectionString = @"Server=.\SQLEXPRESS; Database=Northwind; User=sa; Pwd=123";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             return sqlConnection;
         }

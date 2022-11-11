@@ -6,7 +6,7 @@ namespace Proje.DataAccessLayer
     {
         private SqlConnection GetSqlConnection()
         {
-            string connectionString = @"Server=DESKTOP-OFVK2FD; Database=Northwind; User=sa; Pwd=123";
+            string connectionString = @"Server=.\SQLEXPRESS; Database=Northwind; User=sa; Pwd=123";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             return sqlConnection;
         }
@@ -105,7 +105,7 @@ namespace Proje.DataAccessLayer
                 try
                 {
                     connection.Open();
-                    string queryString = $"SELECT p.ProductID,p.ProductName,p.UnitPrice,p.UnitsInStock FROM Products P INNER JOIN Categories C ON P.CategoryID=C.CategoryID WHERE C.CategoryName='Produce'";
+                    string queryString = $"SELECT P.ProductID,P.ProductName,P.UnitPrice,P.UnitsInStock FROM Products P INNER JOIN Categories C ON P.CategoryID=C.CategoryID WHERE C.CategoryName='{categoryName}'";
                     SqlCommand sqlCommand = new SqlCommand(queryString, connection);
                     SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
                     while (sqlDataReader.Read())

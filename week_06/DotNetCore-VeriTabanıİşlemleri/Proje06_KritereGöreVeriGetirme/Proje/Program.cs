@@ -104,7 +104,7 @@ class Program
         {
              if (dbType==1)
             {
-                ProductByCategoryId(new SqlProductDAL());
+                ProductsFilterByCategory(new SqlProductDAL());
             }
             else
             {
@@ -132,7 +132,7 @@ class Program
         }
     }
 
-      static void ProductByCategoryId(IProductDAL productDAL)
+      static void ProductsFilterByCategory(IProductDAL productDAL)
     {
         var productManager = new ProductManager(productDAL);
         Console.Write("Enter Category NAME");
