@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj": {}
+    "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj": {
+    "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj",
+        "projectUniqueName": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj",
         "projectName": "Proje",
-        "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj",
-        "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\obj\\",
+        "projectPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\Proje.csproj",
+        "packagesPath": "C:\\Users\\Sümeyye\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_06\\DotNetCore-VeriTabanıİşlemleri\\Proje06_KritereGöreVeriGetirme\\Proje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sümeyye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

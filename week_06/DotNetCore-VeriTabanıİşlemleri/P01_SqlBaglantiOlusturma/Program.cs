@@ -13,7 +13,7 @@ class Program
         /*1.Adım
             connectionstring oluşturmak
         */
-        string connectionString = @"Server=DESKTOP-OFVK2FD; Database=Northwind; User Id=sa; Password=123";
+        string connectionString = @"Server=.\SQLEXPRESS; Database=Northwind; User Id=sa; Password=123";
         
         using (var connection = new SqlConnection(connectionString))
         {
