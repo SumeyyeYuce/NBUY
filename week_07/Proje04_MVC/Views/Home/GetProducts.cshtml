@@ -1,0 +1,31 @@
+@model List<Proje04_MVC.Controllers.Product>
+
+@{
+    ViewData["Title"] = "GetProducts";
+}
+
+<h1 class="display-1">All Products</h1>
+
+<ul>
+    @foreach (var p in Model)
+    {
+         <li>@p.Id - @p.Name - @p.Price</li>
+    }
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+@* <ul>
+    @foreach (var p in ViewBag.Products)
+    {
+        <li>@p.Id - @p.Name - @p.Price</li>
+    }
+</ul> *@

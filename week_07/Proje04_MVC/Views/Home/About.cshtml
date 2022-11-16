@@ -1,0 +1,33 @@
+@section Scripts
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+}
+
+@{
+    ViewData["Title"] = "About";
+}
+<h1>About Page</h1>
+
+@if (ViewBag.Hata==true)
+{
+    @section FirstSection
+    {
+        <div class="alert alert-danger text-center">Dikkat! HATA VAR</div>
+    }
+}
+
+<h1>Not:@ViewData["Not"]</h1>
+
+<div>
+    @foreach (var isim in (List<string>)ViewData["Adlar"])
+    {
+        <p>@isim</p>
+    }
+</div>
+
+<div>
+    @foreach (var bolum in ViewBag.Bolumler)
+    {
+        <p>@bolum</p>
+    }
+</div>
