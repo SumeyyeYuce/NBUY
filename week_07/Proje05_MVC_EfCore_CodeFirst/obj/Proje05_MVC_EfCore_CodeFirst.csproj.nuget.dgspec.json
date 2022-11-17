@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj": {}
+    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj": {
+    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj",
+        "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj",
         "projectName": "Proje05_MVC_EfCore_CodeFirst",
-        "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj",
+        "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\Proje05_MVC_EfCore_CodeFirst.csproj",
         "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\obj\\",
+        "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\Proje05_MVC_EfCore_CodeFirst\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
