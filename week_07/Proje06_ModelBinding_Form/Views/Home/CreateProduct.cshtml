@@ -1,0 +1,72 @@
+@model Product
+@{
+    ViewData["Title"] = "CreateProduct";
+}
+@* asp-for ile otomatik olarak id,name ve value degerleri geliyor *@
+<h1 class="display-6">Create Product</h1>
+<hr>
+<form asp-controller="Home" asp-action="CreateProduct" method="post">
+    <div class="row mb-2">
+        <div class="col-2">
+            <label>Product Name</label>       
+        </div>
+        <div class="col-4">
+           <input class="form-control" type="text" asp-for="Name" >
+        </div>
+    </div>
+
+     <div class="row mb-2">
+        <div class="col-2">
+            <label>Product Category:</label>       
+        </div>
+        <div class="col-4">
+           <input class="form-control" type="text" asp-for="Category" >
+        </div>
+    </div>
+
+     <div class="row mb-2">
+        <div class="col-2">
+            <label>Product Price</label>       
+        </div>
+        <div class="col-4">
+           <input class="form-control" type="text" asp-for="Price" >
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-check-label">Is Approved</label>       
+        </div>
+        <div class="col-4">
+          <input class="form-check-input" type="checkbox" asp-for="IsApproved">
+        </div>
+    </div>
+
+
+     <div class="row">
+        <div class="col-6 text-end">
+           <input class="btn btn-success" type="submit" value="Create" >
+        </div>
+    </div>
+</form>
+@if (Model!=null)
+{
+    <hr>
+    <div>
+        <p class="text-danger">@Model.Name eklendi.</p>
+        <p>@(Model.IsApproved ? "Approved" : "Not Approved")</p>
+    </div>
+}
+
+
+
+
+
+
+
+@* @if (@ViewBag.ResultHeader!=null)
+{
+    <hr>
+    <div>@ViewBag.ResultHeader</div>
+    <div>@ViewBag.ResultBody</div>
+} *@
