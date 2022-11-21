@@ -1,0 +1,59 @@
+@model Kitap
+@{
+    ViewData["Title"] = "KitapSil";
+}
+
+<h1 class="display-6">Kitap Sil</h1>
+<hr>
+<form asp-controller="Home" asp-action="KitapSil" method="post">
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="Ad"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="Ad">
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="BasimYili"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="BasimYili">
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="SayfaSayisi"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="SayfaSayisi">
+        </div>
+    </div>
+
+     <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="Kategori"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="Kategori">
+        </div>
+    </div>
+
+     <div class="row mb-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="Yazar"></label>
+        </div>
+        <div class="col-4">
+            <input class="form-control" type="text" asp-for="Yazar">
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-6 d-grid">
+            <input class="btn btn-danger" type="submit" value="Sil">
+        </div>
+    </div>
+</form>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj": {}
+    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj": {
+    "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj",
+        "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj",
         "projectName": "KitabeviApp",
-        "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj",
+        "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\KitabeviApp.csproj",
         "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\obj\\",
+        "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_07\\KitabeviApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",

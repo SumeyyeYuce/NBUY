@@ -4,8 +4,7 @@ using KitabeviApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace KitabeviApp.Controllers;
-//SaveChanges veritabanına kayıt işlemini yapıyor
-//  return RedirectToAction("KategorListesi") yönlendirmek istediğimiz sayfaya ulaştırıyoruz
+
 public class HomeController : Controller
 {
     KitabeviContext context = new KitabeviContext();
@@ -55,12 +54,10 @@ public class HomeController : Controller
             .FirstOrDefault();
         return View(kitap);
     }
-
     public IActionResult KategoriEkle()
     {
         return View();
     }
-
     [HttpPost]
     public IActionResult KategoriEkle(Kategori kategori)
     {
@@ -73,7 +70,6 @@ public class HomeController : Controller
     {
         return View();
     }
-
     [HttpPost]
     public IActionResult YazarEkle(Yazar yazar)
     {
@@ -81,18 +77,16 @@ public class HomeController : Controller
         context.SaveChanges();
         return RedirectToAction("YazarListesi");
     }
-    
+
     public IActionResult KitapEkle()
     {
-        ViewBag.Kategoriler=context.Kategoriler.ToList();
+        ViewBag.Kategoriler = context.Kategoriler.ToList();
         return View();
     }
-
     [HttpPost]
     public IActionResult KitapEkle(Kitap kitap)
     {
-     
         return View();
     }
-  //HttpGet,HttpPost,HttpPut,HttpDelete metotlarını araştır
+    //HttpGet, HttpPost, HttpPut, HttpDelete metotlarını araştırın.
 }
