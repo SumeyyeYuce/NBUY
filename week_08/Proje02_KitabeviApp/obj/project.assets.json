@@ -1226,11 +1226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\Proje02_KitabeviApp\\Proje02_KitabeviApp.csproj",
+      "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\Proje02_KitabeviApp\\Proje02_KitabeviApp.csproj",
       "projectName": "Proje02_KitabeviApp",
-      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\Proje02_KitabeviApp\\Proje02_KitabeviApp.csproj",
+      "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\Proje02_KitabeviApp\\Proje02_KitabeviApp.csproj",
       "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\Proje02_KitabeviApp\\obj\\",
+      "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\Proje02_KitabeviApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",

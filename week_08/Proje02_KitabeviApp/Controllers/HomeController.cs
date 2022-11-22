@@ -44,18 +44,15 @@ public class HomeController : Controller
                 .ToList();
         }
 
-        List <KitapListViewModel> kitapListViewModels= kitaplar
-            .Select(k=>new KitapListViewModel(){
-                    Id=k.Id,
-                    Ad=k.Ad,
-                    BasimYili=k.BasimYili,
-                    SayfaSayisi=k.SayfaSayisi,
-                    KategoriId=k.KategoriId,
-                    YazarId=k.YazarId,
-                    Yazar=k.Yazar,
-                    Kategori=k.Kategori
-                }).ToList();
-       
+        List<KitapListViewModel> kitapListViewModels = kitaplar
+            .Select(k=> new KitapListViewModel(){
+                Id=k.Id,
+                Ad=k.Ad,
+                BasimYili=k.BasimYili,
+                SayfaSayisi=k.SayfaSayisi,
+                YazarAd=k.Yazar.Ad,
+                KategoriAd=k.Kategori.Ad
+            }).ToList();
         return View(kitapListViewModels);
     }
     public IActionResult Detay(int id)
@@ -79,7 +76,7 @@ public class HomeController : Controller
         context.SaveChanges();
         return RedirectToAction("KategoriListesi");
     }
-    
+
     public IActionResult YazarEkle()
     {
         return View();
@@ -164,17 +161,17 @@ public class HomeController : Controller
     public IActionResult KitapGuncelle(int id)
     {
         Kitap kitap = context.Kitaplar.Find(id);
-        // KitapViewModel kitapModel=new KitapViewModel();
+        // KitapViewModel kitapModel = new KitapViewModel();
         // kitapModel.Kitap=kitap;
-        // kitapModel.Yazarlar= context.Yazarlar.ToList();
+        // kitapModel.Yazarlar=context.Yazarlar.ToList();
         // kitapModel.Kategoriler=context.Kategoriler.ToList();
 
-        KitapViewModel kitapViewModel=new KitapViewModel(){
-            Kitap=kitap,
-            Yazarlar=context.Yazarlar.ToList(),
-            Kategoriler=context.Kategoriler.ToList()
+        KitapViewModel kitapViewModel = new KitapViewModel()
+        {
+            Kitap = kitap,
+            Yazarlar = context.Yazarlar.ToList(),
+            Kategoriler = context.Kategoriler.ToList()
         };
-        
         return View(kitapViewModel);
     }
 

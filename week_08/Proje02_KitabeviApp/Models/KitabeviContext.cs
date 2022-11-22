@@ -40,22 +40,22 @@ namespace Proje02_KitabeviApp.Models
                 );
             modelBuilder.Entity<Kitap>()
                 .HasData(
-                    new Kitap() { AnaSayfa=true, Id = 1, Ad = "İnsanlar", BasimYili = 2021, SayfaSayisi = 330, KategoriId = 2, YazarId = 1, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
-                    new Kitap() {AnaSayfa=true, Id = 2, Ad = "Zamanı Durdurmanın Yolları", BasimYili = 2021, SayfaSayisi = 370, KategoriId = 1, YazarId = 1, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
-                    new Kitap() {AnaSayfa=true, Id = 3, Ad = "Demir Ökçe", BasimYili = 2017, SayfaSayisi = 400, KategoriId = 2, YazarId = 4, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
-                    new Kitap() {AnaSayfa=true, Id = 4, Ad = "Huzursuzluk", BasimYili = 2018, SayfaSayisi = 330, KategoriId = 2, YazarId = 9, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
+                    new Kitap() { AnaSayfa = true, Id = 1, Ad = "İnsanlar", BasimYili = 2021, SayfaSayisi = 330, KategoriId = 2, YazarId = 1, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
+
+                    new Kitap() { AnaSayfa = true, Id = 2, Ad = "Zamanı Durdurmanın Yolları", BasimYili = 2021, SayfaSayisi = 370, KategoriId = 1, YazarId = 1, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
+
+                    new Kitap() { AnaSayfa = true, Id = 3, Ad = "Demir Ökçe", BasimYili = 2017, SayfaSayisi = 400, KategoriId = 2, YazarId = 4, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
+
+                    new Kitap() { AnaSayfa = true, Id = 4, Ad = "Huzursuzluk", BasimYili = 2018, SayfaSayisi = 330, KategoriId = 2, YazarId = 9, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
+
                     new Kitap() { Id = 5, Ad = "Serenad", BasimYili = 2020, SayfaSayisi = 300, KategoriId = 2, YazarId = 9, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
+
                     new Kitap() { Id = 6, Ad = "19", BasimYili = 2016, SayfaSayisi = 380, KategoriId = 2, YazarId = 6, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
+
                     new Kitap() { Id = 7, Ad = "C# Programlama Dili", BasimYili = 2011, SayfaSayisi = 730, KategoriId = 3, YazarId = 7, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
+
                     new Kitap() { Id = 8, Ad = "React Uygulama Geliştirme", BasimYili = 2021, SayfaSayisi = 530, KategoriId = 3, YazarId = 3, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." },
-                    
+
                     new Kitap() { Id = 9, Ad = "İnsan Ömrünü Neyle Geçirmeli?", BasimYili = 2021, SayfaSayisi = 330, KategoriId = 2, YazarId = 8, Ozet = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magnam animi sapiente quos atque voluptatem, at molestias eum eius quia quod nostrum cum eos maiores doloribus veniam reprehenderit natus laboriosam." }
                 );
         }
