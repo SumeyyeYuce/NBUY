@@ -12,12 +12,14 @@ namespace KitabeviApp.Business.Concrete
     {
         public Kategori KategoriAl(int id)
         {
-            throw new NotImplementedException();
+            var kategoriRepository = new EfCoreKategoriRepository();
+            return kategoriRepository.KategoriAl(id);
         }
 
         public void KategoriEkle(Kategori kategori)
         {
-            throw new NotImplementedException();
+            var kategoriRepository = new EfCoreKategoriRepository();
+            kategoriRepository.KategoriEkle(kategori);
         }
 
         public void KategoriGuncelle(Kategori kategori)

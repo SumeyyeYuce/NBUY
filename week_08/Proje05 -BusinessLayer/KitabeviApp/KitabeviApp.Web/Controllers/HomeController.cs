@@ -49,7 +49,8 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult KategoriEkle(Kategori kategori)
     {
-        kategoriRepository.KategoriEkle(kategori);
+        var kategoriManager=new KategoriManager();
+        kategoriManager.KategoriEkle(kategori);   
         return RedirectToAction("KategoriListesi");
     }
     public IActionResult KategoriGuncelle(int id)
