@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BwaRQRAOsaQ4PoaUdU5sdt6rEo66oMSxghzRgw7HJ+/kdQs1odDg7ZRHUqbnEXf8GH2kLSj83CUh738cQqLg1w==",
+  "dgSpecHash": "qz6SpeAWY8mtVbwvZQB56mdLTb4ZJ90jUvroEjU/vofiB8FRCgUUb02aewN8wyN+BnnXNjCV60dJt2SXLdP+OA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\BlogApp.Entities.csproj",
+  "projectFilePath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\BlogApp.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",

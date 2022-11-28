@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Data.Concrete.EntityFramework.Repositories
 {
-    public class EfCommentRepository:EfEntityRepositoryBase<Comment>
+    public class EfCommentRepository : EfEntityRepositoryBase<Comment>
     {
-        public EfCommentRepository(DbContext context):base(context) 
+        public EfCommentRepository(DbContext context) : base(context)
         {
 
         }

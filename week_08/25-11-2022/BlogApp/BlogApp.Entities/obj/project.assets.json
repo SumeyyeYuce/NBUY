@@ -541,11 +541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\BlogApp.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\BlogApp.Entities.csproj",
       "projectName": "BlogApp.Entities",
-      "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\BlogApp.Entities.csproj",
+      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\BlogApp.Entities.csproj",
       "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\obj\\",
+      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -562,8 +562,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Shared\\BlogApp.Shared.csproj": {
-              "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Shared\\BlogApp.Shared.csproj"
+            "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Shared\\BlogApp.Shared.csproj": {
+              "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_08\\25-11-2022\\BlogApp\\BlogApp.Shared\\BlogApp.Shared.csproj"
             }
           }
         }
