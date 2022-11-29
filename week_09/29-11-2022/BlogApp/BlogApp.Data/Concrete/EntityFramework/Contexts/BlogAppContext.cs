@@ -1,4 +1,4 @@
-﻿using BlogApp.Data.Concrete.EntityFramework.Mapings;
+﻿using BlogApp.Data.Concrete.EntityFramework.Mappings;
 using BlogApp.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Data.Concrete.EntityFramework.Contexts
 {
-    public class BlogAppContext:DbContext
+    public class BlogAppContext : DbContext
     {
-        public DbSet<Article>  Articles { get; set; }
+        public DbSet<Article> Articles { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Role> Roles { get; set; }
@@ -19,8 +19,10 @@ namespace BlogApp.Data.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-OFVK2FD; Database=BlogAppDb; Integrated Security=true; TrustServerCertificate=true");
-            
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-OFVK2FD\SQLEXPRESS;Database=BlogAppDb;Integrated Security=true;TrustServerCertificate=true");
+            #region TrustedServerSertificate
+            //EntityFrameworkCore 7 ile SqlServer veri tabanına bağlantı ile ilgili önemli bir değişiklik olmuştur. Bu da güvenlik amacıyla doğrulanmış sertifika gereksinimidir. Bunu ifade eden TrustServerCertificate özelliği, böyle bir sertifika yoksa True'ya çekilmelidir, çünkü default olarak False'dur. False iken maalesef veri tabanına bağlansa bile kullanıma izin vermez.
+            #endregion
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,11 +31,6 @@ namespace BlogApp.Data.Concrete.EntityFramework.Contexts
             modelBuilder.ApplyConfiguration(new CommentMap());
             modelBuilder.ApplyConfiguration(new RoleMap());
             modelBuilder.ApplyConfiguration(new UserMap());
-
         }
     }
 }
-
-//EntityFrameworkCore 7 ile SqlServer veritaınıa baglantı ile ilgili öenmli değişiklij olmuştur
-//buda güvenlik amacıyla dogrulamış sertifika gereksinimleri Bunu ifade eden TrustServerCertificate
-//özelliği (devamını hocadan al)

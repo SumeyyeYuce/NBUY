@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Shared.Entities.Abstract
 {
-    public class DtoGetBase
+    public abstract class DtoGetBase
     {
         public virtual ResultStatus ResultStatus { get; set; }
     }

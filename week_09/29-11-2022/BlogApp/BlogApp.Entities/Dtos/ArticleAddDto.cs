@@ -7,34 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Dto=>Data Transfer Object
+//Dto=> Data Transfer Object
 namespace BlogApp.Entities.Dtos
 {
     public class ArticleAddDto
     {
         [DisplayName("Başlık")]
         [Required(ErrorMessage ="{0} alanı boş geçilmemelidir.")]
-        [MaxLength(100,ErrorMessage ="{0} alanının uzunluğu {1} karakteri geçmemelidir.")]
-        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır")]
+        [MaxLength(100, ErrorMessage ="{0} alanının uzunluğu {1} karakteri geçmemelidir.")]
+        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır.")]
         public string Title { get; set; }
+
 
 
         [DisplayName("İçerik")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
-        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır")]
+        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır.")]
         public string Content { get; set; }
 
 
         [DisplayName("Thumbnail")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
         [MaxLength(250, ErrorMessage = "{0} alanının uzunluğu {1} karakteri geçmemelidir.")]
-        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır")]
+        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır.")]
         public string Thumbnail { get; set; }
 
 
         [DisplayName("Tarih")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
-        [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString ="{0:dd/MM/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Date { get; set; }
 
 
@@ -59,8 +60,8 @@ namespace BlogApp.Entities.Dtos
         [DisplayName("Kategori")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
         public int CategoryId { get; set; }
-
         public Category Category { get; set; }
+
 
         [DisplayName("Aktif mi?")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Data.Abstract
 {
-    public interface IUnitOfWork : IAsyncDisposable 
+    public interface IUnitOfWork : IAsyncDisposable
     {
-        IArticleRepository Articles { get; }//burada sadece get olucak. get veriyi çekmek.
+        IArticleRepository Articles { get; }
         ICategoryRepository Categories { get; }
         ICommentRepository Comments { get; }
-        IRoleRepository Roles { get; }  
+        IRoleRepository Roles { get; }
         IUserRepository Users { get; }
         Task<int> SaveAsync();
     }

@@ -12,24 +12,29 @@ namespace BlogApp.Shared.Utilities.Result.Concrete
     {
         public Result(ResultStatus resultStatus)
         {
-            ResultStatus=resultStatus;
+            ResultStatus = resultStatus;
         }
+
         public Result(ResultStatus resultStatus, string message)
         {
             ResultStatus = resultStatus;
-            Message = message;    
+            Message = message;            
         }
-        public Result(ResultStatus resultStatus, string message,Exception exception)
+
+        public Result(ResultStatus resultStatus, string message, Exception exception)
         {
             ResultStatus = resultStatus;
             Message = message;
             Exception = exception;
         }
-
-        public ResultStatus ResultStatus { get; } 
+        public ResultStatus ResultStatus { get; }
 
         public string Message { get; }
 
         public Exception Exception { get; }
     }
 }
+
+//new Result(ResultStatus.Success)
+//new Result(ResultStatus.Success, "Kayıt işlemi başarıyla tamamlandı")
+//new Result(ResultStatus.Success, "İşlem tamam", new throw.ImplementNotException())

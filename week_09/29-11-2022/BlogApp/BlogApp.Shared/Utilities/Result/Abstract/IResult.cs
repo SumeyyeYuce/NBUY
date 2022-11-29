@@ -9,9 +9,8 @@ namespace BlogApp.Shared.Utilities.Result.Abstract
 {
     public interface IResult
     {
-        public ResultStatus ResultStatus { get; }//ResultStatus.Info gibi kullamıcaz
-        public string Message { get;}//hata mesajlarını bunula taşıyaz
-        public Exception Exception { get; }//hataları exception ları bunula taşıcaz
-
+        public ResultStatus ResultStatus { get;  } //ResultStatus.Error, ResultStatus.Success
+        public string Message { get;  } //Hata mesajlarını bununla taşıyacağız
+        public Exception Exception { get;  } //Hataları(exceptions) bununla taşıyacağız
     }
 }

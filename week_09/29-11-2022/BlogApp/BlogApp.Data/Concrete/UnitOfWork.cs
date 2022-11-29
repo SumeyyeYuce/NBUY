@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Data.Concrete
 {
-    //_articleRepository ?? (yoksa demek)
     public class UnitOfWork : IUnitOfWork
     {
         private readonly BlogAppContext _context;
@@ -18,6 +17,7 @@ namespace BlogApp.Data.Concrete
         private EfCommentRepository _commentRepository;
         private EfRoleRepository _roleRepository;
         private EfUserRepository _userRepository;
+
         public UnitOfWork(BlogAppContext context)
         {
             _context = context;
@@ -25,11 +25,11 @@ namespace BlogApp.Data.Concrete
 
         public IArticleRepository Articles => _articleRepository ?? new EfArticleRepository(_context);
 
-        public ICategoryRepository Categories => _categoryRepository ?? new EfCategoryRepository(_context);  
+        public ICategoryRepository Categories => _categoryRepository ?? new EfCategoryRepository(_context);
 
         public ICommentRepository Comments => _commentRepository ?? new EfCommentRepository(_context);
 
-        public IRoleRepository Roles => _roleRepository ?? new EfRoleRepository(_context);  
+        public IRoleRepository Roles => _roleRepository ?? new EfRoleRepository(_context);
 
         public IUserRepository Users => _userRepository ?? new EfUserRepository(_context);
 
@@ -40,7 +40,7 @@ namespace BlogApp.Data.Concrete
 
         public async Task<int> SaveAsync()
         {
-          return await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
     }
 }

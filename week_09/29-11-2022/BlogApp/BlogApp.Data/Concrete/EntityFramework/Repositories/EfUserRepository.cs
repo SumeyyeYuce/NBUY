@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Data.Concrete.EntityFramework.Repositories
 {
-    public class EfUserRepository:EfEntityRepositoryBase<User>,IUserRepository
+    public class EfUserRepository:EfEntityRepositoryBase<User>, IUserRepository
     {
         public EfUserRepository(DbContext context) : base(context)
         {

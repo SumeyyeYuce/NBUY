@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Entities.Dtos
 {
-    public class ArticleListDto : DtoGetBase
+    public class ArticleListDto:DtoGetBase
     {
         public IList<Article> Articles { get; set; }
     }

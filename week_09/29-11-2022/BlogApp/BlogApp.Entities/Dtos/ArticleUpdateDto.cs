@@ -18,20 +18,21 @@ namespace BlogApp.Entities.Dtos
         [DisplayName("Başlık")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
         [MaxLength(100, ErrorMessage = "{0} alanının uzunluğu {1} karakteri geçmemelidir.")]
-        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır")]
+        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır.")]
         public string Title { get; set; }
+
 
 
         [DisplayName("İçerik")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
-        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır")]
+        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır.")]
         public string Content { get; set; }
 
 
         [DisplayName("Thumbnail")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
         [MaxLength(250, ErrorMessage = "{0} alanının uzunluğu {1} karakteri geçmemelidir.")]
-        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır")]
+        [MinLength(5, ErrorMessage = "{0} alanının uzunluğu {1} karakterden az olmamalıdır.")]
         public string Thumbnail { get; set; }
 
 
@@ -62,8 +63,8 @@ namespace BlogApp.Entities.Dtos
         [DisplayName("Kategori")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]
         public int CategoryId { get; set; }
-
         public Category Category { get; set; }
+
 
         [DisplayName("Aktif mi?")]
         [Required(ErrorMessage = "{0} alanı boş geçilmemelidir.")]

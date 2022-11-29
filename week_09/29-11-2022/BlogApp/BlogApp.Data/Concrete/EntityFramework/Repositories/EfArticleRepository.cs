@@ -17,5 +17,7 @@ namespace BlogApp.Data.Concrete.EntityFramework.Repositories
         {
             
         }
+
+
     }
 }

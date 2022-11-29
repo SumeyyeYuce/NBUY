@@ -10,5 +10,7 @@ namespace BlogApp.Data.Abstract
 {
     public interface IArticleRepository : IEntityRepository<Article>
     {
+        
     }
+
 }

@@ -16,6 +16,5 @@ namespace BlogApp.Shared.Entities.Abstract
         public bool IsDeleted { get; set; } = false;
         public bool IsActive { get; set; } = true;
         public virtual string Note { get; set; }
-
     }
 }

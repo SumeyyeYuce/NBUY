@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Entities.Dtos
 {
-    public class CategoryDto :DtoGetBase
+    public class CategoryDto : DtoGetBase
     {
         public Category Category { get; set; }
-        
     }
 }
