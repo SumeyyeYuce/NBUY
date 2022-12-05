@@ -1,0 +1,57 @@
+1) CategoryController -> public async Task<JsonResult> GetAllCategories()
+2) text: 'Yenile', (index.cshtml-category)
+                         action: function(e, dt, node, config){
+                         //burada yenile butonun basıldıgında ajax ile içeripi yenileyecegiz.
+                         $.ajax({
+				burayı dolduracka
+                         });
+
+
+
+
+3)Silme işlemlerine başlıyoruz ->Categorydeki index.cshtml de
+
+	<th>İşlemler</th> ->(bir)
+
+	<td> ->(iki)
+         <button class="btn btn-warning btn-sm">Düzelt</button>
+         <button class="btn btn-danger btn-sm">Sil</button>
+
+      </td>
+
+  <tr name="@category.Id"> ->(üç)
+
+   //Ajax'la delete işlemleri ->(dört)
+                $(document).on('click', '.btn-delete', function (event) {//documanın ğzerindeki clası btn-delet olablara tıklanıldıgında burdaki func'ı çalıştır diyoruz
+
+               });
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> ->(beş) js-partiala koyduk
+
+4) categoryControllera gidip Delete metodunu yazıyoruz
+
+        [HttpPost]    
+        public async Task<JsonResult> Delete (int categoryId)
+        {
+
+        }
+ve içini dolduruyoruz
+
+5) success:function(data){  ->>(altı) burdan devam
+             const result = jQuery.parseJSON(data);
+               if(result.ResultStatus===0){
+                Swal.fire({
+burdan devam
+6)Daha sonra yenile diyince silinmiş kategorileri göstermesin dedik onun işlemini yaptık
+bunun için categryControllerda -> index'in ve GetAllCategories bu metotların GetAll larını "GetAllByNonDeleted" yaptık
+daha sonra 
+ <td>
+                                    <button class="btn btn-warning btn-sm"><span class="fas fa-edit text-white"></span></button>
+                                    <button class="btn btn-danger btn-sm btn-delete" data-id="@category.Id"><span class="fas fa-minus-circle"></span></button>@*bir sürü sil butonnu olucagı için herhangi biyerde sile basıdlıgında onu yakala dicez data-id ile veriyi de alıyoruz*@
+
+                                </td> 
+bu button ları  yenile deki tablolar koyduk 
+ve burdaki tablonun tr sini  <tr name="${category.Id}"> bu şekilde düzelltik
+
+7)
+8)
