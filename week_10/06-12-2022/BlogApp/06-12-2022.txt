@@ -1,0 +1,110 @@
+1)Düzenle kısmı için başlıyoruz
+ilk olarak ındec.cshtml deki javascript kodlarını kesip wwwrootdaki js dosyasına yeni js dosyası açıp oraya yapıştırıyotuz
+ordaki Url ksımlarını js ye göre düzenlemeye başlıyoruz.
+Daha sonra
+ <td>
+      <button class="btn btn-warning btn-sm"><span class="fas fa-edit text-white"></span></button>
+      <button class="btn btn-danger btn-sm btn-delete" data-id="${categoryAddAjaxModel.CategoryDto.Category.Id}"><span class="fas fa-minus-circle"></span></button>
+
+ </td>
+
+bu butonları Ajaxla post işlemleri yazn yerdeki tabloya koyutyoruz
+ındex.cshtml deki script dosyasının yolunu veriyoruz
+
+//Güncelleme işlemlerine başlıyoruz
+2)index.cshtl de
+ <button class="btn btn-warning btn-sm btn-delete" data-id="@category.Id"><span class="fas fa-edit text-white"></span></button> 
+bu butonu bu şekilde düzenledik
+
+
+3)CategoryController'da Update kısmını yazmaya başlıyoruz
+  public async Task<IActionResult> Update (int categoryId)
+        {
+            return Json(null);
+        }
+
+4)ICategoryService katmanına gidip 
+ Task<IDataResult<CategoryUpdateDto>> GetCategoryUpdateDto(int categoryId); bu metodu koyuyotuz
+
+daga sonra categorymanager da implemtne ediyoruz içini dolduryoruz
+ public async Task<IDataResult<CategoryUpdateDto>> GetCategoryUpdateDto(int categoryId)
+        {
+            var result = await _unitOfWork.Categories.AnyAsync(c => c.Id == categoryId);
+            if (result)
+            {
+                var category = await _unitOfWork.Categories.AnyAsync(c => c.Id == categoryId);
+		var categoryUpdateDto = _mapper.Map<CategoryUpdateDto>(category);
+            }
+                
+        }
+
+5)DAHA sonra CategoryProfilese gelip creatMap işlemi yapıyoruz
+  CreateMap<Category, CategoryUpdateDto>();//kategoriyi al kategoriUpdate e dönüştür
+sonra managera giidp devam ediyoruz
+
+6)Daha sonra categoryAddpartial'ın aynını kopyalayıp CategoryUpdatePartial oluşturuyprpuz ve içindeki düzenlemeleri yapıyoruz
+
+
+7)Daha sonra categoryIndex.js dosyaına gidip ordaki düzenleme işlemlerini yapmaya başlıyoruz
+ $(function () {
+            const url = '/Admin/Category/Update/';
+            const placeHolderDiv = $('#modalPlaceHolder');
+            $(document).on('click', '.btn-update', function (event) {//click yapıldıgında clasıı btn-update mş bak onan göe func çalıştır
+                event.preventDefault();
+                const id = $(this).attr('data-id');//ilgili ürünün id'sini vericek'
+                $.get(url, { categoryId: id })
+                    .done(function (data) {
+                        placeHolderDiv.html(data);
+                        placeHolderDiv.find('.modal').modal('show');
+                    })//başarılıysa funcı çalıştır
+                    .fail(function () {
+                        toastr.error('Bir hata oluştu');
+                    });//başarızıs olma durumu
+            })
+        });
+daha sonra burdaki verileri kaydetmeye başlıyoruz
+  placeHolderDiv('click', '#btnUpdate', function (event) {
+                event.preventDefault();
+                const form = $('#form-category-update');
+                const actionUrl = form.attr('action');
+                const dataToSend = form.serialize();
+                $.post(actionUrl, dataToSend)
+                    .done(function (data) {
+                        const categoryUpdateAjaxModel = jQuery.parseJSON(data);
+                        console.log(categoryUpdateAjaxModel);
+                    });
+daha sonra
+8)CtaegoryControlller giidp post metodunu yazıyoruz
+
+        [HttpPost]
+        public async Task<IActionResult> Update(CategoryUpdateDto categoryUpdateDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _categoryService.Update(categoryUpdateDto, "süm");
+            }
+
+        }
+9)CategoryManager daki update'i degiştiriyoruz
+ public async Task<IDataResult<CategoryDto>> Update(CategoryUpdateDto categoryUpdateDto, string modifiedByName)
+        {
+         burayı düzenliyoruz
+10)Tablodaki silinmiş mi ve not  kısmını kaldırıyoruz index.cshtml de ve butonların eksik oldugu yerleri koyuyoruz
+
+11)Sonra içeriğin yenisini oluşturmaya başlıyoruz kaydettikten sonra yeni gelen degerleri 
+ const newFormBody = $('.modal-body', categoryUpdateAjaxModel.CategoryUpdatePartial);
+                placeHolderDiv.find('.modal-body').replaceWith(newFormBody);
+                const isValid = newFormBody.find('[name="IsValid"]').val() === 'True';//ısvalid degeri true ise bunu al 
+                if (isValid) {
+burdan başlıyor
+burada yaptıgım şey düzenleme butonun a tıklanıp basılıp düzenleme işlmeleri yapıldıktan sonra kaydediyor
+
+12)Daha sonra silindi mi ye bastıgımızada kesin silinmemsini istediğimiz için onun kodlarını yazmaya başlıyoruz
+if (!categoryUpdateAjaxModel.CategoryDto.Category.IsDeleted) {
+                                //forma giirlen tablo satırlarını yaratık
+     bu koddan başlıyoruz
+BU PROJEDE BURDA BİTTİ!   ELVEDAAAA
+
+13)
+14)
+15)

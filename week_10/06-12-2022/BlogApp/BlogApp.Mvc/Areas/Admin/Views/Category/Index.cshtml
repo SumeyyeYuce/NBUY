@@ -1,0 +1,80 @@
+﻿@using BlogApp.Shared.Utilities.Result.ComplexTypes
+@using BlogApp.Entities.Dtos
+
+@model CategoryListDto
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Kategoriler Anasayfa";
+}
+@*` templet string*@
+@if (Model.ResultStatus==ResultStatus.Success)
+{
+    @*Kategoriler listelenecek*@
+
+    <div id="modalPlaceHolder" aria-hidden="true"></div>
+   
+        <h1 class="mt-4">Admin Kategoriler</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active">Kategoriler</li>
+        </ol>
+       
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1"></i>
+                Kategoriler
+            </div>
+            <div class="card-body">
+                <div class="spinner-border text-danger" role="status" style="display:none;">
+                    <span class="sr-only">Yükleniyor...</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="categoriesTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                @*tablo başlıkları*@
+                                <th>Id</th>
+                                <th>Ad</th>
+                                <th>Açıklama</th>
+                                <th>Aktif mi?</th>
+                                <th>Oluşturma Tarihi</th>
+                                <th>Oluşturan Kullanıcı</th>
+                                <th>İşlemler</th>
+                               
+
+                            </tr>
+                        </thead>
+                       
+                        <tbody>
+                            @foreach (var category in Model.Categories)
+                            {
+                            <tr name="@category.Id"> @*hangi tr yi silmek istediğimizi belitmrek için name verdik*@
+                                @*modal dan gelen tablo*@
+                                <td>@category.Id</td>
+                                <td>@category.Name</td>
+                                <td>@category.Description</td>
+                                <td>@category.IsActive</td>                              
+                                <td>@category.CreatedDate.ToShortDateString()</td>
+                                <td>@category.CreatedByName</td>
+                                <td>
+
+                                    <button class="btn btn-warning btn-sm btn-update" data-id="@category.Id"><span class="fas fa-edit text-white"></span></button>
+                                    <button class="btn btn-danger btn-sm btn-delete" data-id="@category.Id"><span class="fas fa-minus-circle"></span></button>@*bir sürü sil butonnu olucagı için herhangi biyerde sile basıdlıgında onu yakala dicez data-id ile veriyi de alıyoruz*@
+
+                                </td>
+                               
+                               
+                            </tr>
+                            }
+                                                     
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+ 
+}
+
+@section Scripts{
+    <script src="~/js/categoryIndex.js"></script>
+}
