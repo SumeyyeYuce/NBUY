@@ -1,0 +1,78 @@
+﻿@using ShoppingApp.Web.Models.Dtos
+@model List<ProductDto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*bu sayfa bize html döndürür*@
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div>
+   
+ @*   <table class="table table-bordered">
+        <thead>
+            <tr class="bg-danger text-white">
+                <th>Id</th>
+                <th>Ürün Adı</th>
+                <th>Ürün Fiyatı</th>
+                <th>Ekleme Tarihi</th>
+               
+
+            </tr>
+        </thead>
+        <tbody>
+              @foreach(var productDto in Model)
+               {
+                    <tr>
+                       <td>@productDto.Id</td>
+                       <td>@productDto.Name</td>
+                       <td>@productDto.Price</td>
+                       <td>@productDto.DateAdded</td>
+                     
+                    </tr>
+               }
+        </tbody>
+    </tabl*@
+
+
+@*    <div class="row d-flex d-inline-block">
+        <div class="col-4">
+           <div class=" card">
+            <div class="card-body">
+               <h1>Id</h1>
+               <h3>Ürün Adı</h3>
+               <h3>Ürün Fiyatı</h3>
+               <h3>Ekleme Tarihi</h3>             
+            </div>
+        </div>
+            <div class=" card">
+                <div class="card-body">
+                    <h1>Id</h1>
+                    <h3>Ürün Adı</h3>
+                    <h3>Ürün Fiyatı</h3>
+                    <h3>Ekleme Tarihi</h3>
+                </div>
+            </div>
+            <div class=" card">
+            <div class="card-body">
+               <h1>Id</h1>
+               <h3>Ürün Adı</h3>
+               <h3>Ürün Fiyatı</h3>
+               <h3>Ekleme Tarihi</h3>             
+            </div>
+        </div>
+        <div class=" card">
+            <div class="card-body">
+               <h1>Id</h1>
+               <h3>Ürün Adı</h3>
+               <h3>Ürün Fiyatı</h3>
+               <h3>Ekleme Tarihi</h3>             
+            </div>
+        </div>
+    </div>*@ 
+ 
+</div>
