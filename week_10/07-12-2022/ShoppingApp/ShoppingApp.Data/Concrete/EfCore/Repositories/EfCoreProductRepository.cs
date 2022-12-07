@@ -21,11 +21,11 @@ namespace ShoppingApp.Data.Concrete.EfCore.Repositories
         {
             get { return _context as ShopAppContext; }
 
-           }     
+        }     
                 
         public async Task<List<Product>> GetHomePageProductsAsync()
         {
-            return ShopAppContext
+            return await ShopAppContext
                  .Products
                  .Where(p => p.IsHome && p.IsApproved)//içinde ishome ve isapprove dlanları döndürüecek
                  .ToListAsync();
