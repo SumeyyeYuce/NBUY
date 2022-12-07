@@ -1,0 +1,66 @@
+1)Entity katmanında abstract ve concrete klasörleri oluşturduk daha sonnra abstract'ın içinde IEntityBASE ı oluşturduk 
+2)Daha sonra concrete'in n içinde category ve prodcyt classlarını oluştruduk ve implemente yaptık ve bunların içini dolduruyoruz
+3)Daha sonra concrete klasöründe ProductCategory classını oluşturuyoruz ve içini dolduruyoruz(product ve category cl)
+
+4)Daha sonra Data katmanında abstract concrete ve config klasörlerini olşturduk 
+sonra concrete 'in içine efCore klsörü onun içine context klasörü ve reopsior klasörü oluşturudk
+sonra sqlite ve design paketlerinni indirdik
+sonra context klasöeü içinde ShopAppContext classını oluşturudk ve DbContext Den miras aldırıdk içini doldurmya başladık
+
+5)Daha sonra config klaörüne gelip CategoryConfig adlı clası oluşturuyoruz ve  IEntityTypeConfiguration<Category> burdan miras aldıryoruz ve içini dolduuryoruz
+
+6)Daha sonra config klaörüne gelip  productConfig klasını oluşturup aynı işlemleri yapıyoruz
+7)Daha sonraconfig klasöründe ProductCATEGORYcONFİG ADLI classıı oluştuurp miras aldırıp içini dolduruyotuz
+8)Daha sonra ShopAppContext'e gelip
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+        { bu metodun içini dolduruyoruz
+9)daha sonra data katmanında migrations işlemerini yapıyorz (bundan önce web katmanına desgin paketini yüklüyoruz)
+dotnet ef migrations add InitialDb --startup-project ../Shopping.Web
+dotnet ef database update --startup-project ../Shopping.Web
+
+10)Daha sonra data katmanındaki abstracın içine IRepository İNTERFACE'ini oluştuuryourz IRepository<T> bu şekilde yazıp içini dolduryoruz
+
+11)Daha sonra data katmanındaki abstracın içinde IProductRepository interface'ini oluşturup :IRepository<Product> bundan miras aldırıyoruz
+12)Daha sonra data katmanındaki abstracın içinde ICategoryRepository interface'ini oluşturup :IRepository<actegory> bundan miras aldırıyoruz
+13)Daha sonra data katmanındaki concrete içinde  efcorun içinde repository'nin içinde EfCoreCategoryRepository clasını oluşturuyoruz
+14)Daha sonra data katmanındaki concrete içinde  efcorun içinde repository'nin içinde EfCoreGenericRepository clasını oluşturuyoruz ve gerekli miraslarını aldııryoruz
+ve implemte yapıyoruz ve içlerini dolduruyoruz
+
+15)Daha sonra ECoreCategoryRepository'ye gidip orda miras aldırma işlemlerini yapıyorz ve implemete yapıyoruz
+
+16)Daha sonra data katmanında repositorynin içiinde EfCoreProductRepository clasını oluşturup miras aldırıyoruz
+17)Daha sonra data kadtmanında abstractın içine IUnitOfWork interfaceini oluşturup miras aldırıyroz ve imzaları koyuyoruz
+18)Daha sonra data katmanındaki concrete'in içine UnitOfWork clasını oluşturuyoruz ve miras aldırıp impllemente yapıyoruz ve içini dolduruyotuz
+19)Daha sonra business katmanında abstract ve concrete klasörlerni oluşturtouz
+sonra abstract'ın içine ICategoryService adlı interface i oluştuurp içini dlduruyotz
+
+20) Daha sonra abstract'ın içine IProductService adlı interface i oluştuurp içini dlduruyotz
+
+21)Daha sonra Busines katmanıdaki concrete in içinde CategoryManager classını oluşturyotuz ve miras aldırıyotuz ve içini dlduruyoruz
+
+22)Daha sonra Busines katmanıdaki concrete in içinde ProductManager classını oluşturyotuz ve miras aldırıyotuz ve içini dlduruyoruz
+
+23)Daha sonra Web katmanına gelip temizlik işlemlerini yapıyoruz
+
+24)Daha sonra program.cs ' gidip servislerimizi ekliyoruz
+builder.Services.AddDbContext<ShopAppContext>(); buradan başlıyor
+
+25)Daha sonra HomeControllra gidip dependensi injeksın ve ctor yazıyoruz ve index'in içini doldurmaya başlıyoruz
+
+26)Daha sonra index.cshtml e gidip 
+@using ShoppingApp.Entity.Concrete
+@model List<Product> bu yazıları koyup 
+içini doldurmya başlyruz
+
+27)Daha sonra web katmanında model klasörünün içine DTO klsörü açıp onun içine ProductDto adlı classı açıyoruz(ve içini dolduruyıtuz)
+Bu dto lar procutLarın hepsini listelemek için oluşturuldu
+28)Daha sonra homeControllera gelip oradaki index'i doldurmyaa başlıyoruz
+29)Daha sonra home'un index.cshtml e gelip orayı düzenlmeye başlıyoruz
+
+30)Daha sonra BURDAN SONRASI KARIŞTI HOCADAN AL
+31)
+32)
+33)
+34)
+35)
+
