@@ -1,0 +1,62 @@
+1)ProducDto ya gelip 
+    public string ImageUrl { get; set; } bu satırı ekliyoruz
+2)Home kontroller gelip
+ImageUrl= product.ImageUrl,  bu satırı ekle
+
+3)sonra _prodyctPartial da düznelmee yapıp tekrar migraion işlemerini yapıyoruz
+4)Dah sonra procutPartiae gelip
+<div class="card-img p-2 text-center">
+        <img src="/images/@Model.ImageUrl" />
+     </div> komuttunu yazıyoruz
+ve başka düzenlemelerde yapıyoruz burda
+
+5)Daha sonra index.cshtml e gelip düzenlemeleri yapıyoruz ve kategorileri göstermeye başlıyoruz
+6)Daha sonra web katmanında ViewComponts klasorü oluşturyotuz
+7)
+8)
+9)
+10)
+11)
+12)2.Ders Devam
+
+13)Daha sonra (25d)
+
+14)ProductPARTİLA gelip inceleye tıklandıgında ne olucaksa onu yapmaya başlıyoruz
+
+   asp-controller="Shop"
+            asp-action="ProductDetails"
+            asp-route-url=@M
+buaralar
+sonra ProductDto ya gelip Url ekliyoruz
+sonra ShopControllerw gelip orda  Url=product.Url, bunu ekliyoruz
+
+15)Ondan ssonra program.cs e gidip
+app.MapControllerRoute(
+    name: "productdetails",
+    pattern: "{url?}",
+    defaults: new { controller = "Shop", action = "ProductDetails" }
+    );//shop/p 
+bunu ekliyoruz
+
+16)Daha Sonra program.cs deki pattern:category olanı kaldırıdk
+default da   asp-route-id="@category.Url burayı id yaptık
+ShopControllerda categooryleri İd YAPTIK
+17)ShopControllerda 
+  public async Task<IActionResult> ProductDetails(string id)
+        {
+            return View();
+        } 
+bunu oluşturduk
+18)ProductDetails bunun  view'ını oluşturudk
+19)
+20)3.Ders devam
+21)
+22)
+23)
+24)
+25)
+26)
+27)
+28)
+29)
+30)

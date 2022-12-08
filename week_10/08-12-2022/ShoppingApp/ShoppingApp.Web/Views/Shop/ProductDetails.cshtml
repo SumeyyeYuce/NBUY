@@ -1,0 +1,67 @@
+﻿@using ShoppingApp.Web.Models.Dtos
+@model ProductDetailsDto
+
+
+
+  
+       @* <div>@Model.Id</div>
+        <div>@Model.Name</div>
+        <div>@Model.Price</div>
+        <div>@Model.ImageUrl</div>
+        <div>@Model.Url</div>
+        <div>@Model.Description</div>*@
+
+
+
+@*
+<div class="card" style="width: 20rem;">
+    <div class="card-body">
+        <h5 class="card-title bg-danger text-white">Ürün Bilgileri</h5>
+
+        Ürün Id:<h6 class="text-success">@Model.Id</h6>
+        Ürün Adı:<h6 class="text-success">@Model.Name</h6>
+        Ürün Fiyatı:<h6 class="text-success">@Model.Price</h6>
+          Ürün Resmi:<h6 class="text-success">@Model.ImageUrl</h6>
+          <img src="/images/1.png" /> 
+        Ürün Url:<h6 class="text-success">@Model.Url</h6>
+        Ürün Açıklama:<h6 class="text-success">@Model.Description</h6>
+
+         <div>
+            <h5 class="display-5 text-warning">Kategori Sınıfı</h5>
+            @foreach (var category in Model.Categories)
+            {
+                <div class="fs-3">@category.Name</div>
+            }
+        </div>
+
+    </div>
+</div>*@
+
+<div class="row d-flex">
+    <div class="col-6 bg-gradient justify-content-center text-center ">
+     <img class="mt-5" src="/images/@Model.ImageUrl"/>
+    </div>
+
+    <div class="col-6" >
+        <div class="card-body">
+            <h5 class="card-title bg-danger text-white">Ürün Bilgileri</h5>
+            Ürün Id:<h6 class="text-success">@Model.Id</h6>
+            Ürün Adı:<h6 class="text-success">@Model.Name</h6>
+            Ürün Fiyatı:<h6 class="text-success">@Model.Price</h6>         
+            Ürün Url:<h6 class="text-success">@Model.Url</h6>
+            Ürün Açıklama:<h6 class="text-success">@Model.Description</h6>
+
+            <div>
+                <h5 class="display-5 text-warning">Kategori Sınıfı</h5>
+                @foreach (var category in Model.Categories)
+                {
+                    <div class="fs-3">@category.Name</div>
+                }
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+   

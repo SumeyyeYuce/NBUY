@@ -1,0 +1,122 @@
+1)ProducDto ya gelip 
+    public string ImageUrl { get; set; } bu satırı ekliyoruz
+2)Home kontroller gelip
+ImageUrl= product.ImageUrl,  bu satırı ekle
+
+3)sonra _prodyctPartial da düznelmee yapıp tekrar migraion işlemerini yapıyoruz
+4)Dah sonra procutPartiae gelip
+<div class="card-img p-2 text-center">
+        <img src="/images/@Model.ImageUrl" />
+     </div> komuttunu yazıyoruz
+ve başka düzenlemelerde yapıyoruz burda
+
+5)Daha sonra index.cshtml e gelip düzenlemeleri yapıyoruz ve kategorileri göstermeye başlıyoruz
+6)Daha sonra web katmanında ViewComponts klasorü oluşturyotuz
+7)
+8)
+9)
+10)
+11)
+12)2.Ders Devam
+
+13)Daha sonra (25d)
+
+14)ProductPARTİLA gelip inceleye tıklandıgında ne olucaksa onu yapmaya başlıyoruz
+
+   asp-controller="Shop"
+            asp-action="ProductDetails"
+            asp-route-url=@M
+buaralar
+sonra ProductDto ya gelip Url ekliyoruz
+sonra ShopControllerw gelip orda  Url=product.Url, bunu ekliyoruz
+
+15)Ondan ssonra program.cs e gidip
+app.MapControllerRoute(
+    name: "productdetails",
+    pattern: "{url?}",
+    defaults: new { controller = "Shop", action = "ProductDetails" }
+    );//shop/p 
+bunu ekliyoruz
+
+16)Daha Sonra program.cs deki pattern:category olanı kaldırıdk
+default da   asp-route-id="@category.Url burayı id yaptık
+ShopControllerda categooryleri İd YAPTIK
+17)ShopControllerda 
+  public async Task<IActionResult> ProductDetails(string id)
+        {
+            return View();
+        } 
+bunu oluşturduk
+18)ProductDetails bunun  view'ını oluşturudk
+19)
+20)3.Ders devam
+21)program.cs a gelip
+app.MapControllerRoute(
+    name: "products",
+    pattern: "kategori/{id}",//produvt slaş üürn url diye çalışır
+    defaults: new { controller = "Shop", action = "ProductList" }
+
+    );
+
+
+app.MapControllerRoute(
+    name:"productDetails",
+    pattern:"urunler/{id}",//produvt slaş üürn url diye çalışır
+    defaults:new {controller="Shop",action="ProductDetails"}
+
+    );
+satırlarını ekledik
+22)   asp-route-producturl=@Model.Url>İncele</a> @*burdaki url'i program.cs deki url den anlıyor*@ paryiae ekledik
+23) public  IActionResult ProductDetails(string producturl)
+        {
+            return View();
+        }
+burayı düzledik (diger düznelemerlde var eksik burası)
+24)ProductPartial dan dateAdded'ı kaldırdık
+25)Task<Product> GetProductDetailsByUrlAsync(string productUrl);  IproductSercise koyduk
+26)procytMANAGER DA  public async Task<Product> GetProductDetailsByUrlAsync(string productUrl)
+        {
+            return await _unitOfWork.Products.GetProductDetailsByUrlAsync(productUrl);
+        }
+bunu yaptk
+27)  Task<Product> GetProductDetailsByUrlAsync(string productUrl);  produvtRepositoru koyduk
+28)EfCoreProductRepository burada 
+ public Task<Product> GetProductDetailsByUrlAsync(string productUrl)
+        {
+            //product bilgisni getir getirken de vategory ilgini getir
+            return ShopAppContext
+                .Products
+                .Where(p => p.Url == productUrl)
+                .Include(p => p.ProductCategories)
+                .ThenInclude(pc => pc.Category)
+                .FirstOrDefaultAsync();
+        }
+bunu koyduk
+29)ShopControlera gelip ProductDetails metotunu düzelnilyrozu
+30)sonra dto nun içinde ProductDetailsDto bu clası oluşturyotuz ProcurDto daki leri copypaste yapıyorzu içini doldurp düzenliyoruz
+31)ShopControllerı düzenlemeye devaö ediyoruz
+ProductDetailsDto productDetailsDto = new ProductDetailsDto
+            {
+                Id= product.Id, 
+                Name= product.Name, 
+                Price= product.Price,   
+                ImageUrl= product.ImageUrl, 
+                Url=product
+32)productDetailse gelip düzenleme yapıyoruz
+33)Web katmanında Areas adlı klasör oluşturuyoruz onun için admin klasöreü onuniçine controller view ve model klaörlrii ekliyorz
+34)Daha sonra prgran.cs gelip
+app.MapAreaControllerRoute(
+    name: "Admin",
+    areaName:"Admin",//klaörden bahsettik
+    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+satırlarını ekliyoru
+
+35)sonra admin in içinde controllerda home controller oluştruyrız
+36)ondan sonra onun içinde index view oluşturytouz (sag tık addView)
+37)Daha sonra Admin içindeki view de Shared klasörü açıyoruz onun içine layout.cshtml koyuyoruz
+onun içini düzenliyorz ve css js linklerini koyuyıruz
+38) Admin deki index.cshtml e gidip layotu tanımlıyoruz ve içini doldurmaya başlıyoruz
+39)viewimport ve startları viewin içine copy paste yapıyoruz
+40)sonra admindeki controllerw CategoryController olışuryıryz 
+burdan sonrası karıştı
+Modelsa gelip caetgoryListDto adında class oluşturyotuz
