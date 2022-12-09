@@ -1,0 +1,170 @@
+//ders-1(8d)
+1)İlk olarak yeni kategori eklmee butonun a ya çeviryotuz
+class="btn btn-outline-primary mb-2"
+    asp-area="Admin"
+    asp-controller="Category"
+    asp-action="Create" 
+bunları ekliyorz
+
+2)Category Controller gidyıruz create actionu oluşturuyoruz
+ public IActionResult Create()
+Create in üstünde addviwe diyerek Creat.cshtml viewi ını oluşturyotuz
+
+3) web deki admin deki models daki dto da CategoryAddDto clasını oluşturyotuz içini dolduryotux
+sonra Creat.cshtml bunu dolduryotuz
+4)CategoryAddDto buraya gidip oarayı dolduryotuz
+ [DisplayName("Kategori Adı")] //ekranda gözükücek isim
+        [Required(ErrorMessage ="{0}  boş bırakılmamalıdır")]
+        [MinLength(5,ErrorMessage ="{0} , {1} karakter kısa olmamaldır")]
+        [MaxLength(50, ErrorMessage = "{0} , {1} karakterden uzun olmamaıldır")]
+satırları ekliyoruz
+
+5)CategoryController gidip 
+        [HttpPost]
+        public async Task<IActionResult> Create(CategoryAddDto categoryAddDto)
+        {
+bunları yazmayı başşlıyoruz
+6)solıcton dosyaında yeni proje oluşyryıu Shoppin.Core--onun içinde de Jobs clası oluşturuyotuz ve içine mteod yazıyoruz
+7)Web katmanında dependessin üzerinde add project diyip core'u ekledik
+8)Sonra CategoryControlllerde düzenleme yapmaya devam ediyoruz
+9)Admindeki viewdeki  Layout da gelip
+ <h1 class="text-primary display-5 fw-normal">
+    <a  class= "text-decoration-none"asp-area="Admin" asp-controller="Home" asp-route-id="@category.Id">Admin Panel</a>
+  </h1> bu satırı düzenledil
+
+10) category'nin Index deki url bilgilerini kaldırdık ve butonlara link verdik
+11)dahasonra categoryContrller gelip EDitin get medotuunu oluşturuyırux
+ [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            return View();
+burdan balıyoruz
+
+12)Admindeki dto ya CategoryUpdateDto clasını oluştrudk ve CategoryAdDto olan herşeyi copyPASTAE yaptık ve bir metod ekledik
+13)CATEgoryControler gdip
+ }
+            var categoryUpdateDto = new CategoryUpdateDto
+            {
+                Name = category.Name,
+                Description = category.Description,
+                Url = category.Url
+            };
+bunları koyduk 
+14)Sonra CATEGORYCONTROLLERDA sagtık yapıp edit için view yapıp içini doldurudk(creat.cshtml den aldık çoğunu)
+15)Dahas sonra categoryControler gelpp post metodunu yazıyrou<
+  [HttpPost]
+        public async Task<IActionResult> Edit(CategoryUpdateDto categoryUpdateDto)
+        {
+
+16)Edit.cshtml e gelip input hidden ekliyoruz
+17)CategoryUpdateDto gelip ıd koyuyoruz
+18)categoryControllerde get edit ksımına  Id=category.Id, bunu koyuyoruz
+19)CategoryControlleda post metodunu değiştirdik(edit'in) düzenlemelr yaptık
+
+20)//ders-3
+
+21)İndex.cshtnml de   <a asp-area="Admin" asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id"
+                    class="btn btn-danger btn-sm">Sil</a>
+ekliyoruruz
+22)Daha sonra categoryCONTROLLER gidip get metdofunu delet için yazıyoruz
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var category = await _categoryService.GetByIdAsync(id);
+            if (category == null)
+            {
+buuradan başlıyoruz içini dolduryotuz
+23)Daha sonra Edit.cshtl de şu butonları koyuyoruz
+
+            <a class="btn btn-danger"
+                    asp-area="Admin"
+                    asp-controller="Category"
+                    asp-action="Delete" asp-route-id=@Model.Id>Sil</a>
+
+            <a class="btn btn-success"
+               asp-area="Admin"
+               asp-controller="Category"
+               asp-action="Index" asp-route-id=@Model.Id>İptal</a>
+
+24)Sil ve iptal tuşlarını biz yaptık edit.cshtml de yaptık
+25)Admin deki controllera ProductController oluşturuyoruz ve içini doldurmya başlıyoruz
+private readonly IProductService _productService;
+        private readonly ICategoryService _categoryService;
+
+        public ProductController(IProductService productService, ICategoryService categoryService)
+        {
+            _productService = productService;
+            _categoryService = categoryService;
+        }
+ilk etapda bunları ekledik
+26)product cONTROLLER OLUŞTRUDJ
+27)Sonra DTO NUN içine productListDto olulturduk içini dldurudk
+28)productController da index viewini oluştrudk sagTık ADD vİEW ve içini doldruduk
+29)Data katmanında IProductRepoisyory ye ekleme yapıyoruz
+ Task<Product> GetProductsWithCategories(); bunun koyuyoruz
+30)EfcOREpRODCYT DA İMPLEMTE YAPTIK ve içini dolduruk
+31)DAHA sonra IProductService buraya gidip
+ Task<List<Product>> GetProductsWithCategories(); bu metodu koyduk
+32)productManager a gelip implemte yapıp i.ini doldruduk
+  public async Task<List<Product>> GetProductsWithCategories()
+        {
+            return await _unitOfWork.Products.GetProductsWithCategories();
+        }
+33)ProductListDto ya public List<Category> Categories { get; set; } ekledik
+34)Daha sonra ProdcutController da index'in içini düzenledik
+35)Daha sonra Proct ın index.cshtml e gidip düzenlemelr yaptık
+
+36)4.ders
+37)ProdcutController gidip düzenleme yaptık
+38)ProdcurList den category yi sildik
+39)index.cshtml de düzenleme yaptık
+ <th>Kategoriler</th> bunu
+
+  <td>
+                   <ul>
+                        @foreach (var category in item.Product.ProductCategories)
+                        {
+                            <li>@category.Category.Name</li>
+                        }
+                   </ul>
+                </td>
+bunları ekledik
+
+40)ProductController gelip create için get metodu yazıyoruz
+[HttpGet]
+        public async Task<IActionResult> Create()
+        {
+
+41)Dto ya gidip productAddDtoo oluşyur içini doldur
+42)Sonra productControlre gelip içini düzenliyoruz sag tık addView yapıp create vieinı oluşturup category deki creatin içindeki copy
+ppaste yapıp  içini  düzenliyoruz
+43)
+44)
+45)
+46)
+47)
+48)
+49)
+50)
+51)
+52)
+
+
+
+NOTLAR
+----------------------
+preventDefault--refresh
+asp-validation-for="Name"---name için hata mesajlarını verir
+asp-for="Name"---gözükücek isim
+Replace("ç", "c") ---- ç yerine c koy demek replace
+ToLower---Küçük harfe çevir
+
+@*buradaki  asp-for="Name" CategoryAddDto dan gelen Name oluyor*@
+  <label asp-for="Name" class="form-label"></label>
+  <input class="form-control" asp-for="Name">
+
+   
+asp-area="Admin"  -- Burdaki area program.cs den gelen
+areaName:"Admin",burdan gelen area, ama burada program.cs de klasörden bahsetmiş oludk.
+accept="image/"  ----  bununla sadece resimleri çagırıcak
