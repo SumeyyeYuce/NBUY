@@ -9,9 +9,13 @@ bunları ekliyorz
 2)Category Controller gidyıruz create actionu oluşturuyoruz
  public IActionResult Create()
 Create in üstünde addviwe diyerek Creat.cshtml viewi ını oluşturyotuz
+ve içini doldurmaya başlıyoruz form için
 
 3) web deki admin deki models daki dto da CategoryAddDto clasını oluşturyotuz içini dolduryotux
-sonra Creat.cshtml bunu dolduryotuz
+sonra Creat.cshtml bu view 'i dolduryotuz
+
+Daha sonra
+
 4)CategoryAddDto buraya gidip oarayı dolduryotuz
  [DisplayName("Kategori Adı")] //ekranda gözükücek isim
         [Required(ErrorMessage ="{0}  boş bırakılmamalıdır")]
@@ -19,11 +23,12 @@ sonra Creat.cshtml bunu dolduryotuz
         [MaxLength(50, ErrorMessage = "{0} , {1} karakterden uzun olmamaıldır")]
 satırları ekliyoruz
 
-5)CategoryController gidip 
+5)CategoryController gidip create için post metodunu yazmaya başlıyoruz
         [HttpPost]
         public async Task<IActionResult> Create(CategoryAddDto categoryAddDto)
         {
 bunları yazmayı başşlıyoruz
+
 6)solıcton dosyaında yeni proje oluşyryıu Shoppin.Core--onun içinde de Jobs clası oluşturuyotuz ve içine mteod yazıyoruz
 7)Web katmanında dependessin üzerinde add project diyip core'u ekledik
 8)Sonra CategoryControlllerde düzenleme yapmaya devam ediyoruz
@@ -32,6 +37,8 @@ bunları yazmayı başşlıyoruz
     <a  class= "text-decoration-none"asp-area="Admin" asp-controller="Home" asp-route-id="@category.Id">Admin Panel</a>
   </h1> bu satırı düzenledil
 
+//2.ders
+Category'nin index.cshtml e gidiip edit ve sil için asp-route-id="@category.Id" komutunu yazıyoruz
 10) category'nin Index deki url bilgilerini kaldırdık ve butonlara link verdik
 11)dahasonra categoryContrller gelip EDitin get medotuunu oluşturuyırux
  [HttpGet]
@@ -62,7 +69,6 @@ bunları koyduk
 19)CategoryControlleda post metodunu değiştirdik(edit'in) düzenlemelr yaptık
 
 20)//ders-3
-
 21)İndex.cshtnml de   <a asp-area="Admin" asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id"
                     class="btn btn-danger btn-sm">Sil</a>
 ekliyoruruz
@@ -88,6 +94,7 @@ buuradan başlıyoruz içini dolduryotuz
                asp-action="Index" asp-route-id=@Model.Id>İptal</a>
 
 24)Sil ve iptal tuşlarını biz yaptık edit.cshtml de yaptık
+
 25)Admin deki controllera ProductController oluşturuyoruz ve içini doldurmya başlıyoruz
 private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
@@ -100,20 +107,26 @@ private readonly IProductService _productService;
 ilk etapda bunları ekledik
 26)product cONTROLLER OLUŞTRUDJ
 27)Sonra DTO NUN içine productListDto olulturduk içini dldurudk
-28)productController da index viewini oluştrudk sagTık ADD vİEW ve içini doldruduk
+28)productController da index viewini oluştrudk sagTık ADD vİEW ve içini doldruduk (categorynin index viewini copy paste yaptık)
+
 29)Data katmanında IProductRepoisyory ye ekleme yapıyoruz
- Task<Product> GetProductsWithCategories(); bunun koyuyoruz
-30)EfcOREpRODCYT DA İMPLEMTE YAPTIK ve içini dolduruk
+ Task<list<Product>> GetProductsWithCategories(); bunun koyuyoruz
+
+30)EfCoreProductRepository de İMPLEMTE YAPTIK ve içini dolduruk
+
 31)DAHA sonra IProductService buraya gidip
  Task<List<Product>> GetProductsWithCategories(); bu metodu koyduk
-32)productManager a gelip implemte yapıp i.ini doldruduk
+
+32)productManager a gelip implemte yapıp içini doldruduk
   public async Task<List<Product>> GetProductsWithCategories()
         {
             return await _unitOfWork.Products.GetProductsWithCategories();
         }
-33)ProductListDto ya public List<Category> Categories { get; set; } ekledik
+
+33)ProductListDto ya public List<Category> Categories { get; set; } ekledik (bunu sonra sildik)
 34)Daha sonra ProdcutController da index'in içini düzenledik
 35)Daha sonra Proct ın index.cshtml e gidip düzenlemelr yaptık
+
 
 36)4.ders
 37)ProdcutController gidip düzenleme yaptık
@@ -154,7 +167,7 @@ ppaste yapıp  içini  düzenliyoruz
 
 NOTLAR
 ----------------------
-preventDefault--refresh
+preventDefault-- sayfanın refresh edilmesini engelliyor
 asp-validation-for="Name"---name için hata mesajlarını verir
 asp-for="Name"---gözükücek isim
 Replace("ç", "c") ---- ç yerine c koy demek replace
