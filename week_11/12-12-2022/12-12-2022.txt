@@ -1,0 +1,121 @@
+//ders-1
+1)İlk Olarak product'ın create.cshtml ine gelip düzenleme  yapıyoruz alt kısmı anasayfa ürünü mü onaylı mı checkbox larını ekledik
+<div class="mb-1">Seçenekler </div>
+         
+             <div class="">
+               
+                <input 
+                    type="checkbox"
+                       class="form-check-input" asp-for="IsHome">
+                <label asp-for="IsHome" class="form-label"></label>
+burdan başlıyor
+2)Daha sonra ProdcutController a gelip httpPost metdounu yazzıyoruz
+ [HttpPost]
+        public async Task<IActionResult> Create(ProductAddDto productAddDto)
+     
+3)Create.cshtml e gelip formun içine  enctype="multipart/form-data" fotograf eklemek için gerekli olan bu komutu verdik
+4)ProductAddDto ya gelip
+  public List<Category> SelectedCategories { get; set; } bu satırı silip
+public int[] SelectedCategoryIds { get; set; } bu satırı ekliyoruz
+5)Create.cshtml e gelip  name="selectedCategoryIds"
+                            value="@category.Id"
+forech bunları ekledik
+6)productControllera gelip create ın içini doldurmaya başlıyoruz
+var url = Jobs.InitUrl(productAddDto.Name);
+                var product = new Product
+                {
+                    Name = productAddDto.Name,
+                    Price = productAddDto
+bunlar
+7)Core katmanındaki jobs clasına gidip metot yazıyoruz
+ public static string UploadImage(IFormFile image)
+ (IFormFile  bunu tanımıyor instal diyip ekliyoruz kontrol nokta
+bunu yazdıktan sonra metotunn içini dolduryoruz (image için yaptık bunları)
+
+8)busines katmanındaki IproductService gelip yeni metot yazıyoruz
+ Task CreateProductAsync(Product product, int[] selectedCategoryIds);    bunu ekliyorux
+9)sonra ProductManger gdiidp implemte yaptık
+10)sonra IPrdouctRepository gidip
+ Task CreateProductAsync(Product product, int[] selectedCategoryIds); koyduk
+
+11)Sonra EFCoreProductRepository gidip implemte yapıyoruz ve içini dolduryoruz
+
+12)ProductControllera gelip
+  };
+   await _productService.CreateProductAsync(product, productAddDto.SelectedCategoryIds);
+   return RedirectToAction("Index");
+satırlarını ekliyoruz
+
+//ders-2
+13)ProductControllera gelip
+var categories = await _categoryService.GetAllAsync();
+            productAddDto.Categories = categories;  
+            return View(productAddDto);
+satırlarını ekledik
+14)Create.cshtml e gelip foech'in altına
+@*kategori için yazdıgımız hata mesahı gözüksün*@
+                <span asp-validation-for="SelectedCategoryIds" class="text-danger"></span>
+
+satırlarını ekldedik ve  checked içinde işlmler yaptık 
+
+15)ProductPartial gelip img için clas ve style düznelemleri yaptık ve dışdaki cardın style ını verdik
+<div class="card mb-2" style="height:300px;">
+ <img class="img-fluid" src="/images/@Model.ImageUrl" style="width:50px; height:105px;" />
+bunları düzenledik
+
+16)//ders-3
+17)IProductRepository gelip metot tanımlıyoruz
+Task<List<Product>> GetProductWithCategories(); bunu koyuyoruz
+
+18)EfCoreProductRepository gelip implemnte yapıp içini dolduryorux
+
+19)IProductService buraya gidip 
+ Task<List<Product>> GetProductWithCategories(int id); bu satırı ekledik
+
+20)ProductManager a gelip implemte yapıp içini dodlurudk
+  public async Task<List<Product>> GetProductWithCategories(int id)
+        {
+            return await _unitOfWork.Products.GetProductWithCategories(id);
+        }
+
+21)//ders-4
+22)ProductControllelrda editin get ve set metotlarını yazıyoruz
+
+23)IproductServise gelip 
+   Task UpdateProductAsync(Product product, int[] selectedCategoryIds);
+ metotu yazıyoruz
+
+24)productManagera gelip implemte yapıp içini doduryoruz
+public async Task UpdateProductAsync(Product product, int[] selectedCategoryIds)
+        {
+             await _unitOfWork.Products.UpdateProductAsync(product,selectedCategoryIds);
+        }
+
+25)IProductRepository gelip
+  Task UpdateProductAsync(Product product, int[] selectedCategoryIds);
+metodunu yazıyoruz
+
+26)EfCoreProductRepository gelip implemte yapıp içini dolduyoruz
+ public Task UpdateProductAsync(Product product, int[] selectedCategoryIds)
+        {
+            throw new NotImplementedException();
+        }
+27)
+28)
+29)
+30)
+31)
+32)
+33)
+34)
+35)
+36)
+37)
+38)
+39)
+40)
+
+
+ enctype="multipart/form-data"  herhnagi bir dosyanın eklenmesini saglıyor fotograf vs gibi
+random vermmeizdeki neden aynı isimden olmasın diye oluşturduk
+ @(Model.SelectedCategoryIds.Any(sc=>sc==category.Id) ? "checked": "") (burada diyoruz kibenim categoryId ım seçlen kategori ıd si ile eşleşiyorsa seçili yap)
