@@ -1,0 +1,20 @@
+1)Ddeğişime kapalı geliştirmeye açık(Open-Close)
+2)LİSKOV
+3)Skop-oturum boyunca bir
+4)Görünüşleri aynı çalışma biçimleri farklı->>Poliformizim
+5)
+6)Dependensi İnvorjın
+7)Facttory Design Pattern
+8)İlkay ilknur
+9)
+10)
+11)
+12)
+13)
+14)
+15)
+16)
+17)
+18)
+19)
+20)

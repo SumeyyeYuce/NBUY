@@ -1,0 +1,196 @@
+//ders-1
+1)İlk olarak layota gelipjquery kütüphanesini ekledik
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+bunu
+min.js yi siliip yapıyoruz
+
+2)sonra validaobScripte gelip
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+bunu ekliyoruz sonra
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+bunu ekliyoruz
+
+3)sonra admindeki layaot agelip
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ekşliyoruz
+
+4)validationScriprPartal dosyasını kopyalaıp admindeki sharede yapıştırıyrouz
+
+5)Admindeki layaota gelip
+  @await RenderSectionAsync("Scripts",false); satrıını ekliyoruz
+
+6)Product ın edit.cshtml ine gelip @sectionu koyuyıruz
+@section Scripts{
+    @Html.PartialAsync("_ValidationScriptsPartial")
+
+7)Edit sayfasınada resim koydugumuz divi düzenliyoruz
+
+8)Edit sayfasına gelip script kodlarını yazmaya başlıyoruz
+<script>
+    const imgViewer = document.getElementById('img-viewer');
+    const imgUrl = document.getElementById('img-url');
+    const imgFile = document.getElementById('ImgFile')
+
+9)ProductUpdateDto ya gelip ımagefİLE içibn olan Required özelliğin kaldırıyoruz
+
+10)ProductControllera gelip editin post metodunda ekleme yapmaya başlıyoruz
+  var imageUrl = productUpdateDto.ImageUrl != null ? Jobs.UploadImage(productUpdateDto.ImageFile)
+                    : product.ImageUrl;
+illk olarak satırnı ekledik
+11)sonra create.cshtl e gidip editin içindeki image divinii alıp copy paste ile burdaki image yerine yapıştırıdk
+aşşagıda yazdıgımız script kodlarını da create.cshtml e ekledik copy paste ile
+
+12)sonra admindeki layaouta gelip düzenleme yapıyoruz sag tarafa menu ekliyoruz
+
+
+//ders-2
+
+13)admindeki sharde gelip add diyip yeni view koyduk (AdminSideBarPartial) ve içini doldurmaya başladık
+14)Category controller ve productContrlale gelip
+ ViewBag.SelectedMenu = "Category"; satırlarını koyuyroz
+
+15)Productın indexine gelip düzenleme işlemlerini yapıyoruz 
+
+16)Data katanında abstract da IProductRepository gelip 
+ Task UpdateIsHomeAsync(Product product); 
+Task UpdateIsApprovedAsync(Product product);
+metodlarını yazıyoruz 
+
+17)sonra EfCoreProductRepository gelip implemte yapıp içini doldurmya başlıyoruz her ikiis içinde
+18)daha sonra productService gelip
+ Task UpdateIsHomeAsync(Product product);
+   Task UpdateIsApprovedAsync(Product product);
+ iki metodu yazıyoruz
+19)sonra productManeger  e gelip implmet yapıp içini dodlurtorux
+20)sonra admindeki productController gidip 
+  public async Task<IActionResult> UpdateIsHome(int id)
+        {
+            var product = await _productService.GetByIdAsync(id);
+            if (product==null)
+            {
+                return NotFound();
+            }
+            await _productService.UpdateIsHome(product);
+            return RedirectToAction("Index");
+        }
+
+bu metotları yazmaya başlıyoruz
+aynısını UpdateIsApproved için de yapıyoruz
+21)Sonra Prodct ve Category kontroller a gelip 
+ ViewBag.Title = "Kategoriler";
+ ViewBag.Title = "Ürünler"; 
+satırlarını ekliyoruz
+
+22)İndex lerdeki <h1> başlıklarını kladırıyoruz
+23)layot da  <div class="col-6">
+                        <h3 class="text-danger">@ViewBag.Title</h3>                 
+                    </div> 
+
+bu satırları ekliyoruz ve düzenliyoruz
+
+İndex deki sil butonu nu kesip
+admindeki sharede a gelip yeni view açıp adına ProductDeletePartial diyip içine yapıştırıyoruz
+
+//ders-3
+24)ProductDeletePartial  botstrapden modal koyuyoruz düzenliyoruz
+25)ProdcutControllera gelip yeni metot yaıyoruz
+  public async Task<IActionResult> Delete(int id)
+        {
+            var product = await _productService.GetByIdAsync(id);
+            if (product==null)
+            {
+                return NotFound();
+            }
+            _productService.Delete(product);
+            return RedirectToAction("Index");   
+
+26)//ders-4
+27)Productlar için edit ve create sayfalarına delete ve iptal butonlarını koyduk
+28)Product 'ın Edit.cshtml ine gelip
+ @{
+                Product product = new Product
+                {
+                    Id = Model.Id,
+                    Name = Model.Name,
+                    ImageUrl = Model.ImageUrl
+                };
+            }
+            @await Html.PartialAsync("_ProductDeletePartial",product)
+
+            <a class="btn btn-success"
+               asp-area="Admin"
+               asp-controller="Product"
+               asp-action="Index" asp-route-id=@Model.Id>İptal</a>
+
+bun satırları ekledik
+29)ProductDeletePartialda form kısmını düzenledik sildik ve yerine
+<a 
+                        asp-area="Admin"
+                        asp-controller="Product"
+                        asp-action="Delete"
+                        asp-route-id="@Model.Id"
+                        class="btn btn-primary">Evet</a>
+böyle yaptık 
+30)Product ın create.cshtml ine gelip sil ve iptalbutonlarını koyduk
+
+            <a class="btn btn-danger"
+               asp-area="Admin"
+               asp-controller="Product"
+               asp-action="Delete" asp-route-id=@Model.Id>Sil</a>
+
+            <a class="btn btn-success"
+               asp-area="Admin"
+               asp-controller="Product"
+               asp-action="Index" asp-route-id=@Model.Id>İptal</a>
+
+bunları koyduk
+31)
+32)
+33)
+34)
+35)
+36)
+37)
+38)
+39)
+49)
+
+
+ id ="isHomeForm_@item.Product.Id" bunu bu şekilde yazmamızın nedeni her bir formun id sini ayrı ayrı bulmak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  if (files[0]==null){
+            imgViewer.setAttribute('src','~/images/@(Model.ImageUrl)');
+            imageUrl.innnerText = "";
+        }else
+        {
+            imgViewer.setAttribute('src', window.URL.createObjectURL(files[0]));
+            imgUrl.innerText = files[0].name;
+        }
