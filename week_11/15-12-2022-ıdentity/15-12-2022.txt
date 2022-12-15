@@ -1,0 +1,176 @@
+//ders-1
+1)İlk olarak data entity ve web katmanlarına ekledik
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 7.0.1 bukomutu
+ Microsoft.AspNetCore.Identity.EntityFrameworkCore paketini yüklüyoruz (bu paket bizim için veritabanında tablo oluşturuyor
+)
+2)daha sonra Enity katmanında concrete gelip ıdentity klasöür oluşturup onun içine User classı oluşturduk ve User classına :IdentityUser BURADAN 
+MİRAS ALDIRDIK ve içine metotları oluşturudk
+3)data katmanında concreet in içinde ef corun içinde contextin içinde IdentityContext  clasını oluşturıruz ve IdentityDbContext<User> buradan miras aldıp içine ctor koyuyoruz
+
+4)Program.cs e gelip 
+builder.Services.AddDbContext<IdentityContext>(options=>options.UseSqlite("DataSource=ShoppingApp.db"));  ve
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<IdentityContext>()
+    .AddDefaultTokenProviders();//default cookie
+
+satırlarını ekledik
+veri tabanı için
+
+5)Daha sonra data katmanında migraions işlemi yapıyoruz dotnet ef migrations add InitialIdentity --startup-project ../ShoppingApp.Web --context IdentityContext
+komutunu ekl,yoruz
+daha sonra 
+dotnet ef database update --startup-project ../ShoppingApp.Web --context IdentityContext
+komutunu veriyoruz
+
+6)Daha sonra program.cs e gelip
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    #region PasswordSettings
+        options.Password.RequireDigit= true;//şifre içinde mutlaka rakam bulunsun demiş olduk
+        options.Password.RequireLowercase= true;//şifre içinde mutlaka küçük harf bulunsun
+        options.Password.RequireUppercase= true;//şifre içinde mutlaka büyük harf olsun
+        options.Password.RequiredLength= 6;//şifre en az 6 karakter olsun
+        options.Password.RequireNonAlphanumeric= true;//şifre içinde alphanumeric kara
+satırları ve devamını yazmaya başlıyoruz buranın içini doldruduktan sonra
+builder.Services.ConfigureApplicationCookie(options =>
+{
+
+});
+buaryı yazıp buranın içini dodrumaya başlıyoruz
+
+
+7)//Ders-2
+8)Web katmanındaki controllera gelip AccountController'ı oluştueuyoruz
+ve içini doldurmay başlıyoruz
+  private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
+
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+        }
+
+buradan başladık ve ındex i logın olarak değiştirip post metodunu açtık
+daha sonra 
+ public IActionResult Register()
+        {
+            return View();
+        }
+metodunu yazıp addView diyerek register.cshtml dosyasını oluşturmuş olduk
+9)daha sonra web katmanındaki  model de dto ya gelip RegisterDto yu oluşturup içini doldrumya başlıyoruz
+10) register.cshtml buraya gelip categorynin creat.cshtl ini copy past yapıyoruz ve içini kendimize göre düznlmeye başlıyorus
+11)ViewImports a gelip @using ShoppingApp.Web.Models.Dtos  komutnu yazıyoruz
+12)daha sonra  register.cshtml gelip düzenlemelre devam ediyoruz kayıt ol form için
+13)daha sonra AccountController gelip Registerın post metodunu yazmaya başlıyoruz
+ [HttpPost]
+        public IActionResult Register(RegisterDto registerDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new User
+                {
+                    FirstName = registerDto.FirstName,
+
+buarlar içini doldrurmaya devam ediyroruz
+14)AccountController da loginn view ını oluştuuryoeuz (add view diyip) login.cshtml
+15)Daha sonra web katmanındaki  model de dto ya gelip logınDto clasını oluşturup içini doldurmya başlıyoruz
+16)sonra login.cshtml de içini dolduroruz
+17)AccountController a gelip loginin post metodunn içini doldurmya başlıyoruz
+18)login.cshtml de   <div asp-validation-summary="All" class="text-danger"></div> bu satırı ekliyrz
+19)AccountController a gelip lognin post metodunu yazmaya devam ediyoruz
+
+//ders-3
+20)Web katmanındaki shared da layaout a geliyoruz headerı komple kesip share da _Navbar diye view açıp onun içine yapıştırdık
+ve layota   @await Html.PartialAsync("_Navbar") bu satırı da ekledik
+21)_navbar.cshtml i düzenlemeye başlıyoruz
+22)Program.cs de 
+app.UseAuthentication(); satının ekliyoruz
+23)_navbarı düzenlemeye devam ediyoruz
+24)AccountController a gelip 
+ public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index");
+        } 
+metotlarını yazıyrouz
+ve navbarı düzenlemeye devam ediyoruz
+25)Adminin içindeki HomeConrollea gelip   [Authorize] satırnın ekledik
+
+26)LoginDto ya gelip 
+public string ReturnUrl { get; set; }   satırnı ekliyoruz
+
+27)AccountController a gelip  
+ public IActionResult Login(string returnUrl=null)
+        {
+            return View(new LoginDto
+            { 
+                ReturnUrl = returnUrl
+            
+            });
+        }
+kısmı düzenliyoruz
+28)login.cshtml e gelip 
+      <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl" />
+ satırnı ekliyoruz
+29)AccountController da düzenlemeu devam ediyoruz loginin post metodunda if kısmının içini düzenledik
+return Redirect(loginDto.ReturnUrl ?? "~/"); yeni hali böyle
+30)admindeki category ve product controllera gelip     [Authorize]  bunu koyduk
+
+//ders-4
+31)Program.cs e gelip
+options.Cookie = new CookieBuilder
+    { buranın içine 
+ SameSite = SameSiteMode.Strict bunu ekliyoruz
+32)DAHA sonra AccountController a gelip registerın post metodunun altına [ValidateAntiForgeryToken] komutunu ekliyoruz
+en üst kısma ise [AutoValidateAntiforgeryToken] bu komutu ekliyoruz
+
+33)Daha sonra register.cshtml de   <div asp-validation-summary="All" class="text-danger"></div> satırı ekliyoruz
+34)Daha sonra AccountController a gelip mail onay için işlem yapıyoruz register'ın post metodunda 
+ //Generate Token(mail onayı için)
+                    var tokenCode = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var url = Url.Action("ConfirmEmail", "Account", new
+                    {
+                        userId=user.Id,
+                        token=tokenCode
+                    });
+
+bu işlemleri yazıyoruz
+35)AccountController  da ConfirmEmail için metot yazmaya başlıyoruz
+ public async Task<IActionResult> ConfirmEmail(string userId,string token) bunu yazıp içini dlduryoruz
+36)Web katmanında EmailServices klasörü oluşturuyız onun içine abstract ve cobncrete açıyoruz abstarvın içine IEmailSender oluşturup
+içine   Task SendEmailAsync(string email, string subject, string htmlMessage); diyoruz
+concrete de Pop3EmailSender ve SmtpEmailSender clasarını oluşturyoruz bunlara IEmailSender dan miras
+aldıırypruz  ve SmtpEmailSender  doldrumaya başlıyrpuz
+
+37)AccountController a gelip  private readonly IEmailSender _emailSender; satırını ekliyoruz
+
+38)Program.cs glip builder.Services.AddScoped<IEmailSender, SmtpEmailSender>(x => new SmtpEmailSender(
+
+
+    ));
+bunu yazıp içini doldrumaya başlıyoruz
+39)AccountController  a gelip 
+//mailin gönderilme onaylanma işlemlerir
+                    await _emailSender.SendEmailAsync(user.Email, "ShoppingApp Hesap onaylama", $"<h1>Merhaba</h1>" +
+                        $"<br>" +
+                        $"<p>Lütfen hesabınızı onaylamak için aşşadıdaki lnke  
+
+burayı  yazmay başlıyrıyz ve devam ediyorzu
+daha sonra View deki Accounta gelip ConfirmEmail viewını oluştıryıru
+40)
+41)
+42)
+43)
+44)
+45)
+46)
+47)
+48)
+49)
+50)
+
+
+
+
+  //ModelState.AddModelError("UserName", "Böyle bir kullanıcı bulunamadı");//bu mesaj formun altındaki username in altında gözükücek
