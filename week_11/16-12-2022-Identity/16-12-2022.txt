@@ -1,0 +1,138 @@
+//ders-1
+1)İlk olarak web katmanındaki appsetings.json dosyasına gelip
+ "ConnectionStrings": {
+    "SqliteConnection": "Data Source=ShoppingApp.db",
+    "MsSqlConnection": "Server...daha sonra hazırlanıcak"
+  }
+satırlarını ekliyoruz
+2)Programcs e gelip builder.Services.AddDbContext<IdentityContext>(options=>options.UseSqlite
+(builder.Configuration.GetConnectionString("SqliteConnection")))
+
+builder.Services.AddDbContext<ShopAppContext>(options => options.UseSqlite
+(builder.Configuration.GetConnectionString("SqliteConnection")));
+ bu satırı düzenliyrouz
+
+3)shopappContexte e gelip ctor diyip public ShopAppContext(DbContextOptions<ShopAppContext> options):base(options)
+oluşturduk ve OnConfiguring metodunu sildik
+
+4)appsetings.json gelip
+ "EmailSender": {
+    "Host": "smtp.office365.com",
+    "Port": 587,
+    "EnableSSL": true,
+    "UserName": "sumeyyeyce@hotmail.com",
+    "Password": "12345sum"
+  }  
+satırlarını ekledik
+
+5)Program.cs e gelip 
+builder.Services.AddScoped<IEmailSender, SmtpEmailSender>(x => new 
+ SmtpEmailSender(
+    builder.Configuration["EmailSender:Host"],
+    builder.Configuration.GetValue<int>("EmailSender:Port"),
+    builder.Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+    builder.Configuration["EmailSender:UserName"],
+    builder.Configuration["EmailSender:Password"]
+    ));
+satrını düzenleip bu şekilde yaptık
+6)Daha sonra AccountControllera gelip
+
+7)Ders-2
+8)bişey yazmadık
+
+9)Ders-3
+
+10)Core katmanına gelip jobs un içine yeni bir metot oluşturuyoruz
+ public static string CreateMessage(string title,string message,string alertType)  
+11)core katmanında sag tık yapıp class oluşturtrıuz AlertMessage adında class oluşturudk içini dolduyoruz
+12)public static string CreateMessage(string title,string message,string alertType)  buranın içini doldurmaya başlıyoruz
+13)Web katmanındaki layouta gelip 
+  @if (TempData["Message"]!=null)
+            {
+                //gelen json datayı deserilaze ediyoruz
+                var msg = JsonConvert.DeserializeObject<AlertMessage>(TempData["Message"] as String);
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-@msg.AlertType">
+
+                            <div>@msg.Title</div>
+                            <div>@msg.Message</div>    
+                            
+                            </div>
+                        </div>
+                    </div>
+
+bunlarıkeldik
+14)AccounControllera gelip buradaki viewBagı silip onun yerine bu satırı yazdık
+TempData["Message"] = Jobs.CreateMessage("Bilgi", "Lütfen mail hesabınızı kontrol ediniz gelen linki tıklayarak onaylayın", "warning");
+
+15)ders-4
+16)AccountControllerda loginin post metoduna 
+ if (!await _userManager.IsEmailConfirmedAsync(user))
+                {
+                    TempData["Message"] = Jobs.CreateMessage("bilgi", "Hesabınız onaylanmamş maile gelen onay linkine tıkla", "warning");
+                    return View(loginDto);
+                }
+satırlarını yazıyorz
+17)login.cshtml egelip buton koyduk
+ <a class="btn btn-info"
+               asp-controller="Account"
+               asp-action="ForgotPassword"
+
+            >Şİfremi Unuttum</a>
+18)AccountConrole gelip 
+  public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+yazdık add view diyip ForgotPassword viewini oluşturudk bu viewin içini dodlurduk
+
+19)Daha sonra bunun AccOUNTcONTROLLEA gelip 
+ [HttpPost]
+        public IActionResult ForgotPassword(string email)
+        {
+            return View();
+        }
+
+post metodunu yazdık
+
+
+20)ders-5
+21)[HttpPost]
+        public IActionResult ForgotPassword(string email)
+post metodunu yazmaya ve içini doldruuyoruz
+22)AccountControllerda ResetPassword metodunu yazmayabaşlıyoruz
+23)modeldeki dto ya gelip resetPasswssordDto clasını açıyoruz ve içini dolduruyoruz
+24)AccountControllerda 
+ublic IActionResult ResetPassword(string userId,string token)
+        {
+            if (userId==null || token==null)
+            {
+                TempData["Message"] = Jobs.CreateMessage("Hata", "Bir sorun oluştu lütfen daha sonra tekrar deneyiniz", "danger");
+                return RedirectToAction("Index", "Home");
+            }
+            var resetPasswordDto = new ResetPasswordDto
+            {
+                Token = token
+yazmaya başlıyoruz sonra burada sag tık addview diyip resetPassword.cshtml ini oluşturyroux ve içini dodlruyorz
+25)AccountControlar gelip ResetPassword ün post metodunu yazoırusz
+   [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDto resetPasswordDto)
+        {
+            if (!ModelState.IsValid) 
+            {
+                return View(resetPasswordDto);
+            }
+            var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
+            if (user==null)
+            {
+burdan başlıyoruz
+26)
+27)
+28)
+29)
+30)
+31)
+32)
+33)
