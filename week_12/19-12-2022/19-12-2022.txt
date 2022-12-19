@@ -1,0 +1,48 @@
+//ders-1
+1)İlk olarak layaoud da    asp-route-id="@User.Identity.Name" satrıını ekliyoruz
+2)AccountControllae gelip Manege metotodnu yazmaya başlıyoruz
+ public async Task<IActionResult> Manage(string id)
+        {
+            var name = id; 
+            if (string.IsNullOrEmpty(id))
+            {
+
+buradan başlıyoruz
+3)Dto klasörüne gelip UserManageDto classını oluştuuryruz ve entitydeki user clasınnda olan şeyelri copy paste ile alıp ekliyoruz
+ve ekstra  public string Email { get; set; }
+public string UserName  { get; set; }
+ bunu ekliyoruz ve hata mesajlarını yazıyruz ve controllerda mange metotunu düzenlemeye devam ediyoruz
+
+4)logindto daki userName i e mail adres yapıp controller ve cshtml de olan hatalı yerleri düzeltiyoruz
+5)AccountControllae  addView diyeerk manage in viewini oluşturup registerdan copy paste yapıp düenlrmr yaptık
+6)Manage.cshtmli düzenlemeye devam ediyoruz aynı zamanda yukarıdaki row un altındaki col-4 yapısını kaldırdık
+7)maangeDto ya gelip public List<SelectListItem> MyProperty { get; set; }
+ satırnı ekleyip
+8)AccountControllera gelip  bu eklediğimiz satırları koymaya başlıyoruz
+ List<SelectListItem> genderList = new List<SelectListItem>();
+            genderList.Add(new SelectListItem
+            {
+                 Text="Kadın",
+                 Value="Kadın",
+                 Selected=user.Gender=="Kadın" ? true: false
+            });
+            genderList.Add(new SelectListItem
+            {
+                Text = "Erkek",
+                Value = "Erkek",
+                Selected = user.Gender == "Erkek" ? true : false
+            });
+bunları ekliyoruz
+9)Manage.cshtml e gelip  <select asp-for="Gender" asp-items="@Model.GenderSelectList" class="form-select"> bu satırı düzenliyoruz
+
+10)
+11)
+12)
+13)
+14)
+15)
+16)
+17)
+18)
+19)
+20)
