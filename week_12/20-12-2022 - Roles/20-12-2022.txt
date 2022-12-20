@@ -1,0 +1,98 @@
+----->>>>>ders-1
+1)ilk olarak admindeki shared da  AdminSidePartial GİRİP 
+<a asp-area="Admin"
+       asp-controller="Role"
+       asp-action="UserRoles"
+       class="list-group-item list-group-item-action">Rol Atama</a>
+linkini koydukq
+
+2)RoleControllara gelip UserRoles metotunu oluşturudk
+  public IActionResult UserRoles()
+        
+3) admindeki Modelin içindeki dto da UserRolesDto classını olutruıp içini doldurudk
+4)RoleControllera gelip UserRoles metotonun içini doldurmaya bşalıyoruz ve addView diyip UserRoles adında cshtml oluşturyoruz
+5)UserRoles.cshtml dosyasıı biraz dolduryorz
+6)RoleControllar gelip  public async Task<IActionResult> GetUsers(UserRolesDto userRolesDto) metodunu oluştuurp içini dolduryoruz
+7)Daha sonra rolun edit.cshtml indeki form kısmını copy paste yapıp UserRoles.cshtml e gelip yapıştıırp içiniz düzenlemeye 
+başladık
+
+//Ders-2
+8)AdminSidePartial gelp çıkış yap linki koyduk
+<a asp-area=""
+       asp-controller="Account"
+       asp-action="Logout"
+       class="list-group-item list-group-item-action">Çıkış Yap</a>
+ekledik  Roller ve RolAtamalar içinde düzenlemem yaptık aynı zamanda RoleControllarda
+index e ve Users a    ViewBag.SelectedMenu = "UsersRole";
+            ViewBag.Title = "Role Atama";
+bunları koyduj
+9)Daha sonra Admindeki controllarda UserControllar oluştuurp dependensi yaptık
+10)ADmindeki modelde dto da UserDto oluştuurp içini dolduruk
+11)UserControllara gelip index'in içini dolduruyoryz ve addView diyip İndex.cshtml dosyasını oluşturyoruz
+bu dosyayı Rolun indexinden alıp düzenledik
+12)AdminSidePartial a gelip kullanıcılar için düzenleme yaptık ve UserController da 
+  ViewBag.SelectedMenu = "User";
+            ViewBag.Title = "Kullanıcılar";
+ satırlarını index'e ekledik
+
+13)///Ders-3
+
+
+14)UserControllera gelip create metodnu yazıyoruz  public IActionResult Create()
+15)sonra admindeki modeldeki  Dto da UserAddDto classını oluşturudk ve içini doldurudk
+16)sonra userConrollara gelip create meodunu yazmaya devam ediyoruz ve addView diyip Create.cshtml oluştrudj
+sonra register.cshtml den alıp düzenleme yaptık
+17)UserControllara gelip Create in post metodunu yazıyoruz ve içini dolduryoryz
+
+//ders-4
+18)AccountControllara gelip Registera ekleme yapıyoruz
+ await _userManager.AddToRoleAsync(user, "User"); ksımını ekledik
+19) uygulamanın ana Web katmanındaki account klasöründeki manage.cshtml e gelip tarih için yeni div oluşturyırux
+ @{
+            DateTime today = DateTime.Now;
+            int yearToday = today.Year;//2022 vericek
+            int year = yearToday - 18;
+            int month = today.Month;
+            int day = today.Day;
+            DateTime minBirthOfDate = new DateTime(year, month, day);
+
+        }
+        <div class="col-6 mb-3">
+            <label asp-for="DateOfBirth" class="form-label"></label>
+            <input
+                type="date" 
+                class="form-control"
+                asp-for="DateOfBirth" 
+                value="@minBirthOfDate.ToString("yyyy-MM-dd")"
+                min ="1900-01-01"
+                max="@minBirthOfDate.ToString("yyyy-MM-dd")">
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+        </div>
+
+yani bu satırları ekledik
+20)AccountControllaera gelip manage in post metoduna   user.DateOfBirth = userManageDto.DateOfBirth; satrıını ekledik
+21)manage.cshtm düzenlemeye devam ettik
+22)UserControllara gidip Edit metodunuz yazmaya başlıyoruz
+public async Task<IActionResult> Edit(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user==null)
+            {
+                return NotFound();
+            }
+            UserAddDto userUpdateDto = new UserAddDto
+            {
+buradan başlıyroz
+23)
+24)
+25)
+26)
+27)
+28)
+29)
+30)
+31)
+32)
+33)
+34)
+35

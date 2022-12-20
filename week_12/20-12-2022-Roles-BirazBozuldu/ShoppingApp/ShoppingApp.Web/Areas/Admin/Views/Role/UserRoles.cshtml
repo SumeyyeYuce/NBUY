@@ -1,0 +1,82 @@
+﻿@model UserRolesDto
+<form 
+    id ="formRoleList"
+    asp-area="Admin"
+    asp-controller="Role"
+    asp-action="GetUsers">
+
+    <select class="form-select" asp-for="RoleId" asp-items="@Model.SelectRoleList" onchange="document.getElementById('formRoleList').submit();">
+        <option>Lütfen bir rol seçiniz</option>
+    </select>
+
+</form>
+@if (Model.RoleDetailsDto!=null)
+{
+    <form asp-area="Admin"
+      asp-controller="Role"
+      asp-action="Edit"
+      method="post">
+        <input type="hidden" name="RoleId" value="@Model.RoleDetailsDto.Role.Id" />
+        <input type="hidden" name="RoleName" value="@Model.RoleDetailsDto.Role.Name" />
+
+
+        <div class="row">
+            <div class="col-6">
+                @*Nonmembers*@
+                <h6 class="bg-success text-white p-3">@Model.RoleDetailsDto.Role.Name Name Rölünü ekle</h6>
+
+                @if (Model.RoleDetailsDto.Members.Count == 0)
+                {
+                    <div class="alert alert-warning">
+                        @Model.RoleDetailsDto.Role.Name Rolüne ait kullanıcı bulunamadı.
+                    </div>
+
+                }
+                else
+                {
+                    <table class="table table-sm table-bordered">
+                        @foreach (var user in Model.RoleDetailsDto.NonMembers)
+                        {
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" name="IdsToAdd" value="@user.Id" /> @user.UserName
+                                </td>
+
+                            </tr>
+                        }
+                    </table>
+                }
+
+            </div>
+
+            <div class="col-6">
+                @*  members*@
+                <h6 class="bg-danger text-white p-3">@Model.RoleDetailsDto.Role.Name Rölünden kaldır</h6>
+
+                @if (Model.RoleDetailsDto.Members.Count == 0)
+                {
+
+                    <div class="alert alert-warning">
+                        @Model.RoleDetailsDto.Role.Name Rolüne ait kullanıcı bulunamadı.
+                    </div>
+                }
+                else
+                {
+                    <table class="table table-sm table-bordered">
+                        @foreach (var user in Model.RoleDetailsDto.Members)
+                        {
+                            <tr>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" name="IdsToRemove" value="@user.Id" /> @user.UserName
+                                </td>
+
+                            </tr>
+                        }
+                    </table>
+                }
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+    </form>
+}
