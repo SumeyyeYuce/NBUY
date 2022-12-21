@@ -1,0 +1,82 @@
+﻿@model CardDto
+<h6 class="display-6">Sepet</h6>
+<hr />
+@if (Model.CardItems.Count==0)@*sepette üürn yoksa*@
+{
+    <div class="row">
+        <div class="alert alert-warning">
+            Sepetinizde ürün bulunmamaktadır
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-8">
+            <h6 class="text-danger display-6">Ürünler</h6>
+            <hr/>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Resim</th>
+                        <th>Ürün</th>
+                        <th>Fiyat</th>
+                        <th>Adet</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cardItem in Model.CardItems)
+                    {
+                            <tr>
+                                <td>
+                                    <img src="~/images/@cardItem.ImageUrl" width="50" />
+                                </td>
+                                <td>@cardItem.ProductName</td>
+                                <td>@cardItem.ItemPrice</td>
+                                <td>@cardItem.Quantity
+                                 <input type="number" name="quantity" value="1" class="form-control d-inline-block"
+                               min="1" style="width:50px" />
+                                </td>
+                                <td>@(cardItem.ItemPrice * cardItem.Quantity) </td>
+                          
+
+                                
+                            </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="col-4">
+            <h6 class="text-danger display-6">Özet Bilgiler</h6>
+            <hr />
+            <table class="table table-sm">
+                <tbody>
+                    <tr>
+                        <th>Sepet Toplamı:</th>
+                        <td>@Model.TotalPrice()</td>
+                    </tr>
+
+                    <tr>
+                        <th>Kargo:</th>
+                        <td>Ücretsiz</td>
+                    </tr>
+
+                     <tr>
+                        <th>Ödenecek Toplam Tutar:</th>
+                        <td>@Model.TotalPrice()</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div>
+                <a href="/" class="btn btn-success">Alışverişe Devam Et</a>
+                <a href="/" class="btn btn-primary">Ödeme Adımına Geç</a>
+
+            </div>
+        </div>
+
+    </div>
+}

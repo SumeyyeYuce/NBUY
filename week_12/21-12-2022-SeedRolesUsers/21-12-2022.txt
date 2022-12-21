@@ -1,0 +1,46 @@
+ders-1
+1)İlk olarak UserController da Edit in Viwini oluştuuryotruz.Sag tık AddView Edit.Cshtml Userdaki Creta.cshtml den alıp ekleme
+ve  düzenleme yaptık
+
+2)UserControllara gelip Editin post metodunu yazmaya başlıyoruz ve değişiklikleri kaydetmek için işlemleri yapıyoruz
+        [HttpPost]
+        public async  Task<IActionResult> Edit(UserAddDto userUpdateDto)
+
+3)daha sonra 
+4)Yeni ödev UserControllerda 
+5)projeyi 21-12-2022-SeedRolesUsers diye güncelledik
+6)ShopAppContext de    public class ShopAppContext : IdentityDbContext<User, Role, string> ksımını düzenledik
+ve IdentityContexti sildik
+7)program.cs de 
+builder.Services.AddDbContext<IdentityContext>(options=>options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
+ satırını sildik ve 
+builder.Services.AddIdentity<User, Role>()
+    .AddEntityFrameworkStores<ShopAppContext>()
+    .AddDefaultTokenProviders();
+bu satırda ShopAppContexti düzeneidk
+
+Migration klsöürnü sildik  database de sildik
+8)Data katmanına gelip yeni klsaör ekledik Extensions ve onun içinde yeni class oluşurduk ModelBuilderExtensions adına bunu veridk VE 
+içini doldurmaya başladık
+9)ShopAppContexte gelip 
+modelBuilder.SeedData();
+ base.OnModelCreating(modelBuilder); 
+satırlarını ekledik
+10) migrations işemleri yaptık
+dotnet ef migrations add InitialDb --startup-project ../ShoppingApp.Web
+dotnet ef database update --startup-project ../ShoppingApp.Web
+
+//ders-2
+11)
+12)
+13)
+14)
+15)
+16)
+17)
+18)
+19)
+20)
+
+
+es.Except(userRoles))  var olan rolleri çıkaarak ekle

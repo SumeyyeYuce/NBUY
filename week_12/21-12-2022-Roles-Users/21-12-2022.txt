@@ -1,0 +1,29 @@
+ders-1
+1)İlk olarak UserController da Edit in Viwini oluştuuryotruz.Sag tık AddView Edit.Cshtml Userdaki Creta.cshtml den alıp ekleme
+ve  düzenleme yaptık
+
+2)UserControllara gelip Editin post metodunu yazmaya başlıyoruz ve değişiklikleri kaydetmek için işlemleri yapıyoruz
+        [HttpPost]
+        public async  Task<IActionResult> Edit(UserAddDto userUpdateDto)
+
+3)daha sonra 
+4)Yeni ödev UserControllerda 
+5)
+6)
+7)
+8)
+9)
+10)
+11)
+12)
+13)
+14)
+15)
+16)
+17)
+18)
+19)
+20)
+
+
+es.Except(userRoles))  var olan rolleri çıkaarak ekle
