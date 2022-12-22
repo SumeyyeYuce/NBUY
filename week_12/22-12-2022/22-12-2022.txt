@@ -1,0 +1,142 @@
+//ders-1 
+Geç kaldım biraz kaçırdım
+1)busines katmanında abstracta gelip ICardItemService interface ini oluşturuorzu ve içine metotları yazıyoruz
+2)daha sonra concteret gelip CardItemManager clasını oluşturp miras aldırp sonra inplment eyaptık
+3)data katmanında abstracın içine ICardItemRepository interfaci oluştuup miras aldıyorıyzı
+4)EfCoreCardItemRepository
+5)
+6)
+7)CardItemManagera gelip metotlarıdolduturouz
+8)program.cs e gelip builder.Services.AddScoped<ICardItemService, CardItemManager>();
+ satırnı ekleidk
+9)EfCoreCardItemRepository ChangeQuantity için   işlme yapıyoruz
+IUnitOfWork e gelip      ICardItemRepository CardItems { get; } satırını ekledik
+
+UnitOfWorke gelip implmete yapıp
+ private EfCoreCardItemRepository _cardItemRepository;
+ public ICardItemRepository CardItems => _cardItemRepository = _cardItemRepository ?? new EfCoreCardItemRepository(_context);
+bu satırları ekliyoruz
+unitofWorklere ekleme yaptık
+
+CardItemManager a gelip metotların içlerini dolduruyoruz
+
+10)CardControllara gelip
+ [HttpPost]
+        public async Task<IActionResult> ChangeQuantity(int cardItemId,int quantity)
+        {
+            await _cardItemManager.ChangeQuantity(cardItemId,quantity);
+            return RedirectToAction("Index", "Card");
+        }
+
+yazıyrouz
+
+11)cardın indexe gelip
+
+                                <td>
+                                    <form id ="form_@cardItem.ProductId"
+                                        asp-controller="Card"
+                                        asp-action="ChangeQuantity"
+                                        method="post"
+                                    >
+                                    <input type="hidden" name="cardItemId" value="@cardItem.CardItemId"/>
+
+                                    <input type="number" class="form-control d-inline-block"
+                                    name="quantity" value="@cardItem.Quantity" min ="1" max="10"
+                                   style="width:75px;" 
+                                   onchange="document.getElementById('form_@cardItem.ProductId').submit();" />
+                                    </form>
+
+                                </td>
+kısmını düzenledik
+
+--------------------ders-2
+12)cardın indexine gelip silme işlemi için link koyduj
+  <td>
+      <a
+        asp-controller="Card"
+        asp-action="DeleteFromCard"
+        asp-route-id="@cardItem.CardItemId"
+        class="btn btn-close btn-sm"></a>
+  </td>
+
+13)CardControlera gelip DeleteFromCard metodunu yazoıyoruz
+14)Order yapımına geçiyoruz
+15)entity katmanında conctrete içine Order Clasını ekledik IEntityBase den  miras aldrordık ve içini doldurduk
+16)daha sonra entity katmanında conctrete içine OrderItem clasını yapıp içini dolduryoruz
+17)daha sonra ShopAppContexte gelip
+  public DbSet<Order> Orders { get; set; }    
+        public DbSet<OrderItem> OrderItems { get; set; }   
+bu satırları eklediken sonra migration yapıyoruz olnları silip yapıyoruz
+
+--------------------------ders-3
+18)Cardın indexine gelip Ödeme Adımına Geç butonunu düzenlemeye başlıyoryz 
+ <a 
+                    asp-controller="Card"
+                    asp-action="Checkout"
+                    class="btn btn-primary">Ödeme Adımına Geç</a>
+
+19)CardControllera gelip Checkout metoduunuz yazmya başlıyoruz
+20)Modeldeki dto da OrderDto OLUŞTURO içini dolduruj
+21)CardControllera gelip  OrderDto orderDto = new OrderDto(); burdan itibaren yazmaya  devam ediyoruz
+22)CardControllera gelip CheckouT add view diyip viewini oluşrudj içini doldurmaya başladık (Checkout.cshtml)
+23)entity katmanında convrete ıdentity nin içindeki usera geliyoruz ekleme yapıyoruz
+  public string Address { get; set; }
+  public string City { get; set; }
+
+ satırlarını ekleidk
+24)ModelBuilderExtensions klasörüne gelip kullanıcıBilgierlini girdiğimiz yerdeki yere 
+ PhoneNumber="5555555555",
+   Address="Çek caddesi.Senet Sokak.Fatura Apt",
+    City="İstanbul"
+alanlarını ekleidk
+25)Mihrations ve update işlemleini yaptık
+26)CardControllera gelip 
+
+  var user = await _userManager.FindByIdAsync(userId);
+FirstName=user.FirstName,
+   LastName=user.LastName,
+   Address=user.Address,
+  City=user.City,
+   Phone=user.PhoneNumber,
+   Email=user.Email,
+satırlarını ekleidk
+27)Checkout.cshtml e gelip col-4 lük alanı doldrumaya başadık
+
+-----------------------ders-4
+28)CardControllera gelip Checkout un post metodunu yazıyorz ve içini doldurmaya başlıyoruz
+ [HttpPost]
+  public async Task<IActionResult> Checkout(OrderDto orderDto)
+
+29)business katmanında abstracın içine gelip IOrderService interface ini oluşturyıoeuz ve içini doldurıeyz
+30)business katmanında concrete içinde OrderManager   clasını oluştıruyoruz ve IOrderService  miras aldırp implemte yapık
+31)data katmanında abstractın içinde     IOrderRepository   interfaceini oluştuuryou ve içine metot yazıyorız
+32)sonra CONCRETE in içinde EfCoreOrderRepository oluşturyrouz ctor da yapıyoruz implemte yapıp getOrders metodun dolduryoruz
+33)IUnitOfWorke geleerek  IOrderRepository Orders { get; } yazdık
+34)UnitOfWork gelerek 
+private EfCoreOrderRepository _orderRepository; yazıp implmete yapıyoruz
+        public IOrderRepository Orders => _orderRepository=_orderRepository ?? new EfCoreOrderRepository(_context);
+bu satır
+
+35)OrderManagera gelip
+  private readonly IUnitOfWork _unitOfWork;
+
+        public OrderManager(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+bunları yazıp burdaki CreateAsync , GetOrders metotları doldururızu
+
+36)CardControllea gelip SaveOrder Metodunu yazmaya başlıyoru
+ SaveOrder(orderDto,userId);
+ private void SaveOrder(OrderDto orderDto,string userId)
+37)cardControllerda üst kısma     private readonly IOrderService _orderManager; kodunu ekleyip ctor un içine aldık
+38)Program.cs de builder.Services.AddScoped<IOrderService,OrderManager>();
+ bu satırı ekledik
+39)
+40)
+41)
+42)
+43)
+44)
+45)
+
