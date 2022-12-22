@@ -1,0 +1,215 @@
+ders-1
+1)İlk olarak UserController da Edit in Viwini oluştuuryotruz.Sag tık AddView Edit.Cshtml Userdaki Creta.cshtml den alıp ekleme
+ve  düzenleme yaptık
+
+2)UserControllara gelip Editin post metodunu yazmaya başlıyoruz ve değişiklikleri kaydetmek için işlemleri yapıyoruz
+        [HttpPost]
+        public async  Task<IActionResult> Edit(UserAddDto userUpdateDto)
+
+3)daha sonra 
+4)Yeni ödev UserControllerda 
+5)projeyi 21-12-2022-SeedRolesUsers diye güncelledik
+6)ShopAppContext de    public class ShopAppContext : IdentityDbContext<User, Role, string> ksımını düzenledik
+ve IdentityContexti sildik
+7)program.cs de 
+builder.Services.AddDbContext<IdentityContext>(options=>options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
+ satırını sildik ve 
+builder.Services.AddIdentity<User, Role>()
+    .AddEntityFrameworkStores<ShopAppContext>()
+    .AddDefaultTokenProviders();
+bu satırda ShopAppContexti düzeneidk
+
+Migration klsöürnü sildik  database de sildik
+8)Data katmanına gelip yeni klsaör ekledik Extensions ve onun içinde yeni class oluşurduk ModelBuilderExtensions adına bunu veridk VE 
+içini doldurmaya başladık
+9)ShopAppContexte gelip 
+modelBuilder.SeedData();
+ base.OnModelCreating(modelBuilder); 
+satırlarını ekledik
+10) migrations işemleri yaptık
+dotnet ef migrations add InitialDb --startup-project ../ShoppingApp.Web
+dotnet ef database update --startup-project ../ShoppingApp.Web
+
+-----------------------ders-2
+11)Projeyi 21-12-2022-Card olarak kopyalayıp tekrar açtık
+12)Entity katamında contrete de Card klsı oluşturırz ve içini dolduryorz ve sonra miras aldırıyrouz
+13)Entity katamında contrete de CardItem klasını oluştruypoz içini dolduryoruz miras aldırıyrouz
+14)Data katmanıda ShopAppContexte gelip 
+  public DbSet<Card> Cards { get; set; }
+  public DbSet<CardItem> CardItems { get; set; }
+iki satırı ekledik
+
+15)AccountControllerda bu satırları sildik email onay kısmını registerda sildik
+
+ //Generate token(mail onayı için)
+                    var tokenCode = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var url = Url.Action("ConfirmEmail", "Account", new
+                    {
+                        userId = user.Id,
+                        token = tokenCode
+                    });
+                    Console.WriteLine(url);
+                    //Mailin gönderilme, onaylanma vs
+                    await _emailSender.SendEmailAsync(user.Email, "ShoppingApp Hesap Onaylama", 
+$"<h1>Merhaba</h1><br><p>Lütfen hesabınızı onaylamak için aşağıdaki linke tıklayınız.</p><a href='https://localhost:7215{url}'>Onay linki</a>");
+
+16)daha sonra data katmanında tekrar migration yaptık
+dotnet ef migrations add AddCard --startup-project ../ShoppingApp.Web
+dotnet ef database update --startup-project ../ShoppingApp.Web
+
+17)Daha sonra business katmanında absracta yeni bir interface oluşturud adı ICardService içini dolduruk
+18)Daha sonra business katmanında conrete in içinde CardManager clasını açıp miras aldırdık ICardService buradan
+19)Daha sonra data katmaında abstertacın içinde yeni bir interface oluştruduk ICardRepository
+20)Daha sonra data katmaında conreete içinde EfCoreCardRepository classını oluşturuyorız ve içini dolduryoruz
+21)Daha sonra data katmaında abstertacın içinde IunitOfWork  e gelip   ICardRepository Cards { get; } satırını ekledik
+22)Daha sonra data katmaında conreete içinde UnitOfWork a gelip 
+  private EfCoreCardRepository _cardRepository;
+ve 
+  public ICardRepository Cards => _cardRepository=_cardRepository ?? new EfCoreCardRepository(_context);
+satırlarını ekliyoruz
+23)cardManagerda  İŞLEM YAPIYORUZ ve ICardService de   Task InitializeCard(string userId);  satrılarını ekleidk
+24)Program.cs e gelip builder.Services.AddScoped<ICardService, CardManager>(); satrını ekledik
+25)AccountControllera gelip   private readonly IEmailSender _emailSender; satırını ekleyip ctor un içine ekledik
+
+loginde 
+  if (!await _userManager.IsEmailConfirmedAsync(user))
+                {
+                    TempData["Message"] = Jobs.CreateMessage("Bilgi", "Hesabınız onaylanmamış. Lütfen mailinize gelen onay linkine tıklayarak, hesabınızı onaylayınz.", "warning");
+                    return View(loginDto);
+                    //ÖDEV: Eğer hesap onaylı değilse burada kullanıcıya "Onay linki gönder" şeklinde bir buton gözüksün. Ve bu butona basıldığında tekrar onay maili yollansın.
+                } 
+
+satırlarını sildik
+daha sonra registerda 
+ await _cardManager.InitializeCard(user.Id);
+                    TempData["Message"] = Jobs.CreateMessage("Bilgi", "Hesabınız başarıyla oluşruuldy", "success");
+satırlarını ekleyip düzenledik
+
+
+26)ModelBuilderExtensions a gelip her kullancı için card olultruduk
+   List<Card> cards = new List<Card>
+            {
+                new Card
+                {
+                    Id= 1,
+                    UserId= users[0].Id,
+
+                },
+
+                new Card
+                {
+                    Id= 2,
+                    UserId= users[1].Id,
+
+                }
+
+            };
+            modelBuilder.Entity<Card>().HasData(cards);
+bu satırları ekledikten sonra migrations işlemleri yaptık üzerine ekledik
+dotnet ef migrations add AddUserCard --startup-project ../ShoppingApp.Web
+dotnet ef database update --startup-project ../ShoppingApp.Web
+27)Web katmanıdna Controlerda CardController olşturuyoruz ve içini dolduryoruz
+ [Authorize]
+        private readonly UserManager<User> _userManager;
+        private readonly ICardService _cardManager;
+
+        public CardController(UserManager<User> userManager, ICardService cardManager)
+        {
+            _userManager = userManager;
+            _cardManager = cardManager;
+        } 
+en başa bunları ekleyip sonra 
+ [HttpPost]
+        public IActionResult AddToCard(int productId, int quantity) 
+metodunu yazmya başladık
+28)ProductPartila gidip 
+  <form 
+            asp-controller="Card"
+            asp-action="AddToCard"
+            method="post"
+        >
+        <input type="hidden" name="productId" value="@Model.Id" />
+        <input type="hidden" name="quantity" value="1" />
+        <button type="submit" class="btn btn-success btn-sm">Sepete Ekle</button>
+        </form>
+satırlarını ekleyip düzenleme yaptık
+
+----------------ders-3
+29)busnes da astracta ICardService 
+Task AddToCard(string userId, int productId, int quantity); satrını ekliyoruz
+30))-busnes daconcrete  CardManager gelip implemnte yapıp içini olduryoyruz
+
+31)data da ICardRepository giisp
+ Task AddToCard(string userId, int productId, int quantity);
+Task<Card> GetByIdAsync(int id);
+
+32)data katmanında  de EfCoreCardRepository ye gidip İMPLEMNte yapıp içini dolduruk
+ eksik kaldı buralar
+
+33)EfCoreCardRepository gelip AddToCard metodunu dolduyruz
+34)CardManagera gidip AddToCard metoduna   await _unitOfWork.SaveAsync(); bunu koyuyoruz
+35)CardControllera gelip Index metoudnda işlem yapmaya başlıyoruz
+36) ana web de Modeldek dto da CardDto classını oluşturuyrouz ve içini dolduruyoruz
+37)CardControllera gelip index de kod yazmya devam ediyoruz
+ CardDto cardDto = new CardDto
+            {
+                CardId= card.Id,
+burdan devam ediyoruz  aynı zamadnda ındexin addView diyerek viewini oluşturyoruz
+
+
+-----------------ders-4
+38)NAVBAR.cshtmle gelip
+ <li class="nav-item">
+        <a class="nav-link text-dark"
+         asp-controller="Card"
+          asp-action="Index"
+             >Sepet</a>
+    </li>
+satırını ekledik
+39)card ın index.cshtmle gelip 
+@if (Model.CardItems.Count==0)@*sepette üürn yoksa*@
+{
+    <div class="row">
+        <div class="alert alert-warning">
+            Sepetinizde ürün bulunmamaktadır
+        </div>
+    </div>
+}
+burdan başlıyoruz yazmaya 
+
+40)EfCoreCardRepository ya gelip AddToCard metoduna gelip ekleme ve düznleme yapıyoruz
+41)ProductDetailse gelip 
+sepete ekle kısmını silip 
+ <form 
+            asp-controller="Card"
+            asp-action="AddToCard"
+            method="post"
+        >
+        <input type="hidden" name="productId" value="@Model.Id" />
+        <input type="hidden" name="quantity" value="1" />
+        <button type="submit" class="btn btn-success btn-sm">Sepete Ekle</button>
+        </form>
+buraya bunu koydk
+42)
+43)
+44)
+45)
+46)
+47)
+48)
+49)
+50)
+
+
+
+
+
+
+
+
+
+es.Except(userRoles))  var olan rolleri çıkaarak ekle
+
+
+
+              
