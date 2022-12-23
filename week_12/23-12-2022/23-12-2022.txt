@@ -1,0 +1,140 @@
+----------ders-1 (Kredi kartı işlemleri)-(Luhn Algoritmasına bak)-(iyzico.com'a bak)
+1)İlk olarak entity katmanındaki concrete de order tablosuna gelip bu satırları ekledik sonra olan veritabanını 
+migration u silip tekrar migration yaptık
+
+ public string PaymentId { get; set; }
+ public string ConversationId { get; set; }
+
+2)CardControllerda private bool CardNumberControl(string cardNumber) metodunu yazıyoruz ve içini doldurmaya başlıyoruz
+
+-----------ders-2
+3)CardControllerda Checkout un post metoduna işlem yapmay abaşlıyoruz
+ if (!CardNumberControl(orderDto.CardNumber))
+                {
+                    TempData["Message"] = Jobs.CreateMessage("Hata", "Kredi kartı numarası hatalıdır", "danger");
+                    return View(orderDto);
+                }
+burayı yazdık ve burdan yazmaya devam ediyoruz
+
+4)cardControllerda  private Payment PaymentProcess (OrderDto orderDto) yazmaya başlıyoruz
+
+5)iyizo için paket indirdik (iyzico ve newtonsoft paekteri)
+
+6)order.OrderItems = new List<Entity.Concrete.OrderItem>();
+            foreach (var item in orderDto.CardDto.CardItems)
+            {
+                var orderItem = new Entity.Concrete.OrderItem();
+buralarda düznleme yaptık
+
+7) https://github.com/iyzico/iyzipay-dotnet bu sayfada  Usage kısımdan copy yaptık ve 
+ private Payment PaymentProcess (OrderDto orderDto) buranın içine yapıştırıdk
+
+8)   options.ApiKey = "sandbox-LAkgPZ4WQtWwAKrXrILtIsXWmP215Q0f";
+            options.SecretKey = "sandbox-iTrKkxHAgMryAj3ol9TOg9Rco1QsrHPX";
+buraları kendi apı lerimiz yazdık
+
+9) private Payment PaymentProcess (OrderDto orderDto) metodunu içine kodları yazmaya devam ediyoruz
+kendimze göre düzneliyrozy
+
+10)Checkout metodunda
+ Payment payment = PaymentProcess(orderDto);
+                if (payment.Status=="success")
+                {
+                    SaveOrder(orderDto, userId);
+                    //tam bu noktada sepeti boşaltmalıyız
+                }
+satırlarını ekledik
+----------------ders-3
+11)business katmanıdna abstracta ICardItemService
+ void ClearCard(int cardId);metodunu ekledik
+
+12)business katmanıdna concrete de implmet yapıyoruz ve içinidolduryoruz
+
+13)data katmanıda abstracın içinde ICardItemRepository buraya
+ void ClearCard(int cardId); metodunu yazıyoruz
+
+14)data katmanıda concrete de EfCoreCardItemRepository içine implmete yapıp içini doldururozu
+15)CardControllerda Checkout metoduna 
+ _cardItemManager.ClearCard(orderDto.CardDto.CardId);
+  TempData["Message"] = Jobs.CreateMessage("Başarılı", "Ödeme başarıyla alındı", "success");
+ return View("Success");
+yazıyouz
+16)Web katmaında view de cardın içine yeni view açıyoru Success.chtml diye içine bişeyler yazdık
+
+17)Web katmanında view de shared da layaou
+ @if (User.Identity.IsAuthenticated && User.IsInRole("Admin")) bu satırı düzenliyruz
+user login olduysa ve adı Admin se adminpaneli sadece o görsündedik
+18)Web katmanında view de shared da layaou
+
+    <li class="nav-item">
+ <a class="nav-link text-dark"
+      asp-controller="Card"
+         asp-action="GetOrders">Siparişler</a>
+       </li>
+satrını ekliyuroz
+19)CardControllera gelip GetOrders metodunu yazıyoruz
+public async Task<IActionResult> GetOrders() 
+içini dolduruyoruz
+
+20)Veb de modelda dto da OrderListDto clasın oluştıryuz ve içini dolduruyoruz
+21)CardControllera gelip 
+ List<OrderListDto> orderListDtos = new List<OrderListDto>();
+burdan yazmaya devam ediyoruz
+
+---------------ders-4
+22)CardConrolerda GetOrders metodunu 
+OrderListDto orderListDto;
+            foreach (var order in orders)
+            {
+                orderListDto = new OrderListDto()
+                {
+                    OrderId = order.Id,
+                    OrderNumber = order.OrderNumber,
+                    OrderDate = order.OrderDate,
+                    FirstName = order.FirstName,
+                    LastName = order.LastName,
+                    Address = order.Address,
+                    City = order.City,
+                    Phone = order.Phone,
+                    Email = order.Email,
+                    OrderState = order.OrderState,
+
+burdan itiberen yazmaya devam eidyoruz
+23)GetOrders  addView diyerek GetOrders.cshtml sayfaını oluşturuyoruz be içini yazıyrouz
+24)
+25)
+26)
+27)
+28)
+29)
+30)
+31)
+32)
+33)
+34)
+35)
+36)
+37)
+38)
+39)
+40)
+
+
+
+sümeyye
+wissen
+rufyanerte@gufum.com
+192837 -şifre
+0543 627 23 26
+
+
+
+
+
+
+
+
+
+
+
+

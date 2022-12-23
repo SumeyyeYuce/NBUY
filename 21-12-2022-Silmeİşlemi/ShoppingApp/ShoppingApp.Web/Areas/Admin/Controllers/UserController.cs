@@ -163,7 +163,7 @@ namespace ShoppingApp.Web.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            _userManager.DeleteAsync(user);
+           await _userManager.DeleteAsync(user);
             return RedirectToAction("Index");
         }
     }

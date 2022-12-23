@@ -1,0 +1,39 @@
+﻿@using ShoppingApp.Web.Models.Dtos
+@model OrderListDto
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalOrderDetails_@Model.OrderId">
+    Sil
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalOrderDetails_@Model.OrderId" tabindex="-1" aria-labelledby="modalLabelOrderDetails_@Model.OrderId" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelOrderDetails_@Model.OrderId">Dikkat!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                  @*  <img src="~/images/@Model.OrderListItems" width="135" />*@
+                </div>
+                <div class="mt-3 ms-1">
+                    <strong>@Model.FirstName</strong> adlı ürünü silmek istediğinizden emin misiniz?
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <a class="btn btn-primary"
+                   id="productDeleteForm_@Model.OrderId"
+                
+                   asp-controller="Card"
+                   asp-action="DetayGöster"
+                   asp-route-id="@Model.OrderId">
+                    Evet
+                </a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hayır</button>
+
+            </div>
+        </div>
+    </div>
+</div>
