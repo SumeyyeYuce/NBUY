@@ -11,7 +11,7 @@ namespace ShoppingApp.Data.Config
 {
     public class CategoryConfig : IEntityTypeConfiguration<Category>
     {
-        //buralar veritabanı ile ilgili kullanıcı formu ile ilgili değil
+        //buralar veritabanı ile ilgili kullanıcı formu ile ilgili değil veri tabanı ile ilgili
         public void Configure(EntityTypeBuilder<Category> builder)
         {
           builder.HasKey(c => c.Id);//primaryKey bu olucak diyoruz

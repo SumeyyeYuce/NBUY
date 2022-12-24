@@ -12,7 +12,7 @@ namespace ShoppingApp.Data.Abstract
         //product özgü memberlar burada olucak
 
         //örnegğin aşşagıdaki gibi
-        List<Product> GetProductsByCategory();
-        Task<List<Product>> GetHomePageProductsAsync();
+        List<Product> GetProductsByCategory();//Kategoriye göre product getirmeisni saglicak
+        Task<List<Product>> GetHomePageProductsAsync();//Ansayfa üürnlerini getirsin
     }
 }

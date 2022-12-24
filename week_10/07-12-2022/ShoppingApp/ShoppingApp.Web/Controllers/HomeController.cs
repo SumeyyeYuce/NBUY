@@ -18,7 +18,7 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
     {
         List<Product> products = await _productManager.GetHomePageProductsAsync();
-        List<ProductDto> productsDto = new List<ProductDto>();  
+        List<ProductDto> productsDto = new List<ProductDto>();  //içi boş  liste
         foreach (var product in products)
         {
             productsDto.Add(new ProductDto //yeni bir product listesi

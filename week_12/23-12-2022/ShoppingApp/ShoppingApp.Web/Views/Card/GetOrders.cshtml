@@ -18,7 +18,7 @@
                       <td>@order.OrderDate.ToShortDateString()</td>
                       <td>@($"{order.TotalPrice():C0}")</td>
                       <td>
-                          <a class="btn btn-primary btn-sm">Detay Göster</a>
+                        
                         @await Html.PartialAsync("_OrderDetailsPartial", order)
                       </td>
                   </tr>
