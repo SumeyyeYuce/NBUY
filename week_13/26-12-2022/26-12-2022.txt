@@ -1,0 +1,120 @@
+-------------ders-1
+1)İlk olarak adminSideBarPartial a gelip 
+ <a asp-area="Admin"
+       asp-controller="Order"
+       asp-action="Index"
+       class="list-group-item list-group-item-action">Satışlar</a>
+
+düzenledik
+2)Admindeki controllerda OrderController oluşturyoruz ve içini doldyrmaya balıyryz
+3)IOderService orderManager IOrderRepository ve EfCoreOrderRepository de getOrders metodunu düzenlşyoruz
+string userId = null bu şekilde
+
+4)OrderControllerda index in içini doldurmaya devam ediyoruz ve index de addView diyerek index.cshtml dosyaısnı oluşturız
+
+5)index.cshtmle gelip kodları yazmaya başlıyoruz
+6)Datatables.net sayfaına gelip 
+7) admindeki shareda gelip layaota girip    @await RenderSectionAsync("Styles",false) bu satırı ekliyoruz
+
+8)İndex.cshtmle gelip  @section Styles{
+ @await Html.PartialAsync("_DataTablesStylesPartial") 
+ }
+9) admindeki sharedde gelip yeni bir patialoluştruyuzı DataTablesStylesPartial ve içini css linki koyuyoruz
+10) admindeki sharedde gelip yeni bir patialoluştruyuzı DataTabelsScriptPartial içini js linki koyuyıruz
+11)index.cshtmle de
+ @section Scripts{
+     @await Html.PartialAsync("_DataTableScriptsPartial")
+ } burayı ekliyoruz
+
+12)web deki view de sharde da Search.cshtml oluştuurp içini dolduryoruz
+13)webdeki homun index.cshtml ine gelip  @await Html.PartialAsync("_Search") satırını ekledik
+14)webdeki home.controllera gelip Search için Action yazmaya başlıyoruz
+ public async Task <IActionResult> Search(string q)
+15)busines katmanında abstracı içine de IProductService e gelip 
+ Task<List<Product>> GetSearchResultsAsync(string searchString); ekledik
+----------------------ders-2
+16)busines katmanında concrete gelip implemte yapıyoruz ve içini dolduruyoruz
+17)Data katmanında abstraıcn içine IProductRepoisur Task<List<Product>> GetSearchResultsAsync(string searchString);
+18)data katmanıda concrete içinde EfCoreProductRepository gelip implemte yapıp içini dolduryruz
+19)HomeControllera gelip 
+ List<Product> searchResults = await _productManager.GetSearchResultsAsync(q); 
+burdan itibaren yazmaya devam ediyoruz
+20)EfCoreProductRepoisıry de 
+ var products= ShopAppContext.Products
+                .Where(p => p.IsApproved)
+                .AsQueryable();
+            if (category != null)
+            {
+                products = products
+                   
+                    .Include(p => p.ProductCategories)
+                    .ThenInclude(pc => pc.Category)
+                    .Where(p => p.ProductCategories.Any(pc => pc.Category.Url == category));
+
+burada değişiklik yapıyorz
+
+21)HomeControllerda Search metonuda kod yazmaya devam ediyıryz addView diyip Search.cshtml oluuşturp içini dolduryouz
+22)Sharde gelip yeni bir view oluşturyoruz _NoProduct.cshtml içini dolduryoruz
+23)Search.cshtml e gelip if else kısmını yazmaya başlıyoruz
+ @if (Model.Count==0)
+        {
+            @await Html.PartialAsync("_NoProduct")
+        }
+        else
+        {
+            <div class="row">
+                @foreach(var productDto in Model)
+                {
+                    
+burları yazıyoruz
+24)ProductList.cshtml e gelip  @await Html.PartialAsync("_Search") bu satırı ekledik
+
+------SQLSERVER'a Geçiş
+25)Proje klsaornde sag tık nuget diyip SqlServer ı aratıp data katmanı için indiridk
+26)appsettings.json a gelip mssql içinolan ksımı yazıyorz
+ "MsSqlConnection": "Server=DESKTOP-OFVK2FD;Database=ShoppingAppDb;Integrated Security=true;TrustServerCertificate=true"
+
+27)Program.cs de 
+builder.Services.AddDbContext<ShopAppContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MsSqlConnection")));
+kısımı sqlServer için düzenliyrouz
+28)ProducConfige gelip 
+   builder.Property(p => p.DateAdded)
+                .HasDefaultValueSql("getdate()"); bu ksımı düzenliyoruz
+
+ builder.Property(p => p.Price)
+                .IsRequired()
+                .HasColumnType("money"); burayı ekledik
+
+29)ShopAppContexte gelip 
+ modelBuilder.Entity<OrderItem>()//order için
+                .Property("Price")
+                .HasColumnType("money");
+ satırlarını ekleidk
+30)data katmaındaki migration sil klsaördeki sqlite i da sil
+31)sonra data katmanıda migration yaptık ve update yaptık
+dotnet ef migrations add InitialDb -s ../ShoppingApp.Web
+dotnet ef database update -s ../ShoppingApp.Web
+
+--------------------ders-3
+32)Web kkatmanında yeni klasör açtık Extension onun içinde MigrationManager clasını açtık ve içine kod yazmaya başlıyoruz(metot)
+33)Program.cs e gelip app.Run(); bu kısmı app.UpdateDatabase().Run(); bu şekilde düzenliyrouz
+34)sonra var olan migration ve sqlServerdaki database i silip sadece migration yaptık
+
+35)------------------------ders-4
+36)business ve data katmanlarında en son yazdığımız metodunu düzenledik.Sırasıyla
+37)-------------------ders-5 
+38)categoryler için search butonu koymayı biz yapmayı denedik
+39)
+40)
+41)
+42)
+43)
+44)
+45)
+46)
+47)
+48)
+49)
+50)
+
+
