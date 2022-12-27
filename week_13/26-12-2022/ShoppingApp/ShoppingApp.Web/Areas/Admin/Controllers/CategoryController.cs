@@ -108,19 +108,14 @@ namespace ShoppingApp.Web.Areas.Admin.Controllers
         }
         public async Task<IActionResult> SearchCategory(string q)
         {
-            List<Category> searchResults = await _categoryService.GetSearchResultsAsync(q);
-            List<CategoryListDto> categoryDtos = new List<CategoryListDto>();
-            foreach (var category in searchResults)
+            var categories = await _categoryService.GetSearchResultsAsync(q);
+            var categoryListDto = new CategoryListDto
             {
-                categoryDtos.Add(new CategoryListDto
-                {
-                    //Categories=category
-                
-                });
-            }
-            ViewBag.SelectedMenu = "Product";
+                Categories = categories
+            };
+            ViewBag.SelectedMenu = "Category";
             ViewBag.Title = "Ürün Arama Sonuçları";
-            return View("Index", categoryDtos);
+            return View("Index", categoryListDto);
         }
     }
 }
