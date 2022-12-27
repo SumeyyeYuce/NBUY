@@ -1,0 +1,48 @@
+--------------ders-1
+1)admindeki ProductSearch.cshtmle gelip ekleme ve düzenleme yaptık
+2)admindeki dto da SearcgQueryDto classını oluşturp içini dolduruduk
+3)ProductControllera gelip index e paramaetre veriyoruz
+4)ProductControllera indexinde ekleme yapıyorz
+5)businessa abstrat ve cntrelerde productın 
+        Task<List<Product>> GetSearchResultsAsync(bool? isApproved, bool? isHome,string searchString);
+bu metodundaki parametreleri düzenldik
+6)data katmanıda da önce abxtrsac ve concretee de düzenlemelri yaptık
+7)EfCoreProductRepository gelip 
+        public Task<List<Product>> GetSearchResultsAsync(bool? isApproved, bool? isHome, string searchString)
+bumetodun içini doldurmaya başlıyoruz
+8)ProuctControllerda indexe ve onun üst kısmına ekleme yapıyoruz
+9)Admindeki dto ya ProductListWithSearchDto classını oluşturup ekleme yapıyoruz
+10)ProductControlerın indexine gleip
+ ProductListWithSearchDto productListWithSearchDto = new ProductListWithSearchDto
+            {
+                ProductListDtos= productListDtos,
+                SearchQueryDto=searchQueryDto,
+                IsHomeList=isHomeList,
+                IsApprovedList=isApprovedList
+            };
+-----------------------ders-2
+11)Productın indexine gelip 
+<input type="hidden" asp-for="SearchQueryDto.IsHome"/>
+                      <input type="hidden" asp-for="SearchQueryDto.IsApproved" />
+                      <input type="hidden" asp-for="SearchQueryDto.SearchString" />
+satrılarını ekliyoruz
+12)ProductControllerda UpdateIsHome metoduna yeni parametre eklliyoruz
+13)Yukarıdaki iki işlemi UpdateIsApproved içinde yaptık yani input ve parametre ekledik
+14)Api değişimi yaptık
+----------------------ders-3
+15)Soliticon dosyasında sag tık add new project Api yi seçip adını ShoppingApi.APİ adlı katman
+16)tarayıcıdan postman.coma  girip uygulamayı indirdik
+17)Sumeyyeyuce  12345postman yucesumeyye@gmail.com
+18)
+19)
+20)
+21)
+22)
+23)
+24)
+25)
+26)
+27)
+28)
+29)
+30)
