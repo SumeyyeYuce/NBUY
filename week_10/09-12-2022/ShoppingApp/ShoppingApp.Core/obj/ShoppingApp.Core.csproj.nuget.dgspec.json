@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj": {}
+    "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj": {
+    "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
+        "projectUniqueName": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
         "projectName": "ShoppingApp.Core",
-        "projectPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
+        "projectPath": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
         "packagesPath": "C:\\Users\\Sümeyye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\obj\\",
+        "outputPath": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\09-12-2022\\ShoppingApp\\ShoppingApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sümeyye\\AppData\\Roaming\\NuGet\\NuGet.Config",

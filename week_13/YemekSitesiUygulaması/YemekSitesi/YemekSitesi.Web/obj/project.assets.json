@@ -1186,19 +1186,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\YemekSitesi.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\YemekSitesi.Web.csproj",
       "projectName": "YemekSitesi.Web",
-      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\YemekSitesi.Web.csproj",
-      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\obj\\",
+      "projectPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\YemekSitesi.Web.csproj",
+      "packagesPath": "C:\\Users\\Sümeyye\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sümeyye\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1212,8 +1212,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Business\\YemekSitesi.Business.csproj": {
-              "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Business\\YemekSitesi.Business.csproj"
+            "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Business\\YemekSitesi.Business.csproj": {
+              "projectPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_13\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Business\\YemekSitesi.Business.csproj"
             }
           }
         }
