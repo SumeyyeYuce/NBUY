@@ -1,0 +1,68 @@
+1)Api nin içinde model clasörü açtık ve ProcutDto clasını oluşturup içini doldurudk
+2)ProductControllera gelip 
+ public async Task<IActionResult> GetProducts() 
+bu metoda düzenlemem yapıyoruz
+  List<ProductDto> productDtos= new List<ProductDto>();   
+            foreach (var product in products)
+            {
+                productDtos.Add(new ProductDto
+                {
+                    Id=product.Id,
+                    Name=product.Name,  
+                    Description=product.Description,    
+                    Price=product.Price,
+                    ImageUrl=product.ImageUrl,
+                    Url=product.Url
+                });
+buraları ekliypruz
+3)ProductControllerda yeni bir mettod yazıyoruz
+[HttpGet]   
+        public async Task<IActionResult> GetProduct(int id)
+        {
+var product =  await _productService.GetByIdAsync(id);
+            if (product == null) { return NotFound(); }         
+            ProductDto productDto = new ProductDto
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price,
+                ImageUrl = product.ImageUrl,
+                Url = product.Url
+yazıyoruz ve içini dolduryoruz
+
+4)ProductControllerda yeni bir mettod yazıyoruz
+  public async Task<IActionResult> CreateProduct(ProductDto productDto)
+yazıp içini doldurmaya başlıyoruz
+-------------------ders-2
+5)Yeni bir ModelVİewController oluştrudk visualStudio ya en baştan açarak adına da ShoppingAppClient dedik
+ve içindeki temizlikerli yaptık
+6)LouncsSettings deki port numaralraını değiştridik
+7)ShoppingAppClient projesinin HomeControllerına gelip bişey aypmadık :))
+8)Model kalroüdne ProductViewModel classını oluştruudk ve içini doldurmaya başladık
+9)HomeControllerın Index ine gelip orayı doldurmaya başlıyoruz
+10)Projenin içinde(ShoppingAppClient) sag tık manage diyip  Newtonsoft.Json paketini indirdik
+11)HomeControllera gelip ındex metoduna 
+ string apiResponse= await response.Content.ReadAsStringAsync();
+ urunler = JsonConvert.DeserializeObject<List<ProductViewModel>>(apiResponse);   
+satırlarını ekledik
+--------------------------------ders-3
+12)
+13)
+14)
+15)
+16)
+17)
+18)
+19)
+20)
+21)
+22)
+23)
+24)
+25)
+26)
+27)
+28)
+29)
+30)
