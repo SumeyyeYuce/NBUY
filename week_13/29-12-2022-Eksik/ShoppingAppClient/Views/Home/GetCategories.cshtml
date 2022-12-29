@@ -1,0 +1,26 @@
+﻿@model List<CategoryViewModel>
+<h1 class="display-6">Ürün Listesi</h1>
+<table class="table table-sm table-bordered">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ürün Adı</th> 
+            <th>Açıklama</th>
+            <th>Url</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.Id</td>       
+                <td>@category.Name</td>   
+                 <td>@category.Description</td>
+                 <td>@category.Url</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

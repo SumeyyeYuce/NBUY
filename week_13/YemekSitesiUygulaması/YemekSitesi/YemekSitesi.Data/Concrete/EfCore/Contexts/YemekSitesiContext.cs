@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YemekSitesi.Data.Config;
 using YemekSitesi.Entity.Concrete;
 
 namespace YemekSitesi.Data.Concrete.EfCore.Contexts
@@ -19,5 +20,14 @@ namespace YemekSitesi.Data.Concrete.EfCore.Contexts
         {
             optionsBuilder.UseSqlite("Data Source=YemekSitesi.db");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+          
+            modelBuilder.ApplyConfiguration(new FoodConfig());
+            modelBuilder.ApplyConfiguration(new CategoryConfig());
+            modelBuilder.ApplyConfiguration(new FoodCategoryConfig());
+        }
+
     }
 }

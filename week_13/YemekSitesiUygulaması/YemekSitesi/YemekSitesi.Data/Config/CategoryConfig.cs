@@ -38,70 +38,63 @@ namespace YemekSitesi.Data.Config
                         Name="Çorba",
                         Description="Sizler için özenle hazırlanmış Çorba Tariflerimiz burada bulunmaktadır",
                         Url="corba"
-                },
+                },              
                 new Category
                 {
-                        Id = 2,
-                        Name = "Sulu Yemek",
-                        Description = "Sizler için özenle hazırlanmış Sulu Yemek Tariflerimiz burada bulunmaktadır",
-                        Url = "sulu-yemek"
-                },
-                new Category
-                {
-                         Id = 3,
+                         Id = 2,
                          Name = "Kurabiye",
                          Description = "Sizler için özenle hazırlanmış Kurabiye Tariflerimiz burada bulunmaktadır",
                          Url = "kurabiye"
                 },
                 new Category
                 {
-                          Id = 4,
+                          Id = 3,
                           Name = "Tatlı",
                           Description = "Sizler için özenle hazırlanmış Tatlı Tariflerimiz burada bulunmaktadır",
                           Url = "tatlı"
-                },
-                new Category
-                {
-                           Id = 5,
-                           Name = "Sebze",
-                           Description = "Sizler için özenle hazırlanmış Sebze Tariflerimiz burada bulunmaktadır",
-                           Url = "sebze"
-                },
-                new Category
-                {
-                            Id = 6,
-                            Name = "Hamur İşi",
-                            Description = "Sizler için özenle hazırlanmış Hamur İşi Tariflerimiz burada bulunmaktadır",
-                            Url = "hamur-isi"
-                }, 
-                new Category
-                {
-                            Id = 7,
-                            Name = "Salata",
-                            Description = "Sizler için özenle hazırlanmış Salata Tariflerimiz burada bulunmaktadır",
-                            Url = "salata"
-                }, 
-                new Category
-                {
-                            Id = 8,
-                            Name = "Aperatif",
-                            Description = "Sizler için özenle hazırlanmış Aperatif Tariflerimiz burada bulunmaktadır",
-                            Url = "aperatif"
-                }, 
-                new Category
-                {
-                            Id = 9,
-                            Name = "Et Yemekleri",
-                            Description = "Sizler için özenle hazırlanmış Et Yemekleri Tariflerimiz burada bulunmaktadır",
-                            Url = "et-yemekleri"
-                },
-                new Category
-                {
-                             Id = 10,
-                             Name = "Kahvaltılık",
-                             Description = "Sizler için özenle hazırlanmış Kahvaltılık Tariflerimiz burada bulunmaktadır",
-                             Url = "kahvaltılık"
                 }
+                //new Category
+                //{
+                //           Id = 5,
+                //           Name = "Sebze",
+                //           Description = "Sizler için özenle hazırlanmış Sebze Tariflerimiz burada bulunmaktadır",
+                //           Url = "sebze"
+                //},
+                //new Category
+                //{
+                //            Id = 6,
+                //            Name = "Hamur İşi",
+                //            Description = "Sizler için özenle hazırlanmış Hamur İşi Tariflerimiz burada bulunmaktadır",
+                //            Url = "hamur-isi"
+                //}, 
+                //new Category
+                //{
+                //            Id = 7,
+                //            Name = "Salata",
+                //            Description = "Sizler için özenle hazırlanmış Salata Tariflerimiz burada bulunmaktadır",
+                //            Url = "salata"
+                //}, 
+                //new Category
+                //{
+                //            Id = 8,
+                //            Name = "Aperatif",
+                //            Description = "Sizler için özenle hazırlanmış Aperatif Tariflerimiz burada bulunmaktadır",
+                //            Url = "aperatif"
+                //}, 
+                //new Category
+                //{
+                //            Id = 9,
+                //            Name = "Et Yemekleri",
+                //            Description = "Sizler için özenle hazırlanmış Et Yemekleri Tariflerimiz burada bulunmaktadır",
+                //            Url = "et-yemekleri"
+                //},
+                //new Category
+                //{
+                //             Id = 10,
+                //             Name = "Kahvaltılık",
+                //             Description = "Sizler için özenle hazırlanmış Kahvaltılık Tariflerimiz burada bulunmaktadır",
+                //             Url = "kahvaltılık"
+                //}
 
 
                 );
