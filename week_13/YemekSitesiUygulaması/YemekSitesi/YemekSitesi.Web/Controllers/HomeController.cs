@@ -1,31 +1,37 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using YemekSitesi.Web.Models;
+using YemekSitesi.Business.Abstract;
+using YemekSitesi.Entity.Concrete;
+using YemekSitesi.Web.Models.Dtos;
 
 namespace YemekSitesi.Web.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly IFoodService _foodManager;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IFoodService foodManager)
     {
-        _logger = logger;
+        _foodManager = foodManager;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        List<Food> foods = await _foodManager.GetHomePageFoodsAsync();
+        List<FoodDto> foodDto= new List<FoodDto>();
+        foreach (var food in foods)
+        {
+            foodDto.Add(new FoodDto
+            {
+                Id= food.Id,
+                Name=food.Name,
+                DateAdded= DateTime.Now,
+                CookingTime=food.CookingTime,
+                ImageUrl=food.ImageUrl
+            });
+        }
+        return View(foodDto);
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
+   
 }

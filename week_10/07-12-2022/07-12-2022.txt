@@ -35,13 +35,20 @@ ve implemte yapıyoruz ve içlerini dolduruyoruz
 
 ------------------ders-3
 16)Daha sonra data katmanında repositorynin içiinde EfCoreProductRepository clasını oluşturup miras aldırıyoruz
+
 17)Daha sonra data kadtmanında abstractın içine IUnitOfWork interfaceini oluşturup miras aldırıyroz ve imzaları koyuyoruz
+
 18)Daha sonra data katmanındaki concrete'in içine UnitOfWork clasını oluşturuyoruz ve miras aldırıp impllemente yapıyoruz ve içini dolduruyotuz
+
 19)Daha sonra business katmanında abstract ve concrete klasörlerni oluşturtouz
 sonra abstract'ın içine ICategoryService adlı interface i oluştuurp içini dlduruyotz
+
 20) Daha sonra abstract'ın içine IProductService adlı interface i oluştuurp içini dlduruyotz
+
 21)Daha sonra Busines katmanıdaki concrete in içinde CategoryManager classını oluşturyotuz ve miras aldırıyotuz ve içini dlduruyoruz
+
 22)Daha sonra Busines katmanıdaki concrete in içinde ProductManager classını oluşturyotuz ve miras aldırıyotuz ve içini dlduruyoruz
+
 23)Daha sonra Web katmanına gelip temizlik işlemlerini yapıyoruz(controllerda sadece index kalsın,modelsın içini boşalt,jomecontrollerda
 usinf satırını sil,viewi in içindeki ViewImport içinde modeslı sil,shared da errror.cshtml sil,homeun içindeki privacy.cshtml sil,)
 
@@ -61,7 +68,7 @@ Bu dto lar procutLarın hepsini listelemek için oluşturuldu
 28)Daha sonra homeControllera gelip oradaki index'i doldurmyaa başlıyoruz
 29)Daha sonra home'un index.cshtml e gelip orayı düzenlmeye başlıyoruz
 
-30)Daha sonra BURDAN SONRASI KARIŞTI HOCADAN AL
+30)
 31)
 32)
 33)
