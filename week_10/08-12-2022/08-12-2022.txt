@@ -12,6 +12,7 @@ sonra index.cshtml e gidip ufak düzenleme yapıyoruz
 
 4)Dah sonra web katmanında ViewCompomnets adlı klasör oluşturuyoruz onun içine de CategoriesViewComponent adlı classı oluşturyotuz ve içini dolduruyoruz
 5)Web deki Shard da Componts adlı klasörü olşturuyoruz daha sonra onun içinde de Categories adlı klasöürü oluşturuyoruz
+
 onun içinde de Default.cshtml olulştuurp içini dolduruyoruz
 
 6)Program.cs e gelip route yapısjını oluştuuryoruz

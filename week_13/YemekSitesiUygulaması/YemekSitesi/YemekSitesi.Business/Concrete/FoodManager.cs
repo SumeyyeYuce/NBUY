@@ -46,14 +46,20 @@ namespace YemekSitesi.Business.Concrete
             _unitOfWork.Save();
         }
 
-        public List<Food> GetFoodsByCategory()
+        public async Task<List<Food>> GetFoodsByCategoryAsync(string category)
         {
-            throw new NotImplementedException();
+            return await _unitOfWork.Foods.GetFoodsByCategoryAsync(category);
         }
 
         public async Task<List<Food>> GetHomePageFoodsAsync()
         {
            return await _unitOfWork.Foods.GetHomePageFoodsAsync();
+        }
+
+        public async Task<Food> GetFoodDetailsByUrlAsync(string foodUrl)
+        {
+            return await _unitOfWork.Foods.GetFoodDetailsByUrlAsync(foodUrl);
+
         }
     }
 }

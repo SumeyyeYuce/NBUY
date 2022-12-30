@@ -21,9 +21,31 @@ namespace YemekSitesi.Data.Concrete.EfCore.Repositories
             get { return _context as YemekSitesiContext; }
 
         }
-        public List<Food> GetFoodsByCategory()
+
+        public Task<Food> GetFoodDetailsByUrlAsync(string foodUrl)
         {
-            throw new NotImplementedException();
+            return YemekSitesiContext
+                .Foods
+                .Where(f => f.Url == foodUrl)
+                .Include(f => f.FoodCategories)
+                .ThenInclude(fc => fc.Category)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<List<Food>> GetFoodsByCategoryAsync(string category)
+        {
+            var foods = YemekSitesiContext.Foods.AsQueryable();//var olan productları getricek
+            if (category != null)
+            {
+                foods = foods
+                    .Where(f => f.IsApproved)
+                    .Include(f => f.FoodCategories)
+                    .ThenInclude(fc => fc.Category)
+                    .Where(f => f.FoodCategories.Any(fc => fc.Category.Url == category));
+
+            }
+            return await foods.ToListAsync();
+
         }
 
         public async Task<List<Food>> GetHomePageFoodsAsync()

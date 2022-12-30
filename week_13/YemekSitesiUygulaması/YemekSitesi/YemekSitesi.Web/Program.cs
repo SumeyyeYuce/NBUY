@@ -1,4 +1,4 @@
-using YemekSitesi.Business.Abstract;
+﻿using YemekSitesi.Business.Abstract;
 using YemekSitesi.Business.Concrete;
 using YemekSitesi.Data.Abstract;
 using YemekSitesi.Data.Concrete;
@@ -30,6 +30,27 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "foods",
+    pattern: "kategori/{categoryurl?}",
+    defaults: new { controller = "Food", action = "FoodList" }
+
+    );
+
+
+app.MapControllerRoute(
+    name: "fooddetails",
+    pattern: "yemekler/{foodurl}",//produvt sla� ��rn url diye �al���r
+    defaults: new { controller = "Food", action = "FoodDetails" }
+
+    );
+//app.MapAreaControllerRoute(
+//    name: "Admin",
+//    areaName: "Admin",//kla�rden bahsettik
+//    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+
+
 
 app.MapControllerRoute(
     name: "default",

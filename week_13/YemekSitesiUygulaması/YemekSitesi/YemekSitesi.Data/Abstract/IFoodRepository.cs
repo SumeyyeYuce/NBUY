@@ -9,8 +9,8 @@ namespace YemekSitesi.Data.Abstract
 {
     public interface IFoodRepository :IRepository<Food>
     {
-        List<Food> GetFoodsByCategory();//Kategoriye göre food getirmeisni saglicak
+        Task<List<Food>> GetFoodsByCategoryAsync(string category);//Kategoriye göre food getirmeisni saglicak
         Task<List<Food>> GetHomePageFoodsAsync();//anasayfa ürünlerini getiricek
-
+        Task<Food> GetFoodDetailsByUrlAsync(string foodUrl);
     }
 }

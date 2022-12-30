@@ -1,6 +1,11 @@
 ﻿@using YemekSitesi.Web.Models.Dtos
 @model List<FoodDto>
 
+    <div class="row">
+        <div class="col-3">
+        @await Component.InvokeAsync("Categories")
+        </div>
+ 
 
 <div class="text-center">
     <h1 class="display-4 text-danger fw-bold">Popüler Tarifler</h1>
@@ -14,4 +19,5 @@
             </div>
         }
     </div>
+</div>
 </div>

@@ -9,33 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = YemekSitesi.Web
 build_property.RootNamespace = YemekSitesi.Web
-build_property.ProjectDir = C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Web\
+build_property.ProjectDir = C:\Users\SABAH\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Web\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Web
+build_property.MSBuildProjectDirectory = C:\Users\SABAH\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Sümeyye/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Home/Index.cshtml]
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Food/FoodList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vZFxGb29kTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sümeyye/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/_FoodPartial.cshtml]
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/Components/Categories/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcmllc1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/_FoodPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb29kUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sümeyye/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sümeyye/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/_ViewImports.cshtml]
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sümeyye/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/_ViewStart.cshtml]
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sümeyye/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/_Layout.cshtml]
+[C:/Users/SABAH/Documents/GitHub/NBUY/week_13/YemekSitesiUygulaması/YemekSitesi/YemekSitesi.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qrmsjt9dvj

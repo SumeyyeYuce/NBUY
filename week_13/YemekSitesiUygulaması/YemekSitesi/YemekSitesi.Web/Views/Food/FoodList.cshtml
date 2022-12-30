@@ -1,0 +1,24 @@
+﻿@using YemekSitesi.Web.Models.Dtos
+@model List<FoodDto>
+<div class="text-center">
+    <h1 class="display-4">Welcome ShoppingApp</h1>
+</div>
+<div class="mt-4 row">
+
+    <div class="col-3">
+        @await Component.InvokeAsync("Categories")
+
+    </div>
+
+    <div class="col-9">
+        <div class="row">
+            @foreach (var foodDto in Model)
+            {
+                        <div class="col-md-3">
+                    @await Html.PartialAsync("_FoodPartial", foodDto)
+                        </div>
+            }
+        </div>
+    </div>   
+
+</div>

@@ -14,8 +14,9 @@ namespace YemekSitesi.Business.Abstract
         Task CreateAsync(Food food);
         void Update(Food food);
         void Delete(Food food);
-        List<Food> GetFoodsByCategory();
+        Task<List<Food>> GetFoodsByCategoryAsync(string category);
         Task<List<Food>> GetHomePageFoodsAsync();
+        Task<Food> GetFoodDetailsByUrlAsync(string foodUrl);
 
     }
 }
