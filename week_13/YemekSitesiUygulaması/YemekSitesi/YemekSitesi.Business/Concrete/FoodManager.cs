@@ -61,5 +61,10 @@ namespace YemekSitesi.Business.Concrete
             return await _unitOfWork.Foods.GetFoodDetailsByUrlAsync(foodUrl);
 
         }
+
+        public async Task<List<Food>> GetFoodsWithCategories()
+        {
+            return await _unitOfWork.Foods.GetFoodsWithCategories(); 
+        }
     }
 }

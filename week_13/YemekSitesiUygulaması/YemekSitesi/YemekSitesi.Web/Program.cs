@@ -41,14 +41,14 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "fooddetails",
-    pattern: "yemekler/{foodurl}",//produvt sla� ��rn url diye �al���r
+    pattern: "yemekler/{foodurl}",
     defaults: new { controller = "Food", action = "FoodDetails" }
 
     );
-//app.MapAreaControllerRoute(
-//    name: "Admin",
-//    areaName: "Admin",//kla�rden bahsettik
-//    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+app.MapAreaControllerRoute(
+    name: "Admin",
+    areaName: "Admin",
+    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
 
 
 

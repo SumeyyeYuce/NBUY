@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_10\\08-12-2022\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
+      "projectUniqueName": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\08-12-2022\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
       "projectName": "ShoppingApp.Entity",
-      "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_10\\08-12-2022\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
-      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_10\\08-12-2022\\ShoppingApp\\ShoppingApp.Entity\\obj\\",
+      "projectPath": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\08-12-2022\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
+      "packagesPath": "C:\\Users\\Sümeyye\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_10\\08-12-2022\\ShoppingApp\\ShoppingApp.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sümeyye\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

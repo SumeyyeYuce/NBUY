@@ -65,7 +65,7 @@ namespace YemekSitesi.Data.Config
                     ImageUrl="corba1.png",
                     Url="sütlü-domates-corbasi",
                     IsHome=true,
-                    IsApproved=false,
+                    IsApproved=true,
                     CookingTime="25dk",                   
                 },
                 new Food
@@ -92,7 +92,7 @@ namespace YemekSitesi.Data.Config
                     ImageUrl="corba3.png",
                     Url="kirmizi-mercimek-corbasi",
                     IsHome=false,
-                    IsApproved=false,
+                    IsApproved=true,
                     CookingTime="15dk",
                 },
                 new Food
@@ -135,7 +135,7 @@ namespace YemekSitesi.Data.Config
                     ImageUrl="kurabiye1.png",
                     Url="tuzlu-kurabiye",
                     IsHome=true,
-                    IsApproved=false,
+                    IsApproved=true,
                     CookingTime="15dk",
                 }, 
                 new Food
@@ -187,7 +187,7 @@ namespace YemekSitesi.Data.Config
                     ImageUrl = "kurabiye5.png",
                     Url = "damla-cikolatali-kurabiye",
                     IsHome = true,
-                    IsApproved = false,
+                    IsApproved = true,
                     CookingTime = "15dk",
                 },
             #endregion
@@ -219,8 +219,8 @@ namespace YemekSitesi.Data.Config
                    Material ="1 adet yumurta, Yarım çay bardağı şeker, Yarım çay bardağı sıvı yağ, Yarım çay bardağı süt, 2,5 3 yemek kaşığı un, 1 yemek kaşığı kakao, 1 paket vanilya, 1 çay kaşığı kabartma tozu,2 parça çikolata",
                    ImageUrl ="tatlı2.png",
                    Url ="sufle",
-                   IsHome = false,
-                   IsApproved = false,
+                   IsHome = true,
+                   IsApproved = true,
                    CookingTime = "13dk",
 
                 }

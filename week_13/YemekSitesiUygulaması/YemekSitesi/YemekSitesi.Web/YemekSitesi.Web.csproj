@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YemekSitesi.Business\YemekSitesi.Business.csproj" />
+    <ProjectReference Include="..\YemekSitesi.Core\YemekSitesi.Core.csproj" />
   </ItemGroup>
 
 </Project>

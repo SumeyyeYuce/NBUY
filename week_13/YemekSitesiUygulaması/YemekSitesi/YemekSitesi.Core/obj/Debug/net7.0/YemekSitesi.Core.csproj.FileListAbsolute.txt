@@ -1,0 +1,12 @@
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\bin\Debug\net7.0\YemekSitesi.Core.deps.json
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\bin\Debug\net7.0\YemekSitesi.Core.dll
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\bin\Debug\net7.0\YemekSitesi.Core.pdb
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\YemekSitesi.Core.csproj.AssemblyReference.cache
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\YemekSitesi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\YemekSitesi.Core.AssemblyInfoInputs.cache
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\YemekSitesi.Core.AssemblyInfo.cs
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\YemekSitesi.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\YemekSitesi.Core.dll
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\refint\YemekSitesi.Core.dll
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\YemekSitesi.Core.pdb
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_13\YemekSitesiUygulaması\YemekSitesi\YemekSitesi.Core\obj\Debug\net7.0\ref\YemekSitesi.Core.dll

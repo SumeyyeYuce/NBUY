@@ -19,7 +19,8 @@ namespace YemekSitesi.Web.ViewComponents
                 ViewBag.SelectedCategory = RouteData.Values["categoryurl"];
             }
             var categories = await _categoryManager.GetAllAsync();
-            return View(categories);  
+            return View(categories);
         }
     }
+   
 }

@@ -25,16 +25,42 @@ namespace YemekSitesi.Web.Controllers
                    Id=food.Id,
                    Name=food.Name,
                    CookingTime=food.CookingTime,
-                   ImageUrl=food.ImageUrl,
-                   Url=food.ImageUrl,
+                    DateAdded = DateTime.Now,
+                    ImageUrl =food.ImageUrl,
+                   Url=food.Url,
 
 
                 });
             }
             return View(foodDtos);
+        } 
+
+        public async Task<IActionResult> FoodDetails(string foodurl)
+        {
+            if (foodurl == null)
+            {
+                return NotFound();
+            }
+            var food = await _foodManager.GetFoodDetailsByUrlAsync(foodurl);
+            FoodDetailsDto foodDetailsDto = new FoodDetailsDto
+            {
+                Id = food.Id,
+                Name = food.Name,
+                ImageUrl = food.ImageUrl,
+                Url = food.Url,
+                CookingTime= food.CookingTime,
+                Description = food.Description,
+                Material=food.Material,
+                Categories = food
+                    .FoodCategories
+                    .Select(fc => fc.Category)
+                    .ToList()
+            };
+            return View(foodDetailsDto);
         }
 
-        public IActionResult Index()
+
+        public IActionResult Index() 
         {
             return View();
         }

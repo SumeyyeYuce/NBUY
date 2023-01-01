@@ -1,8 +1,9 @@
 ﻿@using YemekSitesi.Web.Models.Dtos
 @model List<FoodDto>
 
+@*burada Uygulama açıldıgında anasayfada onaylı olan ürünler gözükücek ve kategoriler listelenicek*@
     <div class="row">
-        <div class="col-3">
+        <div class="col-12 mb-2">
         @await Component.InvokeAsync("Categories")
         </div>
  

@@ -12,5 +12,6 @@ namespace YemekSitesi.Data.Abstract
         Task<List<Food>> GetFoodsByCategoryAsync(string category);//Kategoriye göre food getirmeisni saglicak
         Task<List<Food>> GetHomePageFoodsAsync();//anasayfa ürünlerini getiricek
         Task<Food> GetFoodDetailsByUrlAsync(string foodUrl);
+        Task<List<Food>> GetFoodsWithCategories();
     }
 }

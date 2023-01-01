@@ -34,7 +34,7 @@ namespace YemekSitesi.Data.Concrete.EfCore.Repositories
 
         public async Task<List<Food>> GetFoodsByCategoryAsync(string category)
         {
-            var foods = YemekSitesiContext.Foods.AsQueryable();//var olan productları getricek
+            var foods = YemekSitesiContext.Foods.AsQueryable();
             if (category != null)
             {
                 foods = foods
@@ -48,11 +48,20 @@ namespace YemekSitesi.Data.Concrete.EfCore.Repositories
 
         }
 
+        public async Task<List<Food>> GetFoodsWithCategories()
+        {
+            return await YemekSitesiContext
+                .Foods
+                .Include(f => f.FoodCategories)
+                .ThenInclude(fc => fc.Category)
+                .ToListAsync();
+        }
+
         public async Task<List<Food>> GetHomePageFoodsAsync()
         {
             return await YemekSitesiContext
                  .Foods
-                 .Where(f => f.IsHome)
+                 .Where(f => f.IsHome && f.IsApproved)
                  .ToListAsync();
         }
     }

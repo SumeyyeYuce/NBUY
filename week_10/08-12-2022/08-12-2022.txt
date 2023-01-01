@@ -29,7 +29,7 @@ onun içinde de Default.cshtml olulştuurp içini dolduruyoruz
 
 12)//2.Ders Devam
 
-13)Daha sonra (25d)
+13)
 
 14)ProductPARTİLA gelip inceleye tıklandıgında ne olucaksa onu yapmaya başlıyoruz
    asp-controller="Shop"
@@ -132,7 +132,7 @@ ProductDetailsDto productDetailsDto = new ProductDetailsDto
 app.MapAreaControllerRoute(
     name: "Admin",
     areaName:"Admin",//klaörden bahsettik
-    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");  
 satırlarını ekliyoru
 35)sonra admin in içinde controllerda home controller oluştruyrız
 36)ondan sonra onun içinde index view oluşturytouz (sag tık addView)

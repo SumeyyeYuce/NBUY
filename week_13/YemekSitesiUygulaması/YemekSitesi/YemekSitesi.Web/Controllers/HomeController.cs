@@ -18,19 +18,21 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
     {
         List<Food> foods = await _foodManager.GetHomePageFoodsAsync();
-        List<FoodDto> foodDto= new List<FoodDto>();
+        List<FoodDto> foodDtos= new List<FoodDto>();
         foreach (var food in foods)
         {
-            foodDto.Add(new FoodDto
+            foodDtos.Add(new FoodDto
             {
                 Id= food.Id,
                 Name=food.Name,
                 DateAdded= DateTime.Now,
                 CookingTime=food.CookingTime,
-                ImageUrl=food.ImageUrl
+                ImageUrl=food.ImageUrl,
+                Url=food.Url,  
+
             });
         }
-        return View(foodDto);
+        return View(foodDtos);
     }
 
    

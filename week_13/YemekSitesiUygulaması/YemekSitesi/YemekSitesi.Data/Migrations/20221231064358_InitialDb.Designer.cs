@@ -11,7 +11,7 @@ using YemekSitesi.Data.Concrete.EfCore.Contexts;
 namespace YemekSitesi.Data.Migrations
 {
     [DbContext(typeof(YemekSitesiContext))]
-    [Migration("20221229061635_InitialDb")]
+    [Migration("20221231064358_InitialDb")]
     partial class InitialDb
     {
         /// <inheritdoc />
@@ -127,7 +127,7 @@ namespace YemekSitesi.Data.Migrations
                             DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Öncelikle domatesler rendelenir. Ardından tereyağı ve sıvı yağ tencereye alınır, tereyağı eritilir.Tereyağı eridikten sonra un eklenerek biraz kavrulur. Unun kokusu çıktıktan sonra domates salçası eklenir ve biraz karıştırılarak kavrulurRendelenmiş domatesler eklenir. 3-4 dakika daha kavrulur. 4 su bardağı su eklenerek çırpılır, kısık ateşte pişmeye bırakılır. Dilerseniz bu aşamada veya servisten önce çorbayı blenderdan geçirerek pürüzsüz bir kıvam almasını sağlayabilirsiniz.Tuz ve süt eklenerek karıştırılır. Tuz miktarını kendi damak zevkinize göre ayarlayabilirsiniz. Hazır olan çorba ocaktan alınarak kaselere paylaştırılır. İsteğe göre üzerine kaşar peyniri rendesi ve karabiber serpilir.Nefis Sütlü domates çorbası tarifimiz servise hazır. Deneyeceklere afiyet olsun.",
                             ImageUrl = "corba1.png",
-                            IsApproved = false,
+                            IsApproved = true,
                             IsHome = true,
                             Material = "2 yemek kaşığı sıvı yağ, 1 yemek kaşığı tereyağı, 2 tepeleme yemek kaşığı un, yemek kaşığı domates salçası, 5 adet domates, 4 su bardağı su, Yarım su bardağı süt, 1 silme tatlı kaşığı tuz",
                             Name = "Sütlü Domates Çorbası",
@@ -153,7 +153,7 @@ namespace YemekSitesi.Data.Migrations
                             DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Kırmızı mercimek çorbası için sıvı yağı tencereye alınarak yemeklik doğranan soğanlar hafif pembeleşinceye kadar kavrulur.Daha sonra un ilave edilerek kısık ateşte kavurmaya devam edilir. Salça kullanılacak ise salça ilave edilir, kavrulduktan sonra küp küp doğranmış havuç ve iyice yıkanıp suyu süzülen mercimekler ilave edilir.Üzerine su eklenerek karıştırılır ve tencerenin kapağı kapatılır. Çorba piştikten sonra el blenderı ile güzelce ezilir.Karabiber, tuz ve isteğe bağlı olarak kimyon eklenir ve karıştırılır. 5 dakika daha pişirelerek ocaktan alınır.Bu arada küçük bir tavaya iki yemek kaşığı tereyağı alınır, kızdırılır ve bir tatlı kaşığı kırmızı toz biber eklenerek ocaktan alınırBir dilim limon ile servis edilir. Deneyeceklere afiyet olsun",
                             ImageUrl = "corba3.png",
-                            IsApproved = false,
+                            IsApproved = true,
                             IsHome = false,
                             Material = "2 su bardağı kırmızı mercimek, 1 adet soğan, 2 yemek kaşığı un, 1 adet havuç, 1 tatlı kaşığı tuz, Yarım çay kaşığı karabiber, 1 çay kaşığı kimyon (isteğe bağlı), 2 litre sıcak su, 5 yemek kaşığı sıvı yağ",
                             Name = "Kırmızı Mercimek Çorbası",
@@ -192,7 +192,7 @@ namespace YemekSitesi.Data.Migrations
                             DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "İlk olarak sıvı yağ ve tereyağı karıştırılır. Sonra diğer malzemeler eklenir karıştırılır. En son un eklenip kulak memesi kıvamında hamur elde ediyoruz, fazla yumuşakolmasın hamur çünkü kurabiyelerimiz dağılabilir.Resimdeki gibi yada istediğiniz gibi şekil verip üstüne yumurta sarısı sürüp susam, çörek otu serpin. Bu malzemelerden iki tepsi kurabiye çıkmaktadır Afiyet olsun.",
                             ImageUrl = "kurabiye1.png",
-                            IsApproved = false,
+                            IsApproved = true,
                             IsHome = true,
                             Material = "250 gram margarin veya tereyağı, 2 yemek kaşığı sıvı yağ, 2 yemek kaşığı toz şeker, 2 yemek kaşığı sirke, 1 paket kabartma tozu, 1 tatlı kaşığı tuz, Aldığı kadar un,1 yumurta sarısı, Susam ve çörekotu",
                             Name = "Tuzlu Kurabiye",
@@ -244,7 +244,7 @@ namespace YemekSitesi.Data.Migrations
                             DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Oda ısısında yumuşamış margarini ve pudra şekerini iyice karıştıralım. Yumurtayı ekleyip karıştıralım.Un, kabartma tozu ve vanilyayı eleyerek ilave edip yoğuralım. En son damla çikolatayı ekleyip yoğuralım.Önceden ısıtılmış fırında 180 derecede yaklaşık 10-15 dakika kadar pişirelim. Soğuyunca servis yapalım.",
                             ImageUrl = "kurabiye5.png",
-                            IsApproved = false,
+                            IsApproved = true,
                             IsHome = true,
                             Material = "100 gram tereyağı veya margarin, 1 adet yumurta, 1 su bardağı damla çikolata, 1 su bardağı pudra şekeri, 2,5 su bardağı un, 1 paket vanilya, 1 paket kabartma tozu",
                             Name = "Damla Çikolatalı Kurabiye",
@@ -270,8 +270,8 @@ namespace YemekSitesi.Data.Migrations
                             DateAdded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Yumurta ve şekeri el çırpıcısı ile çırpıyoruz.Üzerine diğer malzemeleri ekleyip kek kıvamını elde ediyoruz. Sufle kaplarına döküp üzerine parça çikolata koyuyoruz.Tencerenin içine kaynar suyu döküyoruz.İçine sufleleri koyup kapağını kapatıyoruz.Yaklaşık 7 - 8 dakika pişiriyoruz. Afiyet şeker olsun ",
                             ImageUrl = "tatlı2.png",
-                            IsApproved = false,
-                            IsHome = false,
+                            IsApproved = true,
+                            IsHome = true,
                             Material = "1 adet yumurta, Yarım çay bardağı şeker, Yarım çay bardağı sıvı yağ, Yarım çay bardağı süt, 2,5 3 yemek kaşığı un, 1 yemek kaşığı kakao, 1 paket vanilya, 1 çay kaşığı kabartma tozu,2 parça çikolata",
                             Name = "Sufle",
                             Url = "sufle"

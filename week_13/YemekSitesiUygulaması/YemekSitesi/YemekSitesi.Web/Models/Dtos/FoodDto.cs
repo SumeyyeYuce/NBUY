@@ -1,4 +1,6 @@
-﻿namespace YemekSitesi.Web.Models.Dtos
+﻿using YemekSitesi.Entity.Concrete;
+
+namespace YemekSitesi.Web.Models.Dtos
 {
     public class FoodDto
     {
@@ -8,7 +10,7 @@
         public string CookingTime { get; set; }
         public string ImageUrl { get; set; }
         public string Url { get; set; }
-
+        public List<Category> Categories { get; set; }
 
 
     }
