@@ -1,0 +1,22 @@
+﻿@using YemekSitesi.Entity.Concrete
+@model List<Category>
+@*FoodControllerdan aldıgım category ve food bilgierini gsöteriyorum*@
+<ul class="list-group list-group-horizontal mt-2 border border-danger justify-content-center mb-2">
+    <li class="list-group-item me-3">
+        <a class="list-group-item-action"
+           asp-controller="Food"
+           asp-action="FoodList"
+           asp-route-categoryurl="">Tümünü göster</a>
+    </li>
+    <li class="list-group-item ms-3">
+        @foreach (var category in Model)
+        {
+            <a class="list-group-item-action ms-5"
+           asp-controller="Food"
+           asp-action="FoodList"
+           asp-route-categoryurl="@category.Url">@category.Name</a>
+        }
+    </li>
+    
+</ul>
+

@@ -1,0 +1,55 @@
+﻿@model List<FoodListDto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="d-flex bd-highlight">
+    <div class="p-2 flex-grow-1 bd-highlight mt-1">
+        <h1 class="text-success fs-2">Kategori Listesi</h1>
+    </div>
+    <div class="p-2 bd-highlight mt-1">
+        <a class="btn btn-outline-secondary"
+           asp-area="Admin"
+           asp-controller="Food"
+           asp-action="Create">Yeni Kategori Ekle</a> 
+    </div>
+
+</div>
+
+<hr>
+
+<div class="row">
+            @foreach (var fd in Model)
+            {
+            <div class="col-3 gap-3 ">
+
+                <div class=" card rounded-3 ms-4 mt-2 border border-secondary border-3" style="width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title fs-3">@fd.Food.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@fd.Food.Name Tarifleri</h6>
+                        @* <p class="card-text">@fd.Food.Description</p>*@
+
+                        @foreach (var category in fd.Food.FoodCategories)
+                        {
+                            @category.Category.Name
+                        }
+
+                        <a class="btn btn-outline-success"
+                       asp-controller="Category"
+                       asp-action="Edit"
+                       asp-area="Admin"
+                       asp-route-id="@fd.Food.Id">Kategori Düzenle</a>
+
+                        <a class="btn btn-outline-danger"
+                       asp-controller="Category"
+                       asp-action="Delete"
+                       asp-area="Admin"
+                       asp-route-id="@fd.Food.Id">Kategori Sil</a>
+                    </div>
+                </div>
+            </div>
+            }
+</div>
+
+

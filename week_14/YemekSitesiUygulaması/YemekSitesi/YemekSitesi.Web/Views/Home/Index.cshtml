@@ -1,0 +1,24 @@
+﻿@using YemekSitesi.Web.Models.Dtos
+@model List<FoodDto>
+
+@*burada Uygulama açıldıgında anasayfada onaylı olan ürünler gözükücek ve kategoriler listelenicek*@
+    <div class="row">
+        <div class="col-12 mb-2">
+        @await Component.InvokeAsync("Categories")
+        </div>
+ 
+
+<div class="text-center">
+    <h1 class="display-4 text-danger fw-bold">Popüler Tarifler</h1>
+</div>
+<div class="mt-4">
+    <div class="row">
+        @foreach (var foodDto in Model)
+        {
+            <div class="col-md-4">
+                @await Html.PartialAsync("_FoodPartial", foodDto)
+            </div>
+        }
+    </div>
+</div>
+</div>
