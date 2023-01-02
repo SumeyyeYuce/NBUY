@@ -15,7 +15,7 @@
     <div class="row">
         @foreach (var foodDto in Model)
         {
-            <div class="col-md-4">
+                <div class="col-3" style="width: 20rem; height:13rem;">
                 @await Html.PartialAsync("_FoodPartial", foodDto)
             </div>
         }

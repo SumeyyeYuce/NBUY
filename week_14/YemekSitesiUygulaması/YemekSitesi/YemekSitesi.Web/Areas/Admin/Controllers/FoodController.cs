@@ -26,5 +26,16 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
                 }).ToList();
             return View(foodListDto);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var categories = await _categoryService.GetAllAsync();
+            var foodAddDto = new FoodAddDto
+            {
+                Categories = categories
+            };
+            return View(foodAddDto);
+        }
     }
 }
