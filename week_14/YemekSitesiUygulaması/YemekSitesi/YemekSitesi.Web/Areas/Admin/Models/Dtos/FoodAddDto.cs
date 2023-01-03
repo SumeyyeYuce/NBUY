@@ -37,7 +37,7 @@ namespace YemekSitesi.Web.Areas.Admin.Models.Dtos
         public List<Category> Categories { get; set; }
 
         [Required(ErrorMessage = "En az bir kategori seçmelisiniz")]
-        public List<Category> SelectedCategories { get; set; }
+        public int[] SelectedCategoryIds { get; set; }
 
     }
 }

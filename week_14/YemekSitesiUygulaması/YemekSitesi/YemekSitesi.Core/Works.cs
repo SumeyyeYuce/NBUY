@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,18 @@ namespace YemekSitesi.Core
                .Replace("\"", "")
                .Replace("}", "");
             return url;
+        }
+
+        public static string UploadImage(IFormFile image)
+        {
+            var filePath = Path.GetExtension(image.FileName);   
+            var randomName = $"{Guid.NewGuid()}{filePath}";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", randomName);
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                image.CopyTo(stream);
+            }
+            return randomName;
         }
     }
 }

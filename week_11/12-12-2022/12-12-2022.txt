@@ -20,6 +20,7 @@ public int[] SelectedCategoryIds { get; set; } bu satırı ekliyoruz
 5)Create.cshtml e gelip  name="selectedCategoryIds"
                             value="@category.Id"
 forech bunları ekledik
+
 6)productControllera gelip create ın içini doldurmaya başlıyoruz
 var url = Jobs.InitUrl(productAddDto.Name);
                 var product = new Product

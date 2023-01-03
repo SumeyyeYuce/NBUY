@@ -22,6 +22,21 @@ namespace YemekSitesi.Data.Concrete.EfCore.Repositories
 
         }
 
+        public async Task CreateFoodAsync(Food food, int[] selectedCategoryIds)
+        {
+            await YemekSitesiContext.Foods.AddAsync(food);
+            await YemekSitesiContext.SaveChangesAsync();
+            food.FoodCategories = selectedCategoryIds
+                .Select(ctId => new FoodCategory
+                {
+
+                    FoodId = food.Id,
+                    CategoryId = ctId
+                }).ToList();
+            await YemekSitesiContext.SaveChangesAsync();
+
+        }
+
         public Task<Food> GetFoodDetailsByUrlAsync(string foodUrl)
         {
             return YemekSitesiContext
@@ -57,12 +72,41 @@ namespace YemekSitesi.Data.Concrete.EfCore.Repositories
                 .ToListAsync();
         }
 
+        public async Task<Food> GetFoodWithCategories(int id)
+        {
+            return await YemekSitesiContext
+                 .Foods
+                 .Where(f => f.Id == id)
+                 .Include(f => f.FoodCategories)
+                 .ThenInclude(fc => fc.Category)
+                 .FirstOrDefaultAsync();
+        }
+
         public async Task<List<Food>> GetHomePageFoodsAsync()
         {
             return await YemekSitesiContext
                  .Foods
                  .Where(f => f.IsHome && f.IsApproved)
                  .ToListAsync();
+        }
+
+        public async Task UpdateFoodAsync(Food food, int[] selectedCategoryIds)
+        {
+            Food newFood = await YemekSitesiContext
+                .Foods
+                .Include(f => f.FoodCategories)
+                .FirstOrDefaultAsync(f => f.Id == food.Id);
+
+            newFood.FoodCategories = selectedCategoryIds
+              .Select(ctId => new FoodCategory
+              {
+                  FoodId = newFood.Id,
+                  CategoryId = ctId
+              }).ToList();
+
+            YemekSitesiContext.Update(newFood);
+            await YemekSitesiContext.SaveChangesAsync();
+
         }
     }
 }

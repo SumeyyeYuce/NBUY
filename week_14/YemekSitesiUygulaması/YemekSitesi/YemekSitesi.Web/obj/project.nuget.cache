@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "B9cTG2JfiNmbCGhOcAuM14iECCIKppA3u6QZYHdmkFyzs4L3URqCBsm5Lq1dyP+d79SPDLRT5N4x99iQatfxeA==",
+  "dgSpecHash": "/Goyynm1x4BM1Uo5kCrcdnWPaEEfH1tECZUm8aNRg47pyJ8JIPdEu0tZnFTLJRJIpEb/rSaDwfGj5z+OFC9epg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\YemekSitesi.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sümeyye\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.1\\microsoft.data.sqlite.core.7.0.1.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.1\\microsoft.entityframeworkcore.7.0.1.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.1\\microsoft.entityframeworkcore.abstractions.7.0.1.nupkg.sha512",
@@ -29,6 +30,7 @@
     "C:\\Users\\Sümeyye\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Sümeyye\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"

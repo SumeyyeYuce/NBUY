@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "79ZbIBCOOA9uzFnJ0FHxkMistKwB72+O3IakbsdiUWomL2qHwntiKZ5iPRIPW4pmm3eHdSMi3SOUkGtq8yjkjw==",
+  "dgSpecHash": "0B2OksE/yy2Ux5hfQiZdC/+Km0CmgfFywmQBbh44OQxBsABPNtcevgaZIDWrUuQTQpdaqHjzKXRy0W3srGPr5Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

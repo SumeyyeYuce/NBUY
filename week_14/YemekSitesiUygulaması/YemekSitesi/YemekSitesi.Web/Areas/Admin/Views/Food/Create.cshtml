@@ -4,7 +4,8 @@
 <form asp-area="Admin"
       asp-controller="Food"
       asp-action="Create"
-      method="post">
+      method="post"
+      enctype="multipart/form-data">
 
     <div class="row">
       
@@ -47,16 +48,45 @@
                 @foreach (var category in Model.Categories)
                 {
                     <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" />
+                        <input type="checkbox" class="form-check-input" 
+                        name="selectedCategoryIds" value="@category.Id"
+                            @if (Model.SelectedCategoryIds!=null)
+                            {
+                                @(Model.SelectedCategoryIds.Any(sc=>sc==category.Id) ? "checked" : "")
+                            }
+                        />
                         <label>@category.Name</label>
                     </div>
                 }
+                <span asp-validation-for="SelectedCategoryIds" class="text-danger"></span>
 
             </div>
         </div>
+        <div class="mb-2 mt-3 fs-3 text-success fw-bold">Tercihler</div>
 
-        <div class="row mt-5 mb-2">
-            <button type="submit" class="btn btn-outline-success btn-lg justify-content-center">Kaydet</button>
+       <div class="row">
+            <div class="col">
+                <div class="form-check form-check-inline mb-3">
+
+                <label asp-for="IsHome" class="form-label"></label>
+                <input type="checkbox" class="form-check-input" asp-for="IsHome" />
+                <span asp-validation-for="IsHome" class="text-danger"></span>
+
+            </div>
+                <div class="form-check form-check-inline mb-3">
+
+                    <label asp-for="IsApproved" class="form-label"></label>
+                    <input type="checkbox" class="form-check-input" asp-for="IsApproved" />
+                    <span asp-validation-for="IsApproved" class="text-danger"></span>
+
+                </div>
+            </div>
+       </div>
+
+        <div class="row mt-3 mb-2">
+           <div class="col-4 ">
+                <button type="submit" class="btn btn-outline-success" style="width:100%">Kaydet</button>
+           </div>
         </div>
 
 
