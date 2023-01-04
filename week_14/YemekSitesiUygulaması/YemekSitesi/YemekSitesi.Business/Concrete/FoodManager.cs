@@ -72,14 +72,14 @@ namespace YemekSitesi.Business.Concrete
             await _unitOfWork.Foods.CreateFoodAsync(food, selectedCategoryIds);
         }
 
-        public Task UpdateFoodAsync(Food food, int[] selectedCategoryIds)
+        public async Task UpdateFoodAsync(Food food, int[] selectedCategoryIds)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Foods.UpdateFoodAsync(food, selectedCategoryIds);
         }
 
-        public Task<Food> GetFoodWithCategories(int id)
+        public async Task<Food> GetFoodWithCategories(int id)
         {
-            throw new NotImplementedException();
+            return await _unitOfWork.Foods.GetFoodWithCategories(id);
         }
     }
 }

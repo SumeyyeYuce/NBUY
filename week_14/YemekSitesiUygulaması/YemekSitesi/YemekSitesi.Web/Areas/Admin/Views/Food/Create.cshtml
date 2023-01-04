@@ -66,6 +66,14 @@
 
        <div class="row">
             <div class="col">
+
+                <div class=" mb-3">
+
+                    <label asp-for="CookingTime" class="form-label fs-3 text-success fw-bold"></label>
+                    <input class="form-control border border-danger" asp-for="CookingTime">
+                    <span asp-validation-for="CookingTime" class="text-danger"></span>
+
+                </div>
                 <div class="form-check form-check-inline mb-3">
 
                 <label asp-for="IsHome" class="form-label"></label>

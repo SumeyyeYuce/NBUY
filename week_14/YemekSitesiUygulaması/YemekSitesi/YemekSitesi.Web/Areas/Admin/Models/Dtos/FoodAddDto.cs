@@ -36,6 +36,9 @@ namespace YemekSitesi.Web.Areas.Admin.Models.Dtos
         [DisplayName("Yemek Kategorileri")]
         public List<Category> Categories { get; set; }
 
+        [DisplayName("Hazırlanma ve Pişirme Süresi")]
+        public string CookingTime { get; set; }
+
         [Required(ErrorMessage = "En az bir kategori seçmelisiniz")]
         public int[] SelectedCategoryIds { get; set; }
 

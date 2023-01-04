@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\5c19ae2c-f41e-4e53-818b-585ae1ea1f66.png",
+      "PackagePath": "staticwebassets\\images\\5c19ae2c-f41e-4e53-818b-585ae1ea1f66.png"
+    },
+    {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\63fc5f05-7b63-4a38-b7e7-5315e01f7d8d.png",
+      "PackagePath": "staticwebassets\\images\\63fc5f05-7b63-4a38-b7e7-5315e01f7d8d.png"
+    },
+    {
       "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\corba1.png",
       "PackagePath": "staticwebassets\\images\\corba1.png"
     },
@@ -31,6 +39,14 @@
     {
       "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\corba5.png",
       "PackagePath": "staticwebassets\\images\\corba5.png"
+    },
+    {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\d7f0713c-ae4e-4fe4-b741-6fff41badca0.png",
+      "PackagePath": "staticwebassets\\images\\d7f0713c-ae4e-4fe4-b741-6fff41badca0.png"
+    },
+    {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\e8105516-61c1-4ac3-b48c-e619de32bdc3.png",
+      "PackagePath": "staticwebassets\\images\\e8105516-61c1-4ac3-b48c-e619de32bdc3.png"
     },
     {
       "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\kurabiye1.png",
@@ -59,6 +75,10 @@
     {
       "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\tatlı2.png",
       "PackagePath": "staticwebassets\\images\\tatlı2.png"
+    },
+    {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\tatlı3.png",
+      "PackagePath": "staticwebassets\\images\\tatlı3.png"
     },
     {
       "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\js\\site.js",
