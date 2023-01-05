@@ -26,6 +26,9 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
                 {
                     Food=f
                 }).ToList();
+
+            ViewBag.SelectedMenu = "Food";
+            ViewBag.Title = "Yemek";
             return View(foodListDto);
         }
 
@@ -99,13 +102,15 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
                 if (food == null) { return NotFound(); }
 
                 var url = Works.InitUrl(foodUpdateDto.Name);
+                var imageUrl = foodUpdateDto.ImageFile != null ? Works.UploadImage(foodUpdateDto.ImageFile)
+                    : food.ImageUrl;
                 food.Name = foodUpdateDto.Name;
                 food.Material = foodUpdateDto.Material;
                 food.Description = foodUpdateDto.Description;
                 food.CookingTime = foodUpdateDto.CookingTime;
                 food.IsHome = foodUpdateDto.IsHome;
-                food.IsApproved  = foodUpdateDto.IsApproved;    
-                food.Url = Works.UploadImage(foodUpdateDto.ImageFile);
+                food.IsApproved  = foodUpdateDto.IsApproved;
+                food.ImageUrl = imageUrl;
                 food.Url = url;
 
                 await _foodService.UpdateFoodAsync(food, selectedCategoryIds);
@@ -115,6 +120,32 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
             var categories = await _categoryService.GetAllAsync();
             foodUpdateDto.Categories = categories;
             return View(foodUpdateDto);  
+        }
+
+        public async Task<IActionResult> UpdateIsHome(int id)
+        {
+            var food = await _foodService.GetByIdAsync(id);
+            if (food == null) { return NotFound(); }
+            await _foodService.UpdateIsHomeAsync(food);
+            return RedirectToAction("Index");
+
+        }
+
+        public async Task<IActionResult> UpdateIsApproved(int id)
+        {
+            var food = await _foodService.GetByIdAsync(id);
+            if (food == null) { return NotFound(); }
+            await _foodService.UpdateIsApprovedAsync(food);
+            return RedirectToAction("Index");
+
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var food = await _foodService.GetByIdAsync(id);
+            if (food == null) { return NotFound(); }
+             _foodService.Delete(food);
+            return RedirectToAction("Index");
         }
     }
 }

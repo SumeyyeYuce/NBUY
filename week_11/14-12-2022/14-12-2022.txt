@@ -37,6 +37,7 @@ ekşliyoruz
   var imageUrl = productUpdateDto.ImageUrl != null ? Jobs.UploadImage(productUpdateDto.ImageFile)
                     : product.ImageUrl;
 illk olarak satırnı ekledik
+
 11)sonra create.cshtl e gidip editin içindeki image divinii alıp copy paste ile burdaki image yerine yapıştırıdk
 aşşagıda yazdıgımız script kodlarını da create.cshtml e ekledik copy paste ile
 
@@ -62,6 +63,7 @@ metodlarını yazıyoruz
    Task UpdateIsApprovedAsync(Product product);
  iki metodu yazıyoruz
 19)sonra productManeger  e gelip implmet yapıp içini dodlurtorux
+
 20)sonra admindeki productController gidip 
   public async Task<IActionResult> UpdateIsHome(int id)
         {
@@ -76,6 +78,7 @@ metodlarını yazıyoruz
 
 bu metotları yazmaya başlıyoruz
 aynısını UpdateIsApproved için de yapıyoruz
+
 21)Sonra Prodct ve Category kontroller a gelip 
  ViewBag.Title = "Kategoriler";
  ViewBag.Title = "Ürünler"; 
@@ -157,7 +160,6 @@ bunları koyduk
 
 
  id ="isHomeForm_@item.Product.Id" bunu bu şekilde yazmamızın nedeni her bir formun id sini ayrı ayrı bulmak
-
 
 
 

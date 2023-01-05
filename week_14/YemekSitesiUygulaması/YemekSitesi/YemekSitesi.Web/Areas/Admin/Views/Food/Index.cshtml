@@ -22,18 +22,45 @@
 <div class="row">
             @foreach (var fd in Model)
             {
-            <div class="col-3 gap-3 ">
+            <div class="col-4 gap-2 ">
 
-                <div class=" card rounded-3  mt-2 border border-secondary border-3" style="width: 20rem; height:15rem;">
+                <div class=" card rounded-3  mt-2 border border-secondary border-3" style="width: 20rem; height:17rem;">
                     <div class="card-body">
                         <h5 class="card-title fs-4 text-success">@fd.Food.Name</h5>
                         <h6 class="card-subtitle mb-2 text-muted">@fd.Food.Name Tarifleri</h6>
                         @* <p class="card-text">@fd.Food.Description</p>*@
-                        <label class="text-dark fw-bold">Kategori Adı:</label>
+                        <label class="text-secondary fw-bold">Kategori Adı:</label>
                         @foreach (var category in fd.Food.FoodCategories)
                         {
                             @category.Category.Name
                         }
+
+                    <div class="mt-2 d-flex justify-content-start">
+                        <label class="fs-6">Anasayfa?</label>
+                        <form id="isHomeForm_@fd.Food.Id"
+                          asp-area="Admin"
+                          asp-controller="Food"
+                          asp-action="UpdateIsHome"
+                          asp-route-id="@fd.Food.Id">
+
+                            <input onchange="document.getElementById('isHomeForm_@fd.Food.Id').submit();"
+                               type="checkbox" class="form-check-input ms-2" value="@fd.Food.IsHome"
+                               @(fd.Food.IsHome ? "checked" : "") />
+                        </form>
+
+                        <label class="ms-4">Onaylı?</label>
+                        <form id="isApprovedForm_@fd.Food.Id"
+                          asp-area="Admin"
+                          asp-controller="Food"
+                          asp-action="UpdateIsApproved"
+                          asp-route-id="@fd.Food.Id">
+
+                            <input onchange="document.getElementById('isApprovedForm_@fd.Food.Id').submit();"
+                               type="checkbox" class="form-check-input ms-2" value="@fd.Food.IsApproved"
+                               @(fd.Food.IsApproved ? "checked" : "") />
+
+                        </form>
+                       </div>
 
                     <div class="row card-footer mt-4">
 
@@ -43,11 +70,12 @@
                            asp-area="Admin"
                            asp-route-id="@fd.Food.Id">Düzenle</a>
 
-                            <a class="btn btn-outline-danger  mt-2" 
+                        @await Html.PartialAsync("_FoodDeletePartial",@fd.Food)
+                         @*   <a class="btn btn-outline-danger  mt-2" 
                            asp-controller="Food"
                            asp-action="Delete"
                            asp-area="Admin"
-                           asp-route-id="@fd.Food.Id">Sil</a>
+                           asp-route-id="@fd.Food.Id">Sil</a>*@
                        
                     </div>
 

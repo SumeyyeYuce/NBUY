@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3+03UsfwL/NvSX57U7VFO27EjKhHVLskriiGEv9HrUY=",
+  "Hash": "kTlpuq8LjMgo1oswLnJasShI0eXL3s/qS/awtGx69dI=",
   "Source": "ShoppingApp.Web",
   "BasePath": "_content/ShoppingApp.Web",
   "Mode": "Default",
@@ -476,6 +476,23 @@
       "OriginalItemSpec": "wwwroot\\images\\6.png"
     },
     {
+      "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_11\\14-12-2022\\ShoppingApp\\ShoppingApp.Web\\wwwroot\\images\\69365f37-8209-4be5-aa6a-0fea3d0b113c.png",
+      "SourceId": "ShoppingApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_11\\14-12-2022\\ShoppingApp\\ShoppingApp.Web\\wwwroot\\",
+      "BasePath": "_content/ShoppingApp.Web",
+      "RelativePath": "images/69365f37-8209-4be5-aa6a-0fea3d0b113c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\69365f37-8209-4be5-aa6a-0fea3d0b113c.png"
+    },
+    {
       "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_11\\14-12-2022\\ShoppingApp\\ShoppingApp.Web\\wwwroot\\images\\6f43b8d8-a9b6-4397-a331-135ee86565cd.png",
       "SourceId": "ShoppingApp.Web",
       "SourceType": "Discovered",
@@ -627,6 +644,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\b559b6e8-5786-49b1-bd68-02dc8e7d4fd3.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_11\\14-12-2022\\ShoppingApp\\ShoppingApp.Web\\wwwroot\\images\\ba4b6a51-2ade-40e4-a060-dfe204c39a6c.png",
+      "SourceId": "ShoppingApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_11\\14-12-2022\\ShoppingApp\\ShoppingApp.Web\\wwwroot\\",
+      "BasePath": "_content/ShoppingApp.Web",
+      "RelativePath": "images/ba4b6a51-2ade-40e4-a060-dfe204c39a6c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ba4b6a51-2ade-40e4-a060-dfe204c39a6c.png"
     },
     {
       "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_11\\14-12-2022\\ShoppingApp\\ShoppingApp.Web\\wwwroot\\images\\d1667e96-860f-4f20-ac4d-e7acc53497ea.png",
