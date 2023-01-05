@@ -46,3 +46,15 @@ C:\Users\SABAH\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.
 C:\Users\SABAH\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\refint\ShoppingApp.Core.dll
 C:\Users\SABAH\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.pdb
 C:\Users\SABAH\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ref\ShoppingApp.Core.dll
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.deps.json
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.dll
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\bin\Debug\net7.0\ShoppingApp.Core.pdb
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.csproj.AssemblyReference.cache
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.AssemblyInfoInputs.cache
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.AssemblyInfo.cs
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.dll
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\refint\ShoppingApp.Core.dll
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ShoppingApp.Core.pdb
+C:\Users\Sümeyye\Documents\GitHub\NBUY\week_11\14-12-2022\ShoppingApp\ShoppingApp.Core\obj\Debug\net7.0\ref\ShoppingApp.Core.dll
