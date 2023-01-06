@@ -14,28 +14,29 @@ namespace GetCountriesFromApi.Controllers
             List<Country> countryList = new List<Country>();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://restcountries.com/v2/all"))
+                using (var response = await httpClient.GetAsync("https://restcountries.com/v3.1/all"))
                 {
                    var stringResponse = await response.Content.ReadAsStringAsync();//string olan data nın 
                    countryList = JsonSerializer.Deserialize<List<Country>>(stringResponse);
+                   
                 }
             }
             return View(countryList); 
         }
           
-        public async Task<IActionResult> Privacy()
-        {
-            List<User> userList = new List<User>();
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync("https://reqres.in/api/users?page=2"))
-                { 
-                    var stringResponse = await response.Content.ReadAsStringAsync();
-                    userList = JsonSerializer.Deserialize<List<User>>(stringResponse);
-                }
-            }
-            return View(userList);
-        }
+        //public async Task<IActionResult> Privacy()
+        //{
+        //    List<Data> userList = new List<Data>();
+        //    using (var httpClient = new HttpClient())
+        //    {
+        //        using (var response = await httpClient.GetAsync("https://reqres.in/api/users?page=2"))
+        //        { 
+        //            var stringResponse = await response.Content.ReadAsStringAsync();
+        //            userList = JsonSerializer.Deserialize<List<Data>>(stringResponse);
+        //        }
+        //    }
+        //    return View(userList);
+        //}
        
        
     }

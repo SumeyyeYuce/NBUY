@@ -1,11 +1,3 @@
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\appsettings.json
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.staticwebassets.runtime.json
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.exe
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.deps.json
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.runtimeconfig.json
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.dll
-C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.pdb
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\GetCountriesFromApi.csproj.AssemblyReference.cache
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\GetCountriesFromApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\GetCountriesFromApi.AssemblyInfoInputs.cache
@@ -14,6 +6,14 @@ C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\GetCountriesFromApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\GetCountriesFromApi.RazorAssemblyInfo.cache
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\GetCountriesFromApi.RazorAssemblyInfo.cs
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\appsettings.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.staticwebassets.runtime.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.exe
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.deps.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.runtimeconfig.json
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.dll
+C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\bin\Debug\net7.0\GetCountriesFromApi.pdb
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\staticwebassets\msbuild.GetCountriesFromApi.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\staticwebassets\msbuild.build.GetCountriesFromApi.props
 C:\Users\SABAH\Documents\GitHub\NBUY\week_14\GetCountriesFromApi\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.GetCountriesFromApi.props
