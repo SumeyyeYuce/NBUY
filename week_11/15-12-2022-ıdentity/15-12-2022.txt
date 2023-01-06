@@ -58,10 +58,13 @@ daha sonra
             return View();
         }
 metodunu yazıp addView diyerek register.cshtml dosyasını oluşturmuş olduk
+
 9)daha sonra web katmanındaki  model de dto ya gelip RegisterDto yu oluşturup içini doldrumya başlıyoruz
+
 10) register.cshtml buraya gelip categorynin creat.cshtl ini copy past yapıyoruz ve içini kendimize göre düznlmeye başlıyorus
 11)ViewImports a gelip @using ShoppingApp.Web.Models.Dtos  komutnu yazıyoruz
 12)daha sonra  register.cshtml gelip düzenlemelre devam ediyoruz kayıt ol form için
+
 13)daha sonra AccountController gelip Registerın post metodunu yazmaya başlıyoruz
  [HttpPost]
         public IActionResult Register(RegisterDto registerDto)
@@ -73,6 +76,7 @@ metodunu yazıp addView diyerek register.cshtml dosyasını oluşturmuş olduk
                     FirstName = registerDto.FirstName,
 
 buarlar içini doldrurmaya devam ediyroruz
+
 14)AccountController da loginn view ını oluştuuryoeuz (add view diyip) login.cshtml
 15)Daha sonra web katmanındaki  model de dto ya gelip logınDto clasını oluşturup içini doldurmya başlıyoruz
 16)sonra login.cshtml de içini dolduroruz
@@ -80,13 +84,17 @@ buarlar içini doldrurmaya devam ediyroruz
 18)login.cshtml de   <div asp-validation-summary="All" class="text-danger"></div> bu satırı ekliyrz
 19)AccountController a gelip lognin post metodunu yazmaya devam ediyoruz
 
+
 //ders-3
 20)Web katmanındaki shared da layaout a geliyoruz headerı komple kesip share da _Navbar diye view açıp onun içine yapıştırdık
 ve layota   @await Html.PartialAsync("_Navbar") bu satırı da ekledik
-21)_navbar.cshtml i düzenlemeye başlıyoruz
+
+21)_navbar.cshtml i düzenlemeye başlıyoruz---------------(Buraya tekrar dön)
+
 22)Program.cs de 
 app.UseAuthentication(); satının ekliyoruz
-23)_navbarı düzenlemeye devam ediyoruz
+
+23)_navbarı düzenlemeye devam ediyoruz--------------------(Buraya tekrar dön)
 24)AccountController a gelip 
  public async Task<IActionResult> Logout()
         {

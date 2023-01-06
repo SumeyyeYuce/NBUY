@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2rEkFyIlBsSAeq5BcB2sfdT0W/PifdpQ8pqoSv7QndsmJYQc98q3ojOYSL+F8U0jHe/9jzZs04nEqDAIIIdQfw==",
+  "dgSpecHash": "S5q6IJmN7iWZPahBEYKqobIgt933UqfjWeiux8G4Ow2ToCozqaTrC73L6qcOmzCOoKJ5fQKpIyYwROeZaGVcwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sümeyye\\Desktop\\YemekSitesiUygulaması7\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj",
+  "projectFilePath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması7\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
-    "C:\\Users\\Sümeyye\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\Sümeyye\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+    "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\SABAH\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }
