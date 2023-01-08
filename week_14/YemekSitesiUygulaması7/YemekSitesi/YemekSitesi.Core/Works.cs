@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace YemekSitesi.Core
@@ -48,6 +50,17 @@ namespace YemekSitesi.Core
                 image.CopyTo(stream);
             }
             return randomName;
+        }
+
+        public static string PushMessage(string title, string message, string alertType)
+        {
+            var send = new Alert
+            {
+                Title = title,
+                Message = message,
+                AlertType = alertType
+            };
+            return JsonConvert.SerializeObject(send);
         }
     }
 }

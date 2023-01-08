@@ -20,7 +20,7 @@ namespace YemekSitesi.Web.Models.Dtos
         [DisplayName("Eposta")]
         [Required(ErrorMessage = "{0} alanı zorunludur.")]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
+        public string Email { get; set; } 
 
         [DisplayName("Parola")]
         [Required(ErrorMessage = "{0} alanı zorunludur.")]

@@ -1,5 +1,16 @@
 ﻿@model LoginDto
-<h1>Giriş Yap</h1>
+
+<style>
+    .renk {
+        color: white;
+        background-color: #9900f2;
+    }
+
+    .input {
+        border: 1px solid #ca85f2;
+    }
+</style>
+<h1 class="mt-2" style="color:#9900f2">Giriş Yap</h1>
 <hr />
 <form asp-controller="Account"
       asp-action="Login"
@@ -9,18 +20,23 @@
         <div class="col-4">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="mb-3">
-                <label asp-for="UserName" class="form-label"></label>
-                <input class="form-control" asp-for="UserName">
+                <label asp-for="UserName" class="form-label fs-5"></label>
+                <input class="form-control input" asp-for="UserName">
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="Password" class="form-label"></label>
-                <input class="form-control" asp-for="Password">
+                <label asp-for="Password" class="form-label fs-5"></label>
+                <input class="form-control input" asp-for="Password">
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            <button type="submit" class="btn btn-primary">Giriş Yap</button>
-            <a type="button" class="btn btn-light"
+            <button type="submit" class="btn renk">Giriş Yap</button>
+
+            <a class="btn text-white" style="background-color:#ca85f2"
+               asp-controller="Account"
+               asp-action="ForgotPas">Şifremi Unuttum</a>
+
+            <a type="button" class="btn text-white" style="background-color:#cea0ff"
                asp-controller="Home"
                asp-action="Index">Vazgeç</a>
         </div>

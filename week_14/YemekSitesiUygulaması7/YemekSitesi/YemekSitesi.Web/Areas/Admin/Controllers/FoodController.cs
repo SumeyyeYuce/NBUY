@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using YemekSitesi.Business.Abstract;
 using YemekSitesi.Core;
 using YemekSitesi.Entity.Concrete;
@@ -6,6 +7,7 @@ using YemekSitesi.Web.Areas.Admin.Models.Dtos;
 
 namespace YemekSitesi.Web.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class FoodController : Controller
     {
@@ -66,6 +68,7 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
             }
             var categories = await _categoryService.GetAllAsync();
             foodAddDto.Categories = categories;
+            foodAddDto.ImageUrl = foodAddDto.ImageUrl;
             return View(foodAddDto);
         }
 

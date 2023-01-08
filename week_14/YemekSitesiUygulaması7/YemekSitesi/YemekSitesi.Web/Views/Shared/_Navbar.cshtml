@@ -23,22 +23,47 @@
                 <li class="nav-item">
                     <a class="nav-link disabled">Disabled</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Panel</a>
-                </li>
 
-                <li class="nav-item">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Panel</a>
+                    </li>
+                }
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                @if (User.Identity.IsAuthenticated)
+                {
+                     <li class="nav-item">
+                            <a class="nav-link text-dark"
+                           asp-controller="Account"
+                           asp-action="Manage">@User.Identity.Name</a>
+                        </li>
+
+                     <li class="nav-item">
                     <a class="nav-link text-dark"
                        asp-controller="Account"
+                       asp-action="Exit">Çıkış Yap</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark"
+                       asp-controller="Account"
                        asp-action="Register">Kayıt Ol</a>
-                </li> 
+                    </li>
 
-                <li class="nav-item">
-                  <a class="nav-link text-dark"
-                     asp-controller="Account"
-                     asp-action="Login">Giriş Yap</a>
-               </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark"
+                       asp-controller="Account"
+                       asp-action="Login">Giriş Yap</a>
+                    </li>
+                }
+
+
             </ul>
+          
            
         </div>
     </div>

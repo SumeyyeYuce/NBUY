@@ -46,6 +46,7 @@ satrını düzenleip bu şekilde yaptık
  public static string CreateMessage(string title,string message,string alertType)  
 11)core katmanında sag tık yapıp class oluşturtrıuz AlertMessage adında class oluşturudk içini dolduyoruz
 12)public static string CreateMessage(string title,string message,string alertType)  buranın içini doldurmaya başlıyoruz
+
 13)Web katmanındaki layouta gelip 
   @if (TempData["Message"]!=null)
             {

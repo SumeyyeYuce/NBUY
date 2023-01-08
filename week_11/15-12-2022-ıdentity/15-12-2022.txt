@@ -118,6 +118,7 @@ public string ReturnUrl { get; set; }   satırnı ekliyoruz
             });
         }
 kısmı düzenliyoruz
+
 28)login.cshtml e gelip 
       <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl" />
  satırnı ekliyoruz
@@ -133,6 +134,7 @@ options.Cookie = new CookieBuilder
 32)DAHA sonra AccountController a gelip registerın post metodunun altına [ValidateAntiForgeryToken] komutunu ekliyoruz
 en üst kısma ise [AutoValidateAntiforgeryToken] bu komutu ekliyoruz
 
+
 33)Daha sonra register.cshtml de   <div asp-validation-summary="All" class="text-danger"></div> satırı ekliyoruz
 34)Daha sonra AccountController a gelip mail onay için işlem yapıyoruz register'ın post metodunda 
  //Generate Token(mail onayı için)
@@ -144,10 +146,13 @@ en üst kısma ise [AutoValidateAntiforgeryToken] bu komutu ekliyoruz
                     });
 
 bu işlemleri yazıyoruz
+
 35)AccountController  da ConfirmEmail için metot yazmaya başlıyoruz
  public async Task<IActionResult> ConfirmEmail(string userId,string token) bunu yazıp içini dlduryoruz
+
 36)Web katmanında EmailServices klasörü oluşturuyız onun içine abstract ve cobncrete açıyoruz abstarvın içine IEmailSender oluşturup
 içine   Task SendEmailAsync(string email, string subject, string htmlMessage); diyoruz
+
 concrete de Pop3EmailSender ve SmtpEmailSender clasarını oluşturyoruz bunlara IEmailSender dan miras
 aldıırypruz  ve SmtpEmailSender  doldrumaya başlıyrpuz
 

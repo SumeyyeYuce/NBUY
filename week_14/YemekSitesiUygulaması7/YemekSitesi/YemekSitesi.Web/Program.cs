@@ -1,19 +1,25 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using YemekSitesi.Business.Abstract;
 using YemekSitesi.Business.Concrete;
 using YemekSitesi.Data.Abstract;
 using YemekSitesi.Data.Concrete;
 using YemekSitesi.Data.Concrete.EfCore.Contexts;
 using YemekSitesi.Entity.Concrete.Identity;
+using YemekSitesi.Web.MailServices.Abstract;
+using YemekSitesi.Web.MailServices.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlite("Data Source=YemekSitesi.db"));
-builder.Services.AddDbContext<YemekSitesiContext>();
+builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlite
+(builder.Configuration.GetConnectionString("SqliteConnection")));
+
+builder.Services.AddDbContext<YemekSitesiContext>(options => options.UseSqlite
+(builder.Configuration.GetConnectionString("SqliteConnection")));
 
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<IdentityContext>()
@@ -40,7 +46,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/account/login";
-    options.LogoutPath = "/account/logout";
+    options.LogoutPath = "/account/exit";
     options.AccessDeniedPath = "/account/accessdenied";
     options.SlidingExpiration = true;
     options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
@@ -57,9 +63,14 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IFoodService, FoodManager>();
 
-//builder.Services.AddScoped<IEmailSender, SmtpEmailSender>(x => new SmtpEmailSender(
-//"smtp.office365.com",587, true, "wissen_deneme_d@hotmail.com","12345wissen"
-  //  ));
+builder.Services.AddScoped<IEmailSender, SmtpEmailSender>(x => new SmtpEmailSender(
+  builder.Configuration["EmailSender:Host"],
+  builder.Configuration.GetValue<int>("EmailSender:Port"),
+  builder.Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+  builder.Configuration["EmailSender:UserName"],
+  builder.Configuration["EmailSender:Password"]
+
+    ));
 
 
 

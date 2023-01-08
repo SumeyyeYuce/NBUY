@@ -1,5 +1,16 @@
 ﻿@model RegisterDto
-<h1>KAYIT OL</h1>
+
+<style>
+    .renk{
+        color: white;
+        background-color: #9900f2;
+    }
+    .input{
+        border: 1px solid #ca85f2;
+    }
+</style>
+<h1 class="d-flex justify-content-center renk">Yeni Tariflerden Haberdar Olmak İçin Sende Kaydol</h1>
+@*<h3>KAYIT OL</h3>*@
 <hr />
 <form asp-controller="Account"
       asp-action="Register"
@@ -8,37 +19,37 @@
         <div class="col-4">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="mb-3">
-                <label asp-for="FirstName" class="form-label"></label>
-                <input class="form-control" asp-for="FirstName">
+                <label asp-for="FirstName" class="form-label fs-5"></label>
+                <input class="form-control input " asp-for="FirstName">
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="LastName" class="form-label"></label>
-                <input class="form-control" asp-for="LastName">
+                <label asp-for="LastName" class="form-label fs-5"></label>
+                <input class="form-control input" asp-for="LastName">
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="UserName" class="form-label"></label>
-                <input class="form-control" asp-for="UserName">
+                <label asp-for="UserName" class="form-label fs-5"></label>
+                <input class="form-control input" asp-for="UserName">
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="Email" class="form-label"></label>
-                <input class="form-control" asp-for="Email">
+                <label asp-for="Email" class="form-label fs-5"></label>
+                <input class="form-control input" asp-for="Email">
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="Password" class="form-label"></label>
-                <input class="form-control" asp-for="Password">
+                <label asp-for="Password" class="form-label fs-5"></label>
+                <input class="form-control input" asp-for="Password">
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label asp-for="RePassword" class="form-label"></label>
-                <input class="form-control" asp-for="RePassword">
+                <label asp-for="RePassword" class="form-label fs-5"></label>
+                <input class="form-control input" asp-for="RePassword">
                 <span asp-validation-for="RePassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Kayıt Ol</button>
-            <a type="button" class="btn btn-light"
+            <button type="submit" class="btn  renk">Kayıt Ol</button>
+            <a type="button" class="btn btn-light text-white" style="background-color:#ca85f2 "
                asp-controller="Home"
                asp-action="Index">Vazgeç</a>
         </div>

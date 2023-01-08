@@ -16,10 +16,11 @@ namespace YemekSitesi.Data.Concrete.EfCore.Contexts
         public DbSet<FoodCategory> FoodCategories { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=YemekSitesi.db");
-        }
+       public YemekSitesiContext(DbContextOptions<YemekSitesiContext> options) : base(options)
+       {
+        
+        
+       }  
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
