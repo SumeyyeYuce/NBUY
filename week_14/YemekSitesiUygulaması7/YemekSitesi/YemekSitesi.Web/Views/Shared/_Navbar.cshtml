@@ -1,7 +1,13 @@
 ﻿@using YemekSitesi.Entity.Concrete
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-white bg-white border border-danger">
     <div class="container-fluid">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">YemekTariflerim</a>
+        @*<div class="row">
+            <div class="col-6 border border-primary">*@
+                <img src="/images/logo.png" style=" width: 120px; height:80px;" alt="Web Sitesi Logosu" />
+        @*    </div>
+        </div>*@
+       
+        <a class="navbar-brand text-danger" asp-area="" asp-controller="Home" asp-action="Index">YemekTariflerim</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,27 +17,20 @@
                     <a class="nav-link active" aria-current="page"
                        asp-area="" asp-controller="Home" asp-action="Index">Ansayfa</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ayar</a>
+                <li class="nav-item">  
+                    <a class="nav-link text-dark" 
+                       asp-area="" asp-controller="Food" asp-action="FoodList">Tarifler</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        TARİFLER
-                    </a>
-                   
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-
+             
+               
                 @if (User.Identity.IsAuthenticated)
                 {
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Panel</a>
                     </li>
-                }
+                }   
             </ul>
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">  
                 @if (User.Identity.IsAuthenticated)
                 {
                      <li class="nav-item">
