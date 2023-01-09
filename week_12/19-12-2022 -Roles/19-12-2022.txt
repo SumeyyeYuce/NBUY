@@ -8,6 +8,7 @@
             {
 
 buradan başlıyoruz
+
 3)Dto klasörüne gelip UserManageDto classını oluştuuryruz ve entitydeki user clasınnda olan şeyelri copy paste ile alıp ekliyoruz
 ve ekstra  public string Email { get; set; }
 public string UserName  { get; set; }

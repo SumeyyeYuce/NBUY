@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using YemekSitesi.Core;
 using YemekSitesi.Entity.Concrete.Identity;
 using YemekSitesi.Web.MailServices.Abstract;
@@ -7,6 +8,7 @@ using YemekSitesi.Web.Models.Dtos;
 
 namespace YemekSitesi.Web.Controllers
 {
+    [AutoValidateAntiforgeryToken]
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
@@ -31,7 +33,7 @@ namespace YemekSitesi.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByNameAsync(loginDto.UserName);
+                var user = await _userManager.FindByEmailAsync(loginDto.Email);
                 if (user==null)
                 {
                     ModelState.AddModelError("", "Böyle bir kullanıcı bulunamadı!");
@@ -191,6 +193,77 @@ namespace YemekSitesi.Web.Controllers
             }
             TempData["Message"] = Works.PushMessage("Hata", "Bir hata oluştu", "danger");
             return Redirect("~/");
+        }
+        
+        public async Task<IActionResult> Manage(string id)
+        {
+            var name = id;
+            if (String.IsNullOrEmpty(name))
+            {
+                return NotFound();
+            }
+            var user = await _userManager.FindByNameAsync(name);
+            if (user == null) { return NotFound(); }
+            List<SelectListItem> genderList = new List<SelectListItem>();
+            genderList.Add(new SelectListItem
+            {
+                Text = "Kadın",
+                Value = "Kadın",
+                Selected = user.Gender == "Kadın" ? true : false
+            });
+            genderList.Add(new SelectListItem
+            {
+                Text = "Erkek",
+                Value = "Erkek",
+                Selected = user.Gender == "Erkek" ? true : false
+            });
+            UserManageDto userManageDto = new UserManageDto
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                DateOfBirth = user.DateOfBirth,
+                Gender = user.Gender,
+                Email = user.Email,
+                UserName = user.UserName,
+                GenderSelectList = genderList
+            };
+            return View(userManageDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Manage(UserManageDto userManageDto)
+        {
+            if (userManageDto == null) { return NotFound(); }
+            var user = await _userManager.FindByIdAsync(userManageDto.Id);
+            if (user == null) { return NotFound(); }
+
+            user.FirstName = userManageDto.FirstName;
+            user.LastName = userManageDto.LastName;
+            user.UserName = userManageDto.UserName;
+            user.Gender = userManageDto.Gender;
+            user.Email = userManageDto.Email;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                TempData["Message"] = Works.PushMessage("Başarılı!", "Profiliniz başarıyla kaydedilmiştir.", "success");
+            }
+            List<SelectListItem> genderList = new List<SelectListItem>();
+            genderList.Add(new SelectListItem
+            {
+                Text = "Kadın",
+                Value = "Kadın",
+                Selected = user.Gender == "Kadın" ? true : false
+            });
+            genderList.Add(new SelectListItem
+            {
+                Text = "Erkek",
+                Value = "Erkek",
+                Selected = user.Gender == "Erkek" ? true : false
+            });
+            userManageDto.GenderSelectList = genderList;
+            return View(userManageDto);
         }
     }
 }

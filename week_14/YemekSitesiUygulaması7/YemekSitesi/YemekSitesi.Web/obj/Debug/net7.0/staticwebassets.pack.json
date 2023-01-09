@@ -77,6 +77,22 @@
       "PackagePath": "staticwebassets\\images\\kurabiye5.png"
     },
     {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması7\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması7\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\slider1.png",
+      "PackagePath": "staticwebassets\\images\\slider1.png"
+    },
+    {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması7\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\slider2.png",
+      "PackagePath": "staticwebassets\\images\\slider2.png"
+    },
+    {
+      "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması7\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\slider3.png",
+      "PackagePath": "staticwebassets\\images\\slider3.png"
+    },
+    {
       "Id": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_14\\YemekSitesiUygulaması7\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\tatlı1.png",
       "PackagePath": "staticwebassets\\images\\tatlı1.png"
     },
