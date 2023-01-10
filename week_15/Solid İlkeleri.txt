@@ -9,6 +9,12 @@
 * GenericRepository'lerdeki ortak metot yapıları(Create,Delete)
 
 3)Liskov's Substitution Principle
+* Generic Classlar
 
+4)Interface Segregation
+*IRepository ve IUnitOfWork interfacleri
 
-*)DependencyInversion
+5)Dependency Inversion Principle
+*Controller'larda new'lemeden oluşturduğumuz yapılardır
+Örneğin: private readonly IProductService _productManager; 
+ProductService ulaşmak için Dependency Inversion yöntemini bu şekilde kullanırız
