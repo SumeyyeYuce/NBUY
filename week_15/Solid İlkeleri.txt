@@ -1,0 +1,14 @@
+1)Single Responsibility
+
+* Entity classlarındaki sadece kendine has görevleri yapan entityler
+* Managerlar
+* Repositoryler (Card,Product gibi )
+* Config'ler (Product,Category) 
+
+2)Open/Closed Principle
+* GenericRepository'lerdeki ortak metot yapıları(Create,Delete)
+
+3)Liskov's Substitution Principle
+
+
+*)DependencyInversion
