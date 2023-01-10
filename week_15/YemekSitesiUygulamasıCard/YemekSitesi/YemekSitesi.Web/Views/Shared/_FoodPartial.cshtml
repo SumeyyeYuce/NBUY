@@ -1,0 +1,53 @@
+﻿@using YemekSitesi.Web.Models.Dtos
+@model FoodDto
+
+<style>
+    .ımage{
+        width:100%;
+        height: 20%;
+      
+    }
+</style>
+@*her bir yemegin yemek kartlarını(css görüntülerini) burada oluşturdum*@
+
+<div class="row">
+    <div class="col-md-3">
+
+        <div class="card mb-5" style="width: 18rem; height:20rem;">
+            <img src="/images/@Model.ImageUrl" class="card-img-top" style="width:100%; height:130px;">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn text-white container-fluid" style="background-color:#5abc5a"
+                   asp-controller="Food"
+                   asp-action="FoodDetails"
+                   asp-route-foodurl=@Model.Url>Tarif Detayları</a>
+            </div>
+        </div>
+            
+
+
+    </div>
+</div>
+
+
+@*
+<div class="card mb-2" style="height:345px;">
+    <div class=" p-2 text-center border border-primary ">
+        <img src="/images/@Model.ImageUrl" class="img-fluid" style="width:100%; height:130px;" />
+    </div>
+    <div class="card-title">
+
+        <h5 class="card-title text-center ">@Model.Name</h5>
+        <div class="text-muted text-center p-4">@Model.CookingTime</div>
+        <div class="text-success text-center">@Model.DateAdded.ToShortDateString()</div>
+    </div>
+
+    <div class="card-footer mt-0">
+        <a class="btn btn-success container-fluid"
+           asp-controller="Food"
+           asp-action="FoodDetails"
+           asp-route-foodurl=@Model.Url>Tarif Detayları</a>
+    </div>
+
+</div>*@

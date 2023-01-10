@@ -25,12 +25,14 @@
        asp-controller="Food"
        asp-action="Index"
        class="list-group-item list-group-item-action
-      @(ViewBag.SelectedMenu=="Food" ? "active": "")">Yemekler</a>
+      @(ViewBag.SelectedMenu=="Food" ? "active": "")">Yemekler</a>  
 
-    <a asp-area="Admin"
+      <a asp-area="Admin"
        asp-controller="Role"
        asp-action="Index"
        class="list-group-item list-group-item-action">Roller</a>
+    
+  
 
     <a asp-area="Admin"
        asp-controller="Category"

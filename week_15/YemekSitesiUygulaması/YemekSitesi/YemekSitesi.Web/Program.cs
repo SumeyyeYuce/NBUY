@@ -44,7 +44,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 
 builder.Services.ConfigureApplicationCookie(options =>
-{
+{   
     options.LoginPath = "/account/login";
     options.LogoutPath = "/account/exit";
     options.AccessDeniedPath = "/account/accessdenied";
@@ -52,7 +52,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
     options.Cookie = new CookieBuilder
-    {
+    {   
         HttpOnly = true,
         Name = ".YemekSitesi.Security.Cookie",
         SameSite = SameSiteMode.Strict

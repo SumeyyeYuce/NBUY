@@ -7,7 +7,7 @@ using YemekSitesi.Web.Areas.Admin.Models.Dtos;
 
 namespace YemekSitesi.Web.Areas.Admin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Area("Admin")]
     public class CategoryController : Controller
     {
@@ -30,12 +30,14 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
             return View(categoryListDto);
         }
 
+       
         [HttpGet]
         public IActionResult Create()
         {
             return View();  
         }
 
+       
         [HttpPost]    
         public async Task<IActionResult> Create(CategoryAddDto categoryAddDto)
         {
@@ -53,6 +55,7 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
             return View();
         }
 
+       
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
@@ -72,13 +75,14 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
             return View(categoryUpdateDto);
         }
 
+        
         [HttpPost]
         public async Task<IActionResult> Edit(CategoryUpdateDto categoryUpdateDto)
         {
             if (ModelState.IsValid)
             {
                 var category = await _categoryService.GetByIdAsync(categoryUpdateDto.Id);
-                if (category==null) { return NotFound(); }
+                if (category==null) { return NotFound(); }    
                 category.Name = categoryUpdateDto.Name;
                 category.Description = categoryUpdateDto.Description;
                 category.Url = Works.InitUrl(categoryUpdateDto.Name);
@@ -90,6 +94,7 @@ namespace YemekSitesi.Web.Areas.Admin.Controllers
             return View(categoryUpdateDto);  
         }
 
+       
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {

@@ -7,7 +7,7 @@ using YemekSitesi.Web.Areas.Admin.Models.Dtos;
 
 namespace YemekSitesi.Web.Areas.Admin.Controllers
 {
-    [Authorize]
+    //[Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class FoodController : Controller
     {
