@@ -166,19 +166,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\Sümeyye\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\20-12-2022 - Roles\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
+      "projectUniqueName": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_12\\20-12-2022 - Roles\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
       "projectName": "ShoppingApp.Core",
-      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\20-12-2022 - Roles\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
-      "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\20-12-2022 - Roles\\ShoppingApp\\ShoppingApp.Core\\obj\\",
+      "projectPath": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_12\\20-12-2022 - Roles\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
+      "packagesPath": "C:\\Users\\Sümeyye\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_12\\20-12-2022 - Roles\\ShoppingApp\\ShoppingApp.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sümeyye\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
