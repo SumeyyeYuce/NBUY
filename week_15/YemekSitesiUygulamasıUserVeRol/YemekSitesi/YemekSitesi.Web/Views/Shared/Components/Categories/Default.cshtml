@@ -1,0 +1,49 @@
+﻿@using YemekSitesi.Entity.Concrete
+@model List<Category>
+@*FoodControllerdan aldıgım category ve food bilgierini gsöteriyorum*@
+@*<ul class="list-group list-group-horizontal mt-2 border border-danger justify-content-center mb-2">
+    <li class="list-group-item me-3">
+        <a class="list-group-item-action"
+           asp-controller="Food"
+           asp-action="FoodList"
+           asp-route-categoryurl="">Tümünü göster</a>
+    </li>
+    <li class="list-group-item ms-3">
+        @foreach (var category in Model)
+        {
+            <a class="list-group-item-action ms-5"
+           asp-controller="Food"
+           asp-action="FoodList"
+           asp-route-categoryurl="@category.Url">@category.Name</a>
+        }
+    </li>
+    
+</ul>
+*@
+ @*@(ViewBag.SelectedCategory ==null ? "active" : "")*@
+@*@(ViewBag.SelectedCategory == category.Url ? "active" : "")*@
+
+<style>
+    .renk{
+        background-color: #45bc45;
+    }
+</style>
+
+<nav class="nav nav-pills flex-column flex-sm-row mb-3 renk">
+    <a class="flex-sm-fill text-sm-center nav-link text-white" 
+    aria-current="page"
+       asp-controller="Food"
+       asp-action="FoodList"
+       asp-route-categoryurl="">Tümünü göster</a>
+
+    @foreach (var category in Model)
+    {
+        <a class="flex-sm-fill text-sm-center nav-link text-white"
+       asp-controller="Food"
+       asp-action="FoodList"
+       asp-route-categoryurl="@category.Url">@category.Name</a>
+    }   
+
+    <hr />
+  
+</nav>

@@ -9,6 +9,7 @@ ve  düzenleme yaptık
 3)daha sonra 
 4)Yeni ödev UserControllerda 
 5)projeyi 21-12-2022-SeedRolesUsers diye güncelledik
+
 6)ShopAppContext de    public class ShopAppContext : IdentityDbContext<User, Role, string> ksımını düzenledik
 ve IdentityContexti sildik
 7)program.cs de 
@@ -61,12 +62,14 @@ dotnet ef database update --startup-project ../ShoppingApp.Web
 18)Daha sonra business katmanında conrete in içinde CardManager clasını açıp miras aldırdık ICardService buradan
 19)Daha sonra data katmaında abstertacın içinde yeni bir interface oluştruduk ICardRepository
 20)Daha sonra data katmaında conreete içinde EfCoreCardRepository classını oluşturuyorız ve içini dolduryoruz
+
 21)Daha sonra data katmaında abstertacın içinde IunitOfWork  e gelip   ICardRepository Cards { get; } satırını ekledik
 22)Daha sonra data katmaında conreete içinde UnitOfWork a gelip 
   private EfCoreCardRepository _cardRepository;
 ve 
   public ICardRepository Cards => _cardRepository=_cardRepository ?? new EfCoreCardRepository(_context);
 satırlarını ekliyoruz
+
 23)cardManagerda  İŞLEM YAPIYORUZ ve ICardService de   Task InitializeCard(string userId);  satrılarını ekleidk
 24)Program.cs e gelip builder.Services.AddScoped<ICardService, CardManager>(); satrını ekledik
 25)AccountControllera gelip   private readonly IEmailSender _emailSender; satırını ekleyip ctor un içine ekledik
@@ -80,6 +83,7 @@ loginde
                 } 
 
 satırlarını sildik
+
 daha sonra registerda 
  await _cardManager.InitializeCard(user.Id);
                     TempData["Message"] = Jobs.CreateMessage("Bilgi", "Hesabınız başarıyla oluşruuldy", "success");
@@ -118,7 +122,8 @@ dotnet ef database update --startup-project ../ShoppingApp.Web
             _userManager = userManager;
             _cardManager = cardManager;
         } 
-en başa bunları ekleyip sonra 
+en başa bunları ekleyip sonra
+ 
  [HttpPost]
         public IActionResult AddToCard(int productId, int quantity) 
 metodunu yazmya başladık
@@ -212,4 +217,22 @@ es.Except(userRoles))  var olan rolleri çıkaarak ekle
 
 
 
+
+
+
+
+
+
+
+
+
+
+ //var tokenCode = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    //var url = Url.Action("ConfirmEmail", "Account", new
+                    //{
+                    //    userId = user.Id,
+                    //    token = tokenCode  
+                    //});
+
+                    //await _emailSender.SendEmailAsync(user.Email, "YemekSitesi Hesap Onaylama", $"<h1>Merhaba</h1><br><p>Lütfen hesabınızı onaylamak için aşağıdaki linke tıklayınız.</p><a href='https://localhost:5052{url}'>Onay linki</a>");
               

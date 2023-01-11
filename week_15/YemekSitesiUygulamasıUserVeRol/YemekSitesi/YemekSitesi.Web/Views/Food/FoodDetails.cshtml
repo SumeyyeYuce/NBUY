@@ -1,0 +1,41 @@
+﻿@using YemekSitesi.Web.Models.Dtos
+@model FoodDetailsDto
+
+<div class="row mt-3">
+    <div class="col-8 border border-danger">
+        <div class="">
+            <div class="card" style="width:100%;">
+                <img src="/images/@Model.ImageUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                   <div class="row">
+                        <div class="col-8 border border-primary">
+                           <div class="mt-1">
+                                <h2 class="card-title fs-1 text-secondary">@Model.Name</h2>
+                                <label class="fs-5 fw-bold">Malzemeler</label>
+                                <p class="card-text">@Model.Material</p>
+                                <br />
+                                <label class="fs-5 fw-bold">@Model.Name Tarifi Nasıl Yapılır</label>
+                                <p class="card-text">@Model.Description</p>
+                           </div>
+                       </div>
+                       <div class="col-4 border border-primary">
+                            <div class="mt-2">
+                                <label class="fw-bold text-success">Hazırlanma ve Pişirme Süresi</label>
+                                <h4 class="card-text">@Model.CookingTime</h4>
+                            </div>
+                       </div>
+                   </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4 border border-primary">
+        reklam belki
+    </div>
+</div>
+
+
+
+

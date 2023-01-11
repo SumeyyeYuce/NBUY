@@ -51,7 +51,7 @@ namespace ShoppingApp.Data.Concrete.EfCore.Repositories
 
         public async Task<Card> GetCardByUserId(string userId)
         {
-            var card = ShopAppContext
+            var card =  ShopAppContext
                 .Cards
                 .Include(c => c.CardItems)
                 .ThenInclude(ci => ci.Product)
