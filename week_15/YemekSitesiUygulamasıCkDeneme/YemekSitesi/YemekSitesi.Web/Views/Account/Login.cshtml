@@ -1,0 +1,61 @@
+﻿@model LoginDto
+
+<style>
+    body {
+      /*  background-image: url("/wwwroot/images/loginArkaPlan.png");*/
+        background-color:#fff ;
+    }
+    .renk {
+        color: white;
+        background-color: #FF8E00;
+    }
+
+    .input {
+        border: 1px solid #FF8E00;
+        border-radius:10px;
+    }
+    .colArkaPlan{
+        background-color: rgb(215, 60, 59);
+      /*  opacity:0.5;*/
+        border-radius:20px;
+        height:330px;
+        box-shadow: 5px 10px #FBD148;
+    }
+</style>
+<body>
+    <h1 class="mt-2 text-center" style="color:#FF8E00">Giriş Yap</h1>
+
+    <form class="" style="height:500px;" asp-controller="Account"
+          asp-action="Login"
+          method="post">
+        <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl" />
+
+        <div class="row  d-flex justify-content-center mt-3">
+
+            <div class="col-4 colArkaPlan">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label text-white fs-4"></label>
+                    <input class="form-control input" asp-for="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label text-white fs-4"></label>
+                    <input class="form-control input" asp-for="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn renk">Giriş Yap</button>
+
+                <a class="btn text-white renk" style=""
+                   asp-controller="Account"
+                   asp-action="ForgotPas">Şifremi Unuttum</a>
+
+                <a type="button" class="btn text-white" style="background-color:#FBD148"
+                   asp-controller="Home"
+                   asp-action="Index">Vazgeç</a>
+            </div>
+        </div>
+    </form>
+</body>
+
