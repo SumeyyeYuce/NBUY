@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj": {}
+    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj": {
+    "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj",
+        "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj",
         "projectName": "YemekSitesi.Core",
-        "projectPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj",
-        "packagesPath": "C:\\Users\\Sümeyye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sümeyye\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\obj\\",
+        "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\YemekSitesi.Core.csproj",
+        "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_15\\YemekSitesiUygulamasıCkDeneme\\YemekSitesi\\YemekSitesi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sümeyye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
