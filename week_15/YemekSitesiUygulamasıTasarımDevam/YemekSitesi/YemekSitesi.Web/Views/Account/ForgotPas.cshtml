@@ -1,0 +1,48 @@
+﻿<h1 class="mt-2 text-center" style="color:#FF8E00">Şifremi Unuttum</h1>
+<style>
+    .colArkaPlan {
+        background-color: rgb(215, 60, 59);
+        /*  opacity:0.5;*/
+        border-radius: 20px;
+        height: 200px;
+        box-shadow: 5px 10px #FBD148;
+    }
+
+    .renk {
+        color: white;
+        background-color: #FF8E00;
+    }
+
+    .input {
+        border: 1px solid #FF8E00;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <form class="mt-3" style="height:270px;" asp-controller="Account"
+          asp-action="ForgotPas"
+          method="post">
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-4 mt-4 border border-warning colArkaPlan">
+                @*buradaki All hem modeldeki hemde modelde olmayan hataları göstericek*@
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label class="form-label text-white">Kayıtlı email adresini giriniz</label>
+                    <input class="form-control input" name="email" type="email">
+                </div>
+
+
+                <button type="submit" class="btn renk input">Şifre sıfırlama linkini Gönder</button>
+
+                <a type="button" class="btn btn-light text-white input" style="background-color:#FBD148"
+                   asp-controller="Home"
+                   asp-action="Index">Vazgeç</a>
+            </div>
+        </div>
+    </form>
+
+</body>
+

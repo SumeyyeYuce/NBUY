@@ -1,0 +1,72 @@
+﻿@model RegisterDto
+
+<style>
+    .renk{
+        color: white;
+        background-color: #FF8E00;
+    }
+
+    .input {
+        border: 1px solid #FF8E00;
+        border-radius: 10px;
+    }
+    .colArkaPlan {
+        background-color: rgb(215, 60, 59);
+        /*  opacity:0.5;*/
+        border-radius: 20px;
+        height: 580px;
+        box-shadow: 5px 10px #FBD148;
+    }
+    .baslık{
+        color: #FBD148;
+      
+    }
+</style>
+<h1 class="d-flex justify-content-center baslık fs-2 fw-bold mt-2">Kaydol</h1>
+<body>
+
+    <form class=" mt-2" style="height:620px;" asp-controller="Account"
+          asp-action="Register"
+          method="post">
+        <div class="row d-flex justify-content-center">
+            <div class="col-4 border border-warning colArkaPlan">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label text-white"></label>
+                    <input class="form-control input " asp-for="FirstName">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label text-white"></label>
+                    <input class="form-control input" asp-for="LastName">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="UserName" class="form-label text-white"></label>
+                    <input class="form-control input" asp-for="UserName">
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label text-white "></label>
+                    <input class="form-control input" asp-for="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label text-white "></label>
+                    <input class="form-control input" asp-for="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="RePassword" class="form-label text-white"></label>
+                    <input class="form-control input" asp-for="RePassword">
+                    <span asp-validation-for="RePassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn  renk">Kayıt Ol</button>
+                <a type="button" class="btn btn-light text-white" style="background-color:#FBD148"
+                   asp-controller="Home"
+                   asp-action="Index">Vazgeç</a>
+            </div>
+        </div>
+    </form>
+
+</body>
