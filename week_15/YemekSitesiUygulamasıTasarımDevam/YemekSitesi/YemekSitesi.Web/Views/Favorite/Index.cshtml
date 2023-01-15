@@ -1,5 +1,12 @@
 ﻿@model FavoriteDto
 
+<style>
+    .btn-renk {
+        color: white;
+        background-color: #FBD148;
+    }
+</style>
+
 @if (Model.FavoriteItems.Count == 0)
 {
     <div class="row">
@@ -31,7 +38,7 @@ else
                         <div class="card-body">
                             <h5 class="card-title">@favItem.FoodName</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a class="btn text-white container-fluid" style="background-color:#5abc5a"
+                            <a class="btn text-white container-fluid btn-renk"    
                        asp-controller="Food"
                        asp-action="FoodDetails"
                        asp-route-foodurl=@favItem.FoodUrl>Tarif Detayları</a>
@@ -42,7 +49,7 @@ else
                             </a>
                         </div>
                     </div>
-
+                          
 
             </div>
             

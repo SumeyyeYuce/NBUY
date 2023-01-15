@@ -7,8 +7,17 @@
         height: 20%;
       
     }
+    .btn-renk{
+        color: white;
+        background-color: #FBD148;
+    }
+    .fav-btn{
+        background-color: rgb(215, 60, 52);
+    }
+
+   
 </style>
-@*her bir yemegin yemek kartlarını(css görüntülerini) burada oluşturdum*@
+
 
 <div class="row">
     <div class="col-md-3">
@@ -19,17 +28,17 @@
             <div class="card-body">
                 <h5 class="card-title">@Model.Name</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a class="btn text-white container-fluid" style="background-color:#5abc5a"
+                <a class="btn text-white container-fluid btn-renk" 
                    asp-controller="Food"   
                    asp-action="FoodDetails"
                    asp-route-foodurl=@Model.Url>Tarif Detayları</a>
 
-                <form asp-controller="Favorite"
+                <form class="d-flex justify-content-end" asp-controller="Favorite"
                       asp-action="AddToFavorite"
                       method="post">
                     <input type="hidden" name="foodId" value="@Model.Id" />
                     <input type="hidden" name="favortiteNumber" value="1" />
-                    <button type="submit" class="btn btn-success btn-sm mt-2">Favoriye Ekle</button>
+                    <button type="submit" class="btn fav-btn btn-sm mt-2 "><i class="fa-solid fa-heart text-white"></i></button>
                 </form>
 
             </div>
