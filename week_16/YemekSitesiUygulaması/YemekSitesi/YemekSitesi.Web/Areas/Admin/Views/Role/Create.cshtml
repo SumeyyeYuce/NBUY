@@ -1,0 +1,36 @@
+﻿@model RoleDto
+@*<h1>Rol Oluştur</h1>
+<hr />*@
+<style>
+     .input {
+        border: 1px solid #FF8E00;
+        border-radius: 10px;
+    }
+    .baslık{
+       color: rgb(215, 60, 59);
+    }
+</style>
+<form asp-area="Admin"
+      asp-controller="Role"
+      asp-action="Create"
+      method="post">
+    <div class="row mt-5">
+        <div class="col-4">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label baslık fs-5"></label>
+                <input class="form-control input" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label baslık fs-5"></label>
+                <input class="form-control input" asp-for="Description">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn text-white" style="background-color:#FF8E00">Oluştur</button>
+            <a type="button" class="btn text-white" style="background-color:rgb(215, 60, 59)"
+               asp-area="Admin"
+               asp-controller="Role"
+               asp-action="Index">Vazgeç</a>
+        </div>
+    </div>
+</form>

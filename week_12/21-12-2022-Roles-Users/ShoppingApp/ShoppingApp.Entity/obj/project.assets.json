@@ -773,11 +773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\21-12-2022-Roles-Users\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
+      "projectUniqueName": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\21-12-2022-Roles-Users\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
       "projectName": "ShoppingApp.Entity",
-      "projectPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\21-12-2022-Roles-Users\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
+      "projectPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\21-12-2022-Roles-Users\\ShoppingApp\\ShoppingApp.Entity\\ShoppingApp.Entity.csproj",
       "packagesPath": "C:\\Users\\SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\21-12-2022-Roles-Users\\ShoppingApp\\ShoppingApp.Entity\\obj\\",
+      "outputPath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_12\\21-12-2022-Roles-Users\\ShoppingApp\\ShoppingApp.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -827,7 +827,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

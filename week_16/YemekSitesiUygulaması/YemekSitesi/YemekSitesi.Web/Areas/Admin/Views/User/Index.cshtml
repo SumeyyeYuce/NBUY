@@ -1,0 +1,70 @@
+﻿@using YemekSitesi.Core;
+@model List<UserDto>
+
+
+<div class="d-flex bd-highlight">
+    <div class="p-2 flex-grow-1 bd-highlight mt-1">
+        <h1 class="text-success fs-2">Üye Listesi</h1>
+    </div>
+    <div class="p-2 bd-highlight mt-1">
+        <a class="btn btn-outline-secondary"
+           asp-area="Admin"
+           asp-controller="User"
+           asp-action="Create">User Ekle</a>
+    </div>
+
+</div>
+
+
+
+
+@*<a class="btn btn-outline-primary"
+   asp-area="Admin"
+   asp-controller="User"
+   asp-action="Create">Kullanıcı Ekle</a>*@
+
+<hr />
+<table class="table table-striped table-responsive table-bordered">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Kullanıcı Adı</th>
+            <th>Email</th>
+            <th>Onaylı mı?</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count > 0)
+        {
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.FirstName</td>
+                    <td>@user.LastName</td>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>@user.EmailConfirmed</td>
+                    <td>
+                        <a class="btn text-white" style="background-color:#FBD148"
+                   asp-area="Admin"
+                   asp-controller="User"
+                   asp-action="Edit"
+                   asp-route-id=@user.Id>Düzenle</a>
+
+                        <a class="btn text-white" style="background-color: rgb(215, 60, 52)"
+                   asp-area="Admin"
+                   asp-controller="User"
+                   asp-action="Delete"
+                   asp-route-id=@user.Id>Sil</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            TempData["Message"] = Works.PushMessage("Bilgi", "Kayıtlı bir rol bilgisi bulunmamaktadır.", "warning");
+        }
+    </tbody>
+</table>
