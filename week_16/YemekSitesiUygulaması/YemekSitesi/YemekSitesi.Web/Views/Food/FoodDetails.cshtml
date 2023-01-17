@@ -1,5 +1,7 @@
 ﻿@using YemekSitesi.Web.Models.Dtos
 @model FoodDetailsDto
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
 
 @*<div class="row mt-3">
     <div class="col-10 border border-danger">
@@ -46,6 +48,9 @@
 </div>
 *@
 <style>
+    body{
+        background-color: #F5EDDC;
+    }
     .resim{
         width:75%;
         height:60%;
@@ -53,34 +58,67 @@
         border-radius:5px;
        
     }
+    .ıcerik1{
+       
+       padding-left:15%;
+    }
+
+    .ıcerik2 {
+        padding-left: 5%;
+    }
+
+    .fav-btn {
+        background-color: rgb(215, 60, 52);
+    }
+    .favori{
+        padding-left: 68%;
+    }
 </style>
 
-<div class="row d-flex justify-content-center mt-3">
+<body>
+    <div class="row d-flex justify-content-center mt-3">
 
-    <div class="col-10 border border-danger">
-        <div class="d-flex justify-content-center">
-            <img src="/images/@Model.ImageUrl" class=" resim" alt="...">
-          
+        <div class="col-10 ">
+            <div class="d-flex justify-content-center">
+                <img src="/images/@Model.ImageUrl" class=" resim" alt="...">
+
+            </div>
         </div>
     </div>
-</div>
 
-<div class="row  mt-3">
-    <div class="col-12 ps-5  d-flex justify-content-center ">
-        <div class="col-4 ">
-
-            <h2 class="card-title fs-5 text-secondary">@Model.Name</h2>
-            <label class="fs-5 fw-bold">Malzemeler</label>
-            <p class="card-text">@Html.Raw(Model.Material)</p>
-            <br />
-
-
-       </div>
-      @* <div class="col-8 border border-warning">
-            <label class="fs-5 fw-bold">@Model.Name Tarifi Nasıl Yapılır</label>
-              <p class="card-text">@Html.Raw(Model.Description)</p>
-       </div>*@
+    <div class="row">
+        <form class="col-10 favori " asp-controller="Favorite"
+              asp-action="AddToFavorite"
+              method="post">
+            <input type="hidden" name="foodId" value="@Model.Id" />
+            <input type="hidden" name="favortiteNumber" value="1" />
+            <button type="submit" class="btn fav-btn text-white mt-2 "><i class="fa-solid fa-heart text-white me-1"></i>Favoriye Ekle</button>
+        </form>
     </div>
-</div>
+    <div class="row mt-3">
+        <div class="col-12 ps-5  d-flex flex-row   ">
+            <div class="col-6 ıcerik1  ">
 
+                <h2 class="card-title fs-5 text-secondary">@Model.Name</h2>
+                <label class="fs-5 fw-bold text-success">Malzemeler</label>
+                <p class="card-text">@Html.Raw(Model.Material)</p>
+                <br />
+            </div>
+            <div class="col-6 ıcerik2  ">
+                <label class="fw-bold text-success">Hazırlanma ve Pişirme Süresi</label>
+                <h4 class="card-text">@Model.CookingTime</h4>
+
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3 d-flex justify-content-center">
+        <div class="col-11 ıcerik1 ">
+            <label class="fs-5 fw-bold">@Model.Name Tarifi Nasıl Yapılır</label>
+            <p class="card-text">@Html.Raw(Model.Description)</p>
+        </div>
+    </div>
+
+</body>
 

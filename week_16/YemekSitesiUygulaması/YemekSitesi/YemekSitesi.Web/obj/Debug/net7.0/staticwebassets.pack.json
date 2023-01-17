@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\images\\e8105516-61c1-4ac3-b48c-e619de32bdc3.png"
     },
     {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\ffbaec88-67ce-40d8-8009-e45d1ef92aa0.png",
+      "PackagePath": "staticwebassets\\images\\ffbaec88-67ce-40d8-8009-e45d1ef92aa0.png"
+    },
+    {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\kurabiye1.png",
       "PackagePath": "staticwebassets\\images\\kurabiye1.png"
     },
@@ -115,6 +119,14 @@
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\makarna1.png",
       "PackagePath": "staticwebassets\\images\\makarna1.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\sld.png",
+      "PackagePath": "staticwebassets\\images\\sld.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\sld1.png",
+      "PackagePath": "staticwebassets\\images\\sld1.png"
     },
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\slider1.png",

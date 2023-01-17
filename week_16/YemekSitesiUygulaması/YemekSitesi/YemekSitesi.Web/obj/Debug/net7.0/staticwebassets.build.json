@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "U+wm5FMt/hWNRnatQoVIlaH4Y3vmTQB8+cO2gbNZnzM=",
+  "Hash": "8sw6oVkwDlSW0kDXU1+ThXCVDtyQ57q9seEF3DQ27Q4=",
   "Source": "YemekSitesi.Web",
   "BasePath": "_content/YemekSitesi.Web",
   "Mode": "Default",
@@ -391,6 +391,23 @@
       "OriginalItemSpec": "wwwroot\\images\\e8105516-61c1-4ac3-b48c-e619de32bdc3.png"
     },
     {
+      "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\ffbaec88-67ce-40d8-8009-e45d1ef92aa0.png",
+      "SourceId": "YemekSitesi.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\",
+      "BasePath": "_content/YemekSitesi.Web",
+      "RelativePath": "images/ffbaec88-67ce-40d8-8009-e45d1ef92aa0.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ffbaec88-67ce-40d8-8009-e45d1ef92aa0.png"
+    },
+    {
       "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\kurabiye1.png",
       "SourceId": "YemekSitesi.Web",
       "SourceType": "Discovered",
@@ -525,6 +542,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\makarna1.png"
+    },
+    {
+      "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\sld.png",
+      "SourceId": "YemekSitesi.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\",
+      "BasePath": "_content/YemekSitesi.Web",
+      "RelativePath": "images/sld.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sld.png"
+    },
+    {
+      "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\sld1.png",
+      "SourceId": "YemekSitesi.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\",
+      "BasePath": "_content/YemekSitesi.Web",
+      "RelativePath": "images/sld1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sld1.png"
     },
     {
       "Identity": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulaması\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\slider1.png",
