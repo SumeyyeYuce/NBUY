@@ -1,0 +1,49 @@
+﻿@using YemekSitesi.Entity.Concrete
+@model Food
+<style>
+    .btn-renk {
+        color: white;
+        background-color: #FBD148;
+    }
+
+    .btn-hayır {
+        background-color: rgb(215, 60, 52);
+        color:white;
+    }
+</style>
+
+<button type="button" class="btn btn-outline-danger mt-2" data-bs-toggle="modal" data-bs-target="#modalFoodDelete_@Model.Id" style="">
+    Sil
+</button>
+
+
+<div class="modal fade" id="modalFoodDelete_@Model.Id" tabindex="-1" aria-labelledby="modalLabelFoodDelete_@Model.Id" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelFoodDelete">@Model.Name</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <img src="~/images/@Model.ImageUrl"  style="width:100%" />
+                </div>
+                <div class="mt-3 ms-1">
+                    <strong>@Model.Name</strong> adlı yemeği  Silmek istediğinizden emin misiniz?
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+
+                <a asp-area="Admin"
+                   asp-controller="Food"
+                   asp-action="Delete"
+                   asp-route-id="@Model.Id"
+                   class="btn btn-renk">Evet</a>
+
+                <button type="button" class="btn btn-hayır " data-bs-dismiss="modal">Hayır</button>
+
+            </div>
+        </div>
+    </div>
+</div>

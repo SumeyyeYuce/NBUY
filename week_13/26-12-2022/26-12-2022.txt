@@ -18,13 +18,14 @@ string userId = null bu şekilde
 
 8)İndex.cshtmle gelip  @section Styles{
  @await Html.PartialAsync("_DataTablesStylesPartial") 
- }
+ }-----------------tekrar dön
+
 9) admindeki sharedde gelip yeni bir patialoluştruyuzı DataTablesStylesPartial ve içini css linki koyuyoruz
 10) admindeki sharedde gelip yeni bir patialoluştruyuzı DataTabelsScriptPartial içini js linki koyuyıruz
 11)index.cshtmle de
  @section Scripts{
      @await Html.PartialAsync("_DataTableScriptsPartial")
- } burayı ekliyoruz
+ } burayı ekliyoruz-------------------tekrar dön
 
 12)web deki view de sharde da Search.cshtml oluştuurp içini dolduryoruz
 13)webdeki homun index.cshtml ine gelip  @await Html.PartialAsync("_Search") satırını ekledik

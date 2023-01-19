@@ -1,0 +1,74 @@
+﻿@model UserAddDto
+
+<style>
+    .input {
+        border: 1px solid #FF8E00;
+        border-radius: 10px;
+    }
+    .inputIki{
+        border: 1px solid #FF8E00;
+    }
+
+    .baslık {
+        color: rgb(215, 60, 59);
+    }
+</style>
+
+<form asp-area="Admin"
+      asp-controller="User"
+      asp-action="Create"
+      method="post">
+    <div class="row">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="col-8">
+
+            <div class="mb-3">
+                <label asp-for="UserDto.FirstName" class="form-label baslık fs-5"></label>
+                <input class="form-control input" asp-for="UserDto.FirstName">
+                <span asp-validation-for="UserDto.FirstName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="UserDto.LastName" class="form-label baslık fs-5"></label>
+                <input class="form-control input" asp-for="UserDto.LastName">
+                <span asp-validation-for="UserDto.LastName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="UserDto.UserName" class="form-label baslık fs-5"></label>
+                <input class="form-control input" asp-for="UserDto.UserName">
+                <span asp-validation-for="UserDto.UserName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="UserDto.Email" class="form-label baslık fs-5"></label>
+                <input class="form-control input" asp-for="UserDto.Email">
+                <span asp-validation-for="UserDto.Email" class="text-danger"></span>
+            </div>
+             
+
+            <button type="submit" class="btn text-white" style="background-color:#FF8E00">Oluştur</button>
+
+            <a type="button" class="btn text-white" style="background-color:rgb(215, 60, 59)"
+               asp-area="Admin"
+               asp-controller="User"
+               asp-action="Index">Vazgeç</a>
+        </div>
+
+        <div class="col-4 ps-5 mt-5">
+            @foreach (var role in Model.Roles)
+            {
+                <div class="form-check ps-5">
+                    <input class="form-check-input inputIki" type="checkbox" name="selectedRoles"
+                       value="@role.Name"
+                       @(Model.SelectedRoles.Any(sr=>sr==role.Name) ? "checked" : "") />
+                    <label class="form-check-label">@role.Name</label>
+                </div>
+            }
+            <span class="text-danger" asp-validation-for="SelectedRoles"></span>
+            <hr style="color:#FF8E00; border:1px solid" />
+
+            <div class="form-check ps-5">
+                <input class="form-check-input inputIki" asp-for="UserDto.EmailConfirmed" type="checkbox" />
+                <label asp-for="UserDto.EmailConfirmed" class="form-check-label"></label>
+            </div>
+        </div>
+    </div>
+</form>

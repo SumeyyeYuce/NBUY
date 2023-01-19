@@ -1,0 +1,96 @@
+﻿@model CategoryListDto
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="d-flex bd-highlight">
+    <div class="p-2 flex-grow-1 bd-highlight mt-1">
+        <h1 class="text-success fs-2">Kategori Listesi</h1>
+    </div>
+    <div class="p-2 bd-highlight mt-1">
+        <a class="btn btn-outline-secondary"
+           asp-area="Admin"
+           asp-controller="Category"  
+           asp-action="Create">Yeni Kategori Ekle</a>
+    </div>
+    
+</div>
+
+<hr>
+
+<div class="row">
+    
+        @foreach (var category in Model.Categories)
+    {
+        
+        <div class="col-md-3">
+            <div class="card rounded-3  mt-2 border border-secondary border-3" style="width: 15rem;">
+                <div class="card-body">
+                    <h5 class="card-title fs-3">@category.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@category.Name Tarifleri</h6>
+                    <p class="card-text">@category.Description</p>
+
+                    <a class="btn btn-outline-success"
+                      asp-controller="Category"
+                      asp-action="Edit"
+                      asp-area="Admin"
+                      asp-route-id="@category.Id"
+                    >Düzenle</a>
+
+                    <a class="btn btn-outline-danger"
+                        asp-controller="Category"
+                        asp-action="Delete"
+                        asp-area="Admin"
+                        asp-route-id="@category.Id"
+                    >Sil</a>
+                </div>
+            </div>
+        </div>
+        }
+
+</div>
+
+
+@*<div class="row">
+    <div class="text-center">
+        <h1 class="display-4 mb-4">Pratik Yemek Tarifleri</h1>
+    </div>
+    @foreach (var foodDto in Model)
+    {
+        <div class="col-md-3 gap-2">
+
+            @await Html.PartialAsync("_FoodPartial", foodDto)
+
+        </div>
+    }
+
+</div>*@
+
+
+@*<div class="row">
+    <div class="col d-flex flex-row">
+        @foreach (var category in Model.Categories)
+        {
+            <div class="card rounded-3 ms-4 mt-2 border border-secondary border-3" style="width: 20rem;">
+                <div class="card-body">
+                    <h5 class="card-title fs-3">@category.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@category.Name Tarifleri</h6>
+                    <p class="card-text">@category.Description</p>
+
+                    <a class="btn btn-outline-success"
+                   asp-controller="Category"
+                   asp-action="Edit"
+                   asp-area="Admin"
+                   asp-route-id="@category.Id">Kategori Düzenle</a>
+
+                    <a class="btn btn-outline-danger"
+                   asp-controller="Category"
+                   asp-action="Delete"
+                   asp-area="Admin"
+                   asp-route-id="@category.Id">Kategori Sil</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>*@
