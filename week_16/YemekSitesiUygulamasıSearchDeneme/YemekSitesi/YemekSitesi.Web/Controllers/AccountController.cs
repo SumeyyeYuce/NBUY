@@ -75,14 +75,15 @@ namespace YemekSitesi.Web.Controllers
                     FirstName = registerDto.FirstName,
                     LastName = registerDto.LastName,
                     Email = registerDto.Email,
-                    UserName = registerDto.UserName,
+                    UserName = registerDto.UserName,  
+                    
                     EmailConfirmed = true   
                 };
                 var result  = await _userManager.CreateAsync(user,registerDto.Password);
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "User");
-                    await _favoriteManager.InitializeFavorite(user.Id);
+                    //await _favoriteManager.InitializeFavorite(user.Id);
 
                     TempData["Message"] = Works.PushMessage("Bilgi", "Hesabınız başarıyla oluşturuldu", "success");
                     return RedirectToAction("Login", "Account");

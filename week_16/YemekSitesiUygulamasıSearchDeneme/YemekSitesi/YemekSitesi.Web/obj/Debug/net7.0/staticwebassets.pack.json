@@ -25,8 +25,16 @@
       "PackagePath": "staticwebassets\\images\\29d9df79-7d33-4282-8f9a-99ec0fbc89c4.png"
     },
     {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\2e2302b7-c06f-4745-aade-218232409616.png",
+      "PackagePath": "staticwebassets\\images\\2e2302b7-c06f-4745-aade-218232409616.png"
+    },
+    {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\354731f5-39c8-42a7-ab00-c8e3eaaecbcf.png",
       "PackagePath": "staticwebassets\\images\\354731f5-39c8-42a7-ab00-c8e3eaaecbcf.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\548367f5-2b5a-4ac1-9f75-c3d9076051c1.png",
+      "PackagePath": "staticwebassets\\images\\548367f5-2b5a-4ac1-9f75-c3d9076051c1.png"
     },
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\5c19ae2c-f41e-4e53-818b-585ae1ea1f66.png",
@@ -35,6 +43,10 @@
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\63fc5f05-7b63-4a38-b7e7-5315e01f7d8d.png",
       "PackagePath": "staticwebassets\\images\\63fc5f05-7b63-4a38-b7e7-5315e01f7d8d.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\7c31c620-a68d-4c58-8c01-927e40914f74.png",
+      "PackagePath": "staticwebassets\\images\\7c31c620-a68d-4c58-8c01-927e40914f74.png"
     },
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\7fb41e1e-9b0f-4950-b11b-06e6ee072a40.png",
@@ -77,8 +89,16 @@
       "PackagePath": "staticwebassets\\images\\d2.png.jpg"
     },
     {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\d3a37d52-7204-4204-b6fb-fcc767ed0b0f.png",
+      "PackagePath": "staticwebassets\\images\\d3a37d52-7204-4204-b6fb-fcc767ed0b0f.png"
+    },
+    {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\d7f0713c-ae4e-4fe4-b741-6fff41badca0.png",
       "PackagePath": "staticwebassets\\images\\d7f0713c-ae4e-4fe4-b741-6fff41badca0.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\dc850fa9-3e51-4317-b70b-6cab3e6c72f1.png",
+      "PackagePath": "staticwebassets\\images\\dc850fa9-3e51-4317-b70b-6cab3e6c72f1.png"
     },
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\e8105516-61c1-4ac3-b48c-e619de32bdc3.png",
@@ -87,6 +107,18 @@
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\ffbaec88-67ce-40d8-8009-e45d1ef92aa0.png",
       "PackagePath": "staticwebassets\\images\\ffbaec88-67ce-40d8-8009-e45d1ef92aa0.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\icecek1.png",
+      "PackagePath": "staticwebassets\\images\\icecek1.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\icecek2.png",
+      "PackagePath": "staticwebassets\\images\\icecek2.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\icecek3.png",
+      "PackagePath": "staticwebassets\\images\\icecek3.png"
     },
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\kurabiye1.png",
@@ -119,6 +151,14 @@
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\makarna1.png",
       "PackagePath": "staticwebassets\\images\\makarna1.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\makarna2.png",
+      "PackagePath": "staticwebassets\\images\\makarna2.png"
+    },
+    {
+      "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\makarna3.png",
+      "PackagePath": "staticwebassets\\images\\makarna3.png"
     },
     {
       "Id": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_16\\YemekSitesiUygulamasıSearchDeneme\\YemekSitesi\\YemekSitesi.Web\\wwwroot\\images\\sld.png",

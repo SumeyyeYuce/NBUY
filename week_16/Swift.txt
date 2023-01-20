@@ -1,0 +1,59 @@
+1)SET
+-kümeler sırasızdır ve kopyaları içeremez, oysa diziler sıralarını korur ve kopyaları içerebilir.
+-Yani “bu set X maddesini içeriyor mu” dediğinizde, set ne kadar büyük olursa olsun, saniyeler içinde cevap alacaksınız.
+-Benzersiz olması gereken bir değerler koleksiyonuna ihtiyacınız varsa veya belirli bir öğenin orada 
+çok hızlı bir şekilde olup olmadığını kontrol edebilmeniz gerekiyorsa, bir küme kullanmalısınız:
+-Bir oyun için bir sözlükteki tüm kelimelerin bir listesini saklamak istiyorsanız, 
+bunun tekrarı yoktur ve sıra önemli değildir, bu nedenle bir sete gidersiniz.
+let set = Set(["aardvark", "astronaut", "azalea"])
+
+2)TUPLES
+-Her öğenin kesin bir konuma veya ada sahip olduğu belirli, 
+sabit bir ilgili değerler koleksiyonuna ihtiyacınız varsa, bir demet kullanmalısınız:
+-Tam olarak iki diziyi veya tam olarak iki diziyi ve bir tamsayıyı veya tam 
+olarak üç Boolean'ı veya benzerini tutmak istiyorsanız, bir demet kullanmalısınız.
+let address = (house: 555, street: "Taylor Swift Avenue", city: "Nashville")
+
+3)ARRAY
+-Yinelenenleri içerebilecek bir değerler koleksiyonuna ihtiyacınız varsa veya öğelerinizin sırası önemliyse, 
+bir dizi kullanmalısınız:
+-Bir kullanıcı tarafından okunan tüm makaleleri saklamak istiyorsanız, 
+sıra önemli değilse (tek umursadığınız tek şey okuyup okumadıklarıysa) 
+bir dizi kullanırsınız veya sıra önemliyse bir dizi kullanırsınız. .
+let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
+
+4)Dictionaries
+-Sözlükler, tıpkı diziler gibi değer koleksiyonlarıdır, 
+ancak şeyleri bir tamsayı konumunda depolamak yerine, onlara istediğiniz herhangi bir şeyi kullanarak erişebilirsiniz.
+-Sözlük verilerini depolamanın en yaygın yolu, dizeleri kullanmaktır. Örneğin, 
+şarkıcıların boylarını isimlerini kullanarak saklayan bir sözlük oluşturabiliriz:
+
+let heights = [
+    "Taylor Swift": 1.78,
+    "Ed Sheeran": 1.73
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--NOTT
+Unutmayın: diziler sırayı korur ve kopyaları olabilir, 
+kümeler sırasızdır ve kopyaları olamaz ve demetlerin içinde sabit sayıda sabit tür değerleri vardır.

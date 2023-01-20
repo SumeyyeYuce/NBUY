@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CNbZ9x3k74n9oYLTLdLV0q2xFwvuswxeHMlY9OTB0yqk7B+B+B9d/FeqcC8hWZ2dpJr/lQI9xjf81dF59e1jZw==",
+  "dgSpecHash": "GRZzz/0Sdq7WxGZKmzStc76C9eC/bOeDGspggfRZyDqgVXdjMV0S7DXWJqJYdNYK/17/M+xBRyAS8w5dQq5aAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_13\\26-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
+  "projectFilePath": "c:\\Users\\SABAH\\Documents\\GitHub\\NBUY\\week_13\\26-12-2022\\ShoppingApp\\ShoppingApp.Core\\ShoppingApp.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\SABAH\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
