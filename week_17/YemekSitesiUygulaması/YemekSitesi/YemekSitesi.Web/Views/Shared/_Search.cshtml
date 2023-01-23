@@ -1,0 +1,52 @@
+﻿<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<style>
+    
+
+    #box {
+        max-width: 300px;
+        position: relative;
+        /*border:1px solid red;*/
+    }
+
+    #box .fa-search {
+        position: absolute;
+        top: 14px;
+        left: 12px;
+        font-size: 20px;
+        color: rgb(215, 60, 52);
+    }
+
+    #search {
+        width: 110px;
+        height:45px;
+        box-sizing: border-box;
+        border: 2px solid rgb(215, 60, 52);
+        border-radius: 4px;
+        font-size: 15px;
+        padding: 12px 20px 12px 40px;
+        -moz-transition: width 0.4s ease-in-out;
+        -o-transition: width 0.4s ease-in-out;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        text-decoration:none;
+    }
+    #search:focus {
+        width: 100%;
+     }
+</style>
+
+<div class="mt-2">
+    <form asp-area=""
+        asp-controller="Home"
+        asp-action="Search"
+    >
+        <div id="box">
+            <input class="form-control mt-0" name="q" id="search" placeholder="Ara...." />
+            <i class="fa fa-search"></i>
+    </div>
+   
+   
+    </form>
+</div>
+
+   
