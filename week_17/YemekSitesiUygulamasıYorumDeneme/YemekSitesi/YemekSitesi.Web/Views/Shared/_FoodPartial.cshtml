@@ -1,0 +1,51 @@
+﻿@using YemekSitesi.Web.Models.Dtos
+@model FoodDto
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<style>
+    .ımage{
+        width:100%;
+        height: 20%;
+      
+    }
+    .btn-renk{
+        color: white;
+        background-color: #FBD148;
+    }
+    .fav-btn{
+        background-color: rgb(215, 60, 52);
+    }
+
+   
+</style>
+
+
+<div class="row">
+    <div class="col-md-3">
+
+        <div class="card mb-3" style="width: 17rem; height:22rem;">
+          
+            <img src="/images/@Model.ImageUrl" class="card-img-top" style="width:100%; height:130px;">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a class="btn text-white container-fluid btn-renk" 
+                   asp-controller="Food"   
+                   asp-action="FoodDetails"
+                   asp-route-foodurl=@Model.Url>Tarif Detayları</a>
+
+                <form class="d-flex justify-content-end" asp-controller="Favorite"
+                      asp-action="AddToFavorite"
+                      method="post">
+                    <input type="hidden" name="foodId" value="@Model.Id" />
+                    <input type="hidden" name="favortiteNumber" value="1" />
+                    <button type="submit" class="btn fav-btn btn-sm mt-2 "><i class="fa-solid fa-heart text-white"></i></button>
+                </form>
+
+            </div>
+        </div>
+            
+
+
+    </div>
+</div>
+
