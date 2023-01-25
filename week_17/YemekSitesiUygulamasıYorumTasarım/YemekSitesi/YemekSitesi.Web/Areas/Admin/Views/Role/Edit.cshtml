@@ -1,0 +1,72 @@
+﻿@using YemekSitesi.Core;
+@model RoleDetailsDto
+<h3><span class="text-danger">@Model.Role.Name</span> Rolü Kullanıcılarını Düzenle</h3>
+<hr />
+
+<form asp-area="Admin"
+      asp-controller="Role"
+      asp-action="Edit"
+      method="post">
+    <input type="hidden" name="RoleId" value="@Model.Role.Id" />
+    <input type="hidden" name="RoleName" value="@Model.Role.Name" />
+
+
+    <div class="row">
+        <div class="col-6">
+          
+            <h6 class="bg-success text-white p-3">@Model.Role.Name Rölünü ekle</h6>
+
+            @if (Model.NonMembers.Count == 0)
+            {
+                <div class="alert alert-warning">
+                    @Model.Role.Name Rolüne ait kullanıcı bulunamadı.
+                </div>
+
+            }
+            else
+            {
+                <table class="table table-sm table-bordered">
+                    @foreach (var user in Model.NonMembers)
+                    {
+                        <tr>
+                            <td>
+                                <input class="form-check-input" type="checkbox" name="IdToAdd" value="@user.Id" /> @user.UserName
+                            </td>
+
+                        </tr>
+                    }
+                </table>
+            }
+
+        </div>
+
+        <div class="col-6">
+            
+            <h6 class="bg-danger text-white p-3">@Model.Role.Name Rölünden kaldır</h6>
+
+            @if (Model.Members.Count == 0)
+            {
+
+                <div class="alert alert-warning">
+                    @Model.Role.Name Rolüne ait kullanıcı bulunamadı.
+                </div>
+            }
+            else
+            {
+                <table class="table table-sm table-bordered">
+                    @foreach (var user in Model.Members)
+                    {
+                        <tr>
+                            <td>
+                                <input class="form-check-input" type="checkbox" name="IdToRemove" value="@user.Id" /> @user.UserName
+                            </td>
+
+                        </tr>
+                    }
+                </table>
+            }
+
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+</form>
