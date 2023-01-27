@@ -1,0 +1,83 @@
+﻿@using YemekSitesi.Web.Models.Dtos
+@model List<FoodDto>
+
+ <style>
+   .slider1{
+       height:500px;
+       width:500px;
+   }
+   .image{
+       height:370px;
+       width:1100px;
+   }
+   .sld{
+       position:absolute;
+       left:20%;
+   }
+
+ </style>
+
+    <div class="row mt-2">  
+        <div class="col-12 mb-2">
+        @await Component.InvokeAsync("Categories")
+     
+        </div>
+
+
+        <div class=" w-75 mx-auto " style="height:375px;">
+            <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="/images/sld1.png" class="w-100" style="height:375px;" alt="...">
+                    </div>
+
+                    <div class="carousel-item ">
+                        <img src="/images/d1.png.jpg" class="w-100" style="height:375px;" alt="...">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/images/d2.png.jpg" class="w-100" style="height:375px;" alt="...">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/images/slider4.png" class="w-100" style="height:375px;" alt="...">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/images/slider5.png" class="w-100" style="height:375px;" alt="...">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/images/sld.png" class="w-100" style="height:375px;" alt="...">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+    <div class="row">
+        <div class="text-center">
+            <h1 class="display-4 mb-4">Pratik Yemek Tarifleri</h1>
+        </div>
+        @foreach (var foodDto in Model)
+        {
+            <div class="col-md-3 gap-2">
+
+                @await Html.PartialAsync("_FoodPartial", foodDto)
+
+            </div>
+        }
+
+    </div>
+
+</div>

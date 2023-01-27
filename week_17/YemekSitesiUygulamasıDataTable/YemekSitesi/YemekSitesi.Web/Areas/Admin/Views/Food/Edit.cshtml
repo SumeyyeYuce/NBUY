@@ -1,0 +1,154 @@
+﻿@using YemekSitesi.Entity.Concrete;
+@model FoodUpdateDto
+<h1>Yemek Tarifi Düzenleme</h1>
+<hr />
+<form asp-area="Admin"
+      asp-controller="Food"
+      asp-action="Edit"
+      method="post"
+      enctype="multipart/form-data">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div class="row">
+
+        <div class="row">
+            <div class="col mb-3">
+                <label asp-for="Name" class="form-label fs-3 text-success fw-bold"></label>
+                <input class="form-control border border-danger" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class=" col mb-3">
+                <label asp-for="Material" class="form-label fs-3 text-success fw-bold"></label>
+                <textarea class="form-control" id="mat-editor" name="Material">@Html.Raw(Model.Material)</textarea>
+                <span asp-validation-for="Material" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class=" col mb-3">
+                <label asp-for="Description" class="form-label fs-3 text-success fw-bold"></label>
+                <textarea class="form-control" id="desc-editor" name="Description">@Html.Raw(Model.Description)</textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col">
+                <img id="img-viewer" src="/images/@Model.ImageUrl" style="width:50%" height="50%" />
+                <input class="d-none" type="file" asp-for="ImageFile" accept="image/">
+                <div class="mt-2">
+                    <label for="ImageFile" class="btn btn-success">Resim Yükle</label>
+                    <label id="img-url">@Model.ImageUrl</label>
+                </div>
+                <span asp-validation-for="ImageFile" class="text-danger"></span> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col ">
+                <div class="mb-3">
+                    <label asp-for="Categories" class="fs-3 text-success fw-bold"></label>
+                </div>
+                @foreach (var category in Model.Categories)
+                {
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input"
+                           name="selectedCategoryIds" value="@category.Id"
+                           @if (Model.SelectedCategoryIds!=null)
+                           {
+                           @(Model.SelectedCategoryIds.Any(sc=>sc==category.Id) ? "checked" : "")
+                           } />
+                        <label>@category.Name</label>
+                    </div>
+                }
+                <span asp-validation-for="SelectedCategoryIds" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="mb-2 mt-3 fs-3 text-success fw-bold">Tercihler</div>
+
+        <div class="row">
+            <div class="col">
+
+                <div class=" mb-3">
+
+                    <label asp-for="CookingTime" class="form-label fs-3 text-success fw-bold"></label>
+                    <input class="form-control border border-danger" asp-for="CookingTime">
+                    <span asp-validation-for="CookingTime" class="text-danger"></span>
+
+                </div>
+                <div class="form-check form-check-inline mb-3">
+
+                    <label asp-for="IsHome" class="form-label"></label>
+                    <input type="checkbox" class="form-check-input" asp-for="IsHome" />
+                    <span asp-validation-for="IsHome" class="text-danger"></span>
+
+                </div>
+                <div class="form-check form-check-inline mb-3">
+
+                    <label asp-for="IsApproved" class="form-label"></label>
+                    <input type="checkbox" class="form-check-input" asp-for="IsApproved" />
+                    <span asp-validation-for="IsApproved" class="text-danger"></span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-2">
+            <div class="col-4">
+                <button type="submit" class="btn btn-outline-success mt-2" style="">Kaydet</button>
+
+                @{
+                    Food food = new Food
+                    {
+                        Id = Model.Id,
+                        Name = Model.Name,
+                        ImageUrl = Model.ImageUrl
+                    };
+                }
+               
+                <a class="btn btn-outline-primary mt-2 ms-2"
+                   asp-area="Admin"
+                   asp-controller="Food"
+                   asp-action="Index" asp-route-id=@Model.Id>İptal</a>
+
+                @await Html.PartialAsync("_FoodDeletePartial",food)
+            </div>
+        </div>
+
+
+    </div>
+
+</form>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#mat-editor'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#desc-editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}
+
+ <script>
+    const imgViewer = document.getElementById('img-viewer');
+    const imgUrl = document.getElementById('img-url');
+    const imgFile = document.getElementById('ImageFile')
+
+    imgFile.addEventListener('change',function(event){
+        const files = event.target.files;
+        imgViewer.setAttribute('src',window.URL.createObjectURL(files[0]));
+        imgUrl.innerText = files[0].name;
+    });
+
+ </script>

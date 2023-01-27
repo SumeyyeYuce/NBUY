@@ -1,0 +1,123 @@
+1)SET
+-kümeler sırasızdır ve kopyaları içeremez, oysa diziler sıralarını korur ve kopyaları içerebilir.
+-Yani “bu set X maddesini içeriyor mu” dediğinizde, set ne kadar büyük olursa olsun, saniyeler içinde cevap alacaksınız.
+-Benzersiz olması gereken bir değerler koleksiyonuna ihtiyacınız varsa veya belirli bir öğenin orada 
+çok hızlı bir şekilde olup olmadığını kontrol edebilmeniz gerekiyorsa, bir küme kullanmalısınız:
+-Bir oyun için bir sözlükteki tüm kelimelerin bir listesini saklamak istiyorsanız, 
+bunun tekrarı yoktur ve sıra önemli değildir, bu nedenle bir sete gidersiniz.
+let set = Set(["aardvark", "astronaut", "azalea"])
+
+2)TUPLES
+-Her öğenin kesin bir konuma veya ada sahip olduğu belirli, 
+sabit bir ilgili değerler koleksiyonuna ihtiyacınız varsa, bir demet kullanmalısınız:
+-Tam olarak iki diziyi veya tam olarak iki diziyi ve bir tamsayıyı veya tam 
+olarak üç Boolean'ı veya benzerini tutmak istiyorsanız, bir demet kullanmalısınız.
+let address = (house: 555, street: "Taylor Swift Avenue", city: "Nashville")
+
+3)ARRAY
+-Yinelenenleri içerebilecek bir değerler koleksiyonuna ihtiyacınız varsa veya öğelerinizin sırası önemliyse, 
+bir dizi kullanmalısınız:
+-Bir kullanıcı tarafından okunan tüm makaleleri saklamak istiyorsanız, 
+sıra önemli değilse (tek umursadığınız tek şey okuyup okumadıklarıysa) 
+bir dizi kullanırsınız veya sıra önemliyse bir dizi kullanırsınız. .
+let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
+
+4)Dictionaries
+-Sözlükler, tıpkı diziler gibi değer koleksiyonlarıdır, 
+ancak şeyleri bir tamsayı konumunda depolamak yerine, onlara istediğiniz herhangi bir şeyi kullanarak erişebilirsiniz.
+-Sözlük verilerini depolamanın en yaygın yolu, dizeleri kullanmaktır. Örneğin, 
+şarkıcıların boylarını isimlerini kullanarak saklayan bir sözlük oluşturabiliriz:
+
+let heights = [
+    "Taylor Swift": 1.78,
+    "Ed Sheeran": 1.73
+]
+
+5)Dictionary default values
+let favoriteIceCream = [
+    "Paul": "Chocolate",
+    "Sophie": "Vanilla"
+]
+Burada Paul ve Sophie için dondurma çeşiti ataması yaptık burada eger olmayan bir degeri çagırmak istersek Swift biz nil
+döndürür.Nil döndürmesin diye alternatip bir yol olarak şu şekilde yapabiliriz
+Normalda yukarıdaki sabitten bir deger okumak istiyorsak
+favoriteIceCream ["Paul"]  bu şekilde çagırbilriz ancak olmayan bir değeri okumasını istiyorsak
+favoriteIceCream["Charlotte"] örneğin böyle bir değerin okunmasını istiyorsak bu şekilde oldugunda bize
+nil döndürür.Ancak şu şekilde ise
+favoriteIceCream ["Charlotte",default:"Unknown"] bu şekilde yazarsak nil döndürmek yerine 
+"Bilinmeyen bir deger" döndürücek
+
+
+6)Creating empty collections (Boş koleksiyon Oluşturma)
+-Diziler, kümeler ve sözlükler, değerleri tek bir yerde topladıkları için koleksiyon olarak adlandırılır.
+-Boş bir koleksiyon oluşturmk için, önce türünü yazmalıyız ardından parantez açıp kapatmalıyız.
+Örneğin----> var teams = [String: String]() bu şekilde.
+-Sonra aşagıdaki gibi girişler ekleyebiliriz
+teams["Paul"] = "Red"
+-Tamsayıları depolamak için bu şekilde dizi oluşturabiliriz
+var results = [Int]()
+-Farklı Örnek Kullanımlar
+var words = Set<String>()
+var scores = Dictionary<String, Int>()
+var results = Array<Int>()
+
+---Neden boş bir koleksiyon kullanmaya ihtiyaç duyarız
+CEVAP:Tüm verileri öncedn bilmiyorsak bu durumda boş bir koleksiyon oluştururuz.Ardından birşey ler eklemek daha kolaydr.
+Örneğin elimizde bir dizi var ve dizinin elemanlarının "J" ile başlayıp başlamadıgını var olup olmadıgını bilmediğimiz için
+bu şekilde boş koleksiyon oluşturdugumuzda arama yapabilriz
+
+7)Enumerations (Enum)
+-Enum kullanmamızdaki en büyük amaç tanımladıgımız bir degeri okutmak istersek, o sırada ismini yanlış yazabiliriz
+veya başkası ismini yanlış yazabilir.
+Bu durumun önüne geçmek için enum yapsını kulanırız
+Örneğin:
+let result = "failure"
+let result2 = "failed"
+let result3 = "fail"
+bu şekilde bir tanımlama yapıldıgıda yazım yanlışları ortaya çıkabilir.Bunun oluşmaması için Enum yapısını 
+kullanabiliriz
+
+enum Result {
+    case success
+    case failure
+} Bu şekilde kullanabilriz
+Enum içindeki degere ulaşmak içinse
+let result4 = Result.failure 
+bu şekilde kullanım yaparız
+
+--Enuma aşagıdaki gibi degerler vererek içlerinde ne oldugunu söyleyebiliriz.Ve enumı çagırıkende içinde olan
+şeyi belirtebilriz ve değerini verebiliriz
+enum Weather {
+    case sunny
+    case windy(speed: Int)
+    case rainy(chance: Int, amount: Int)
+}
+
+-Bu, havamızın güneşli olabileceği, rüzgarlı olabileceği veya yağmurlu olabileceği anlamına gelir. 
+Bununla birlikte, rüzgarlı olduğunda, rüzgarın ne kadar hızlı olduğunu bir tam sayı olarak kaydetmeyi 
+de isteriz - saatte 10 kilometre (kph), 20, 30 vb. Ve hava yağmurlu olduğunda, 
+yağmurun olma ihtimalinin yüzdesini ve bir hacim değerini depolayarak ne kadar yağmur depolayacağını depolarız.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--NOTT
+Unutmayın: diziler sırayı korur ve kopyaları olabilir, 
+kümeler sırasızdır ve kopyaları olamaz ve demetlerin içinde sabit sayıda sabit tür değerleri vardır.
